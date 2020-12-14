@@ -27,14 +27,16 @@
             Ville: {{ $user->city }}
           </li>
           <li class="list-group-item active">
-            Avatar: {{ $user->avatar }}
+            Avatar: <img src="{{ asset($user->avatar) }}" style="max-width: 200px;">
           </li>
           <li class="list-group-item active">
             Expérience: {{ $user->exp }}
           </li>
-          <li class="list-group-item active">
-            Administrateur: {{ $user->admin }}
-          </li>
+          @if (Auth::user()->admin === 1)
+            <li class="list-group-item active">
+              Administrateur: {{ $user->admin }}
+            </li>
+          @endif
         </ul>
         <a href="{{ route('User.edit', ['User' => $user->id]) }}" class="btn btn-primary">
           <span class="fa fa-edit"> Modifier</span>

@@ -16,6 +16,27 @@
             <input value=" {{ $user->nickname }} " name="nickname" id="nickname" type="text" tabindex="1" required autofocus>
           </div>
           <div class="form-group">
+            <label for="avatar1" class="col-md-4 col-form-label text-md-right">
+              <img src="{{ asset('images/avatars/1.png') }}" style="max-width: 200px;">
+            </label>
+            <input type="radio" id="avatar1" name="avatar" value="images/avatars/1.png">
+
+            <label for="avatar2" class="col-md-4 col-form-label text-md-right">
+              <img src="{{ asset('images/avatars/2.png') }}" style="max-width: 200px;">
+            </label>
+            <input type="radio" id="avatar2" name="avatar" value="images/avatars/2.png">
+
+            <label for="avatar3" class="col-md-4 col-form-label text-md-right">
+              <img src="{{ asset('images/avatars/3.png') }}" style="max-width: 200px;">
+            </label>
+            <input type="radio" id="avatar3" name="avatar" value="images/avatars/3.png">
+
+            <label for="avatar4" class="col-md-4 col-form-label text-md-right">
+              <img src="{{ asset('images/avatars/4.png') }}" style="max-width: 200px;">
+            </label>
+            <input type="radio" id="avatar4" name="avatar" value="images/avatars/4.png">
+          </div>
+          <div class="form-group">
             <label for="first_name">Prénom</label>
             <input value=" {{ $user->first_name }} " name="first_name" id="first_name" type="text" tabindex="1" required autofocus>
           </div>

@@ -70,7 +70,7 @@ class RegisterController extends Controller
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
             'city' => $data['city'],
-            'avatar' => 'i', //Changer pour le chemin d'avatars lorsque disponible
+            'avatar' => $data['avatar'],
             'exp' => 0,
             'admin' => false
         ]);
