@@ -59,7 +59,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+      $user = User::all()->find($id);
+      return view('User.edit', ['user' => $user]);
     }
 
     /**
@@ -71,7 +72,10 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $user = User::find($id);
+      $user->fill($request->all());
+      $user->save();
+      return redirect()->route('User.show', ['User' => $id]);
     }
 
     /**
