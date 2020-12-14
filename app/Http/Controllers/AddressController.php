@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Address;
+use Illuminate\Support\Facades\DB;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AddressController extends Controller
 {
@@ -24,7 +27,8 @@ class AddressController extends Controller
      */
     public function create()
     {
-        //
+      $user = User::all();
+      return view('Address.create', ['user' => $user]);
     }
 
     /**
@@ -35,7 +39,25 @@ class AddressController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $request->validate([
+          'address'=>'required',
+          'zip_code'=>'required',
+          'city'=>'required',
+          'country'=>'required'
+      ]);
+
+
+      $address = new Address([
+          'address' => $request->get('address'),
+          'zip_code' => $request->get('zip_code'),
+          'city' => $request->get('city'),
+          'country' => $request->get('country')
+      ]);
+      $address->save();
+      $insertedId = $address->id;
+
+      DB::insert('insert into addresses_users (user_id, address_id) values (?, ?)', [Auth::id(), $insertedId]);
+      return redirect()->route('Address.index');
     }
 
     /**
