@@ -19,8 +19,8 @@ class CreateAddressesUsersTable extends Migration
         });
 
         Schema::table('addresses_users', function (Blueprint $table) {
-            $table->foreignId('address_id')->references('id')->on('users');
-            $table->foreignId('user_id')->references('id')->on('addresses');
+            $table->foreignId('address_id')->references('id')->on('addresses');
+            $table->foreignId('user_id')->references('id')->on('users');
         });
     }
 

@@ -39,6 +39,9 @@
           @endif
         </tbody>
       </table>
+      <a href="{{ route('Address.create') }}" class="btn btn-primary">
+        <span class="fa fa-edit">Ajouter une adresse</span>
+      </a>
     </div>
   @endguest
 </div>

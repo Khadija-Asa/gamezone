@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Address;
+use App\AddressesUser;
 use Illuminate\Support\Facades\DB;
 use App\User;
 use Illuminate\Http\Request;
@@ -105,8 +106,13 @@ class AddressController extends Controller
      * @param  \App\Address  $address
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Address $address)
+    public function destroy($id)
     {
-        //
+      $addressesUsers = AddressesUser::find($id);
+      $addressesUsers->delete();
+      $address = Address::find($id);
+      $address->delete();
+
+      return redirect()->route('Address.index');
     }
 }
