@@ -23,9 +23,6 @@
                     {{ $address->address->address }}, {{ $address->address->zip_code }} {{ $address->address->city }} {{ $address->address->country }}
                   </td>
                   <td>
-                    <a href="{{ route('Address.show', ['Address' => $address->address->id]) }} " class="btn btn-success">
-                      <span class="fa fa-eye"> Détails</span>
-                    </a>
                     <a href="{{ route('Address.edit', ['Address' => $address->address->id]) }}" class="btn btn-primary">
                       <span class="fa fa-edit"> Modifier</span>
                     </a>

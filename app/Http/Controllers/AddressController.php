@@ -75,24 +75,28 @@ class AddressController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Address  $address
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Address $address)
+    public function edit($id)
     {
-        //
+      $address = Address::all()->find($id);
+      return view('Address.edit', ['address' => $address]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Address  $address
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Address $address)
+    public function update(Request $request, $id)
     {
-        //
+        $address = Address::find($id);
+        $address->fill($request->all());
+        $address->save();
+        return redirect()->route('Address.index');
     }
 
     /**
