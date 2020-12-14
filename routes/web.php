@@ -31,3 +31,6 @@ Route::resource('Schedule', 'ScheduleController')->only([
 Route::get('/contact', 'SendEmailController@index')->name('contact');
 Route::post('/contact/send', 'SendEmailController@send')->name('mail.send');
 Route::get('/mention', 'HomeController@mention')->name('mention');
+Route::resource('Calendar', 'CalendarController')->only([
+  'index'
+]);
