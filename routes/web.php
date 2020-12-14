@@ -35,3 +35,6 @@ Route::get('/mention', 'HomeController@mention')->name('mention');
 
 Route::get('/map', 'HomeController@map')->name('map');
 Route::get('/recruitment', 'HomeController@recruitment')->name('recruitment');
+Route::resource('Calendar', 'CalendarController')->only([
+  'index'
+]);
