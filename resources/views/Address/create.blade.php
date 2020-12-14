@@ -25,7 +25,7 @@
             <label for="country">Pays</label>
             <input name="country" id="country" type="text" tabindex="1" required autofocus>
           </div>
-          <button class="btn btn-primary" name="submit" type="submit" id="contact-submit">Modifier mes informations</button>
+          <button class="btn btn-primary" name="submit" type="submit" id="contact-submit">Ajouter une adresse</button>
         </form>
         {{-- <form action="{{ route('User.destroy', ['User' => $user->id]) }}" method="POST" style="display: contents">
           @csrf
