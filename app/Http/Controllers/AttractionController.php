@@ -14,7 +14,8 @@ class AttractionController extends Controller
      */
     public function index()
     {
-        //
+      $attractions = Attraction::all();
+      return view('Attraction.index', ['attractions' => $attractions]);
     }
 
     /**
@@ -24,7 +25,7 @@ class AttractionController extends Controller
      */
     public function create()
     {
-        //
+      return view('Attraction.create');
     }
 
     /**
@@ -35,7 +36,30 @@ class AttractionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $request->validate([
+          'name'=>'required',
+          'logo'=>'required',
+          'bg_image'=>'required',
+          'description'=>'required',
+          'min_height'=>'required'
+      ]);
+
+      $logo_url = $request->file('bg_image')->store('images/attractions');
+      $bg_image_url = $request->file('logo')->store('images/attractions');
+
+
+      $attraction = new Attraction([
+          'name' => $request->get('name'),
+          'logo_url' => $logo_url,
+          'bg_image_url' => $bg_image_url,
+          'description' => $request->get('description'),
+          'important_informations' => $request->get('important_informations'),
+          'min_height' => $request->get('min_height'),
+          'exp_given' => $request->get('exp_given')
+      ]);
+      $attraction->save();
+
+      return redirect()->route('Attraction.index');
     }
 
     /**
