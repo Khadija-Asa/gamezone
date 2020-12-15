@@ -103,11 +103,14 @@ class ScheduleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Schedule  $schedule
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Schedule $schedule)
+    public function destroy($id)
     {
-        //
+      $schedule = Schedule::find($id);
+      $schedule->delete();
+
+      return redirect()->route('Schedule.index');
     }
 }
