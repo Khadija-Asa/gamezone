@@ -25,5 +25,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('User', 'UsersController');
 Route::resource('Address', 'AddressController');
 Route::resource('Attraction', 'AttractionController');
+Route::resource('Schedule', 'ScheduleController')->only([
+  'index', 'store', 'create', 'edit', 'update', 'destroy'
+]);
 Route::get('/contact', 'SendEmailController@index')->name('contact');
 Route::post('/contact/send', 'SendEmailController@send')->name('mail.send');
