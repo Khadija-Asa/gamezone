@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.contact-part {
+    display: flex;
+    justify-content: center;
+}
+.contact-part-one {
+display: flex;
+flex-direction: column;
+}
+.contact-part-two {
+    display: flex;
+}
+.form-group-contact {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 20px 20px;
+}
+.form-group-contact textarea {
+    border-radius: 5px;
+    border: 1px solid;
+}
+.contactbutton {
+    display: flex;
+    justify-content: center;
+}

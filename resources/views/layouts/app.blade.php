@@ -24,6 +24,7 @@
     <link href="{{ asset('css/attractions.css') }}" rel="stylesheet">
     <link href="{{ asset('css/mention.css') }}" rel="stylesheet">
     <link href="{{ asset('css/map.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
