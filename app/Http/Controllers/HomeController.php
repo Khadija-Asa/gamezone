@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Attraction;
 
 class HomeController extends Controller
 {
@@ -28,5 +29,9 @@ class HomeController extends Controller
     public function mention()
     {
         return view('mention');
+    }
+    public function map()
+    {
+        return view('map');
     }
 }
