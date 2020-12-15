@@ -79,24 +79,48 @@ class AttractionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Attraction  $attraction
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Attraction $attraction)
+    public function edit($id)
     {
-        //
+      $attraction = Attraction::all()->find($id);
+      return view('Attraction.edit', ['attraction' => $attraction]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Attraction  $attraction
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Attraction $attraction)
+    public function update(Request $request, $id)
     {
-        //
+      $attraction = Attraction::find($id);
+      $attraction->fill([
+        'name' => $request->get('name'),
+        'description' => $request->get('description'),
+        'important_informations' => $request->get('important_informations'),
+        'min_height' => $request->get('min_height'),
+        'exp_given' => $request->get('exp_given'),
+      ]);
+      if ($request->hasFile('logo')) {
+        $logo_url = $request->file('logo')->store('public/attractions');
+        $logo_url = substr($logo_url, 7);
+        $attraction->fill([
+          'logo_url' => $logo_url
+        ]);
+      }
+      if ($request->hasFile('bg_image')) {
+        $bg_image_url = $request->file('bg_image')->store('public/attractions');
+        $bg_image_url = substr($bg_image_url, 7);
+        $attraction->fill([
+          'bg_image_url' => $bg_image_url
+        ]);
+      }
+      $attraction->save();
+      return redirect()->route('Attraction.index');
     }
 
     /**

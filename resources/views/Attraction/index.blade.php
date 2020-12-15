@@ -12,7 +12,12 @@
       <p>Description: {{ $attraction->description }}</p>
       <p>Informations importantes: {{ $attraction->important_informations }}</p>
       <p>Hauteur minimum: {{ $attraction->min_height }}cm</p>
-      <p>Expéreince gagnée: {{ $attraction->exp_given }}</p>
+      <p>Expérience gagnée: {{ $attraction->exp_given }}</p>
+      @if (Auth::user()->admin === 1)
+        <a href="{{ route('Attraction.edit', ['Attraction' => $attraction->id]) }}" class="btn btn-primary">
+          <span class="fa fa-edit"> Modifier</span>
+        </a>
+      @endif
     </div>
   @endforeach
 </div>
