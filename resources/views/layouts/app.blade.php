@@ -7,10 +7,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Gamezone</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -30,14 +31,20 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
+		<link href="{{ asset('css/header.css') }}" rel="stylesheet">
+
 </head>
+
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+
+						<div class="cart">
+                <a href="{{ url('/') }}"><i class="fas fa-shopping-basket"></i></a>
+							</div>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -53,13 +60,47 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">Se connecter</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">S'enregistrer</a>
                                 </li>
                             @endif
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">attractions</a>
+                                </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">plan</a>
+                                </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">se rendre au parc</a>
+                                </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">tarifs et billetterie</a>
+                                </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">horaires et calendrier</a>
+                                </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">my game</a>
+                                </li>
+														<li class="nav-item">
+                                <a class="nav-link" href="#">informations</a>
+                                </li>
+														
+													<ul class="languages-icon">
+																<li class="nav-item">
+                                <a class="nav-link" href="#"><img src="../images/flags/french.png"></a>
+                                </li>
+														<li class="nav-item">
+                                <a class="nav-link" href="#"><img src="../images/flags/english.png"></a>
+                                </li>
+														<li class="nav-item">
+                                <a class="nav-link" href="#"><img src="../images/flags/spanish.png"></a>
+                                </li>
+													</ul>
+
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -83,6 +124,19 @@
                 </div>
             </div>
         </nav>
+
+				<div class="top-logo">
+					<img src="../images/logo-gamezone.png">
+				</div>
+
+				<section class="top-image">
+
+					<div class="header-image">
+					</div>
+					<h1>game zone</h1>
+					<h2>Le premier parc d'attraction au monde entièrement dédié à l'univers des jeux-vidéos.
+				
+				<section>
 
         <main class="py-4">
             @yield('content')
