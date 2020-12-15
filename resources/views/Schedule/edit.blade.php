@@ -7,20 +7,19 @@
   @else
     <div class="row">
       <div class="col-8">
-        <form action="{{ route('Schedule.store') }}" method="POST" >
+        <form action="{{ route('Schedule.update', ['Schedule' => $day->id]) }}" method="POST" >
           @csrf
-          <div class="form-group">
-            <label for="day">Jour</label>
-            <select name="day" id="day" tabindex="1" required autofocus>
-              @foreach ($daysList as $dayOfList)
-                <option value="{{ $dayOfList }}">{{ $dayOfList }}</option>
-              @endforeach
-          </div>
+          @method('PUT')
+          <p>Jour: {{ $day->day }}</p>
           <div class="form-group">
             <label for="start_hour">Heure d'ouverture</label>
             <select name="start_hour" id="start_hour" tabindex="1" required autofocus>
               @foreach ($hours as $hour)
-                <option value="{{ $hour }}">{{ $hour }}</option>
+                @if ($day->start_hour == $hour)
+                  <option value="{{ $hour }}" selected>{{ $hour }}</option>
+                @else
+                  <option value="{{ $hour }}">{{ $hour }}</option>
+                @endif
               @endforeach
             </select>
           </div>
@@ -28,11 +27,15 @@
             <label for="end_hour">Heure de fermeture</label>
             <select name="end_hour" id="end_hour" tabindex="1" required autofocus>
               @foreach ($hours as $hour)
-                <option value="{{ $hour }}">{{ $hour }}</option>
+                @if ($day->end_hour == $hour)
+                  <option value="{{ $hour }}" selected>{{ $hour }}</option>
+                @else
+                  <option value="{{ $hour }}">{{ $hour }}</option>
+                @endif
               @endforeach
             </select>
           </div>
-          <button class="btn btn-primary" name="submit" type="submit" id="contact-submit">Ajouter les horaires</button>
+          <button class="btn btn-primary" name="submit" type="submit" id="contact-submit">Modifier les horaires</button>
         </form>
       </div>
     </div>
