@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Attraction;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AttractionController extends Controller
 {
@@ -44,8 +45,10 @@ class AttractionController extends Controller
           'min_height'=>'required'
       ]);
 
-      $logo_url = $request->file('bg_image')->store('images/attractions');
-      $bg_image_url = $request->file('logo')->store('images/attractions');
+      $logo_url = $request->file('bg_image')->store('public/attractions');
+      $bg_image_url = $request->file('logo')->store('public/attractions');
+      $logo_url = substr($logo_url, 7); //On enlève 'public/' de la string, pour faire l'affichage correctement dans la vue
+      $bg_image_url = substr($bg_image_url, 7);
 
 
       $attraction = new Attraction([
