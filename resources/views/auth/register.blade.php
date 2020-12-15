@@ -5,14 +5,14 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('Inscription') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="nickname" class="col-md-4 col-form-label text-md-right">Nom d'affichage</label>
+                            <label for="nickname" class="col-md-4 col-form-label text-md-right">Pseudo</label>
 
                             <div class="col-md-6">
                                 <input id="nickname" type="text" class="form-control @error('name') is-invalid @enderror" name="nickname" value="{{ old('name') }}" required autocomplete="nickname" autofocus>
@@ -26,7 +26,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">Adresse email</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">Adresse e-mail</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -64,28 +64,6 @@
                         </div>
 
                         <div class="form-group row">
-                          <label for="avatar1" class="col-md-4 col-form-label text-md-right">
-                            <img src="{{ asset('images/avatars/1.png') }}" style="max-width: 200px;">
-                          </label>
-                          <input type="radio" id="avatar1" name="avatar" value="images/avatars/1.png">
-
-                          <label for="avatar2" class="col-md-4 col-form-label text-md-right">
-                            <img src="{{ asset('images/avatars/2.png') }}" style="max-width: 200px;">
-                          </label>
-                          <input type="radio" id="avatar2" name="avatar" value="images/avatars/2.png">
-
-                          <label for="avatar3" class="col-md-4 col-form-label text-md-right">
-                            <img src="{{ asset('images/avatars/3.png') }}" style="max-width: 200px;">
-                          </label>
-                          <input type="radio" id="avatar3" name="avatar" value="images/avatars/3.png">
-
-                          <label for="avatar4" class="col-md-4 col-form-label text-md-right">
-                            <img src="{{ asset('images/avatars/4.png') }}" style="max-width: 200px;">
-                          </label>
-                          <input type="radio" id="avatar4" name="avatar" value="images/avatars/4.png">
-                        </div>
-
-                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">Mot de passe</label>
 
                             <div class="col-md-6">
@@ -107,10 +85,32 @@
                             </div>
                         </div>
 
+                        <div class="form-group row avatar">
+                          <label for="avatar1" class="col-md-4 col-form-label text-md-right">
+                            <img src="{{ asset('images/avatars/1.png') }}" style="max-width: 200px;">
+                          </label>
+                          <input type="radio" id="avatar1" name="avatar" value="images/avatars/1.png">
+
+                          <label for="avatar2" class="col-md-4 col-form-label text-md-right">
+                            <img src="{{ asset('images/avatars/2.png') }}" style="max-width: 200px;">
+                          </label>
+                          <input type="radio" id="avatar2" name="avatar" value="images/avatars/2.png">
+
+                          <label for="avatar3" class="col-md-4 col-form-label text-md-right">
+                            <img src="{{ asset('images/avatars/3.png') }}" style="max-width: 200px;">
+                          </label>
+                          <input type="radio" id="avatar3" name="avatar" value="images/avatars/3.png">
+
+                          <label for="avatar4" class="col-md-4 col-form-label text-md-right">
+                            <img src="{{ asset('images/avatars/4.png') }}" style="max-width: 200px;">
+                          </label>
+                          <input type="radio" id="avatar4" name="avatar" value="images/avatars/4.png">
+                        </div>
+
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                            <div class="col-md-6 offset-md-4 register">
+                                <button type="submit" class="btn btn-primary register">
+                                    {{ __('S\'inscrire') }}
                                 </button>
                             </div>
                         </div>
