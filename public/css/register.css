@@ -1,0 +1,10 @@
+.avatar {
+    justify-content: center;
+    text-align: center;
+}
+.register {
+display: flex;
+justify-content: center;
+margin-top: 20px;
+padding: 5px 100px;
+}
