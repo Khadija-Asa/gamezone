@@ -28,10 +28,10 @@
                   {{ $day->end_hour }}
                 </td>
                 <td>
-                  <a href="{{ route('Schedule.edit', ['Schedule' => $schedule->id]) }}" class="btn btn-primary">
+                  <a href="{{ route('Schedule.edit', ['Schedule' => $day->id]) }}" class="btn btn-primary">
                     <span class="fa fa-edit"> Modifier</span>
                   </a>
-                  <form action="{{ route('Schedule.destroy', ['Schedule' => $schedule->id]) }}" method="POST" style="display: contents">
+                  <form action="{{ route('Schedule.destroy', ['Schedule' => $day->id]) }}" method="POST" style="display: contents">
                     @csrf
                     @method('DELETE')
                     <button class="btn btn-danger" type="submit">
