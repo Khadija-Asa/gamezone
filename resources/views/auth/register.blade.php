@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+<section class="header-bottom">
+        <h1>GAME ZONE</h1>
+        <p>Le premier parc d’attraction <br>
+        au monde entièrement dédié à <br>
+        l’univers des jeux-vidéos.</p>
+    </section>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
