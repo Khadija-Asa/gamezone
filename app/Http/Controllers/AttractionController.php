@@ -129,8 +129,11 @@ class AttractionController extends Controller
      * @param  \App\Attraction  $attraction
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Attraction $attraction)
+    public function destroy($id)
     {
-        //
+      $attraction = Attraction::find($id);
+      $attraction->delete();
+
+      return redirect()->route('Attraction.index');
     }
 }

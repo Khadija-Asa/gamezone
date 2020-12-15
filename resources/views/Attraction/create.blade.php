@@ -43,13 +43,6 @@
             </div>
             <button class="btn btn-primary" name="submit" type="submit" id="contact-submit">Ajouter une attraction</button>
           </form>
-          {{-- <form action="{{ route('User.destroy', ['User' => $user->id]) }}" method="POST" style="display: contents">
-            @csrf
-            @method('DELETE')
-            <button class="btn btn-danger" type="submit">
-              <span class="fa fa-trash">Supprimer le compte</span>
-            </button>
-          </form> --}}
         </div>
       </div>
     @else

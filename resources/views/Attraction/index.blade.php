@@ -17,8 +17,20 @@
         <a href="{{ route('Attraction.edit', ['Attraction' => $attraction->id]) }}" class="btn btn-primary">
           <span class="fa fa-edit"> Modifier</span>
         </a>
+        <form action="{{ route('Attraction.destroy', ['Attraction' => $attraction->id]) }}" method="POST" style="display: contents">
+          @csrf
+          @method('DELETE')
+          <button class="btn btn-danger" type="submit">
+            <span class="fa fa-trash">Supprimer</span>
+          </button>
+        </form>
       @endif
     </div>
   @endforeach
+  @if (Auth::user()->admin ===1)
+    <a href="{{ route('Attraction.create') }}" class="btn btn-primary">
+      <span class="fa fa-edit"> Ajouter une attraction</span>
+    </a>
+  @endif
 </div>
 @endsection
