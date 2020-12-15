@@ -1,17 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
+<section class="header-bottom">
+        <h1>GAME ZONE</h1>
+        <p>Le premier parc d’attraction <br>
+        au monde entièrement dédié à <br>
+        l’univers des jeux-vidéos.</p>
+    </section>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header title-header">{{ __('Connexion') }}</div>
+            <div class="card-login">
+                <div class="card-header-login title-header">{{ __('Connexion') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="form-group row">
+                        <div class="form-group-login row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Adresse E-mail') }}</label>
 
                             <div class="col-md-6">
@@ -25,7 +31,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="form-group-login row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Mot de passe') }}</label>
 
                             <div class="col-md-6">
@@ -39,7 +45,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="form-group-login row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -51,14 +57,14 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                        <div class="form-group-login row mb-0">
+                            <div class="buttonlogingroup">
+                                <button type="submit" class="loginbutton">
                                     {{ __('Se connecter') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="forgetpassword" href="{{ route('password.request') }}">
                                         {{ __('Mot de passe oublié ?') }}
                                     </a>
                                 @endif
