@@ -25,3 +25,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('User', 'UsersController');
 Route::resource('Address', 'AddressController');
 Route::resource('Attraction', 'AttractionController');
+Route::get('/contact', 'SendEmailController@index')->name('contact');
+Route::post('/contact/send', 'SendEmailController@send')->name('mail.send');
