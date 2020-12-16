@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+<section class="header-bottom">
+        <h1>GAME ZONE</h1>
+        <p>NOUS CONTACTER</p>
+    </section>
 <div class="container-contact">
   <div class="row-contact">
   <p class="titlecontact">Pour toutes demandes vous pouvez nous contacter :</p>
