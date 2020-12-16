@@ -34,4 +34,8 @@ class HomeController extends Controller
     {
         return view('map');
     }
+    public function cookies()
+    {
+        return view('cookies');
+    }
 }
