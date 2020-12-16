@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  color: white;
+  font-size: 15px;
+}
+
+.paragraph {
+  background-image: url(../images/Group\ 30\ \(1\).png)!important;
+  background: center;
+  background-size: cover;
+  padding: 30px;
+  padding-top: 80px;
+}
+
+p {
+  color: white !important;
+  font-size: 10px;
+  text-align: justify !important;
+}
+
+.clause {
+  color: #EFC732;
+}
+
+@media only screen and (min-width: 768px) {
+  .paragraph {
+    padding: 50px;
+    padding-top: 100px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .paragraph {
+    padding: 80px;
+    padding-top: 130px;
+  }
+}
