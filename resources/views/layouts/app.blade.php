@@ -18,7 +18,6 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-<<<<<<< HEAD
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
@@ -27,8 +26,6 @@
     <link href="{{ asset('css/mention.css') }}" rel="stylesheet">
     <link href="{{ asset('css/map.css') }}" rel="stylesheet">
     <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
-=======
->>>>>>> 5df2d3433c1a4e4b0e680a8993a5098f4d896856
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
 		<link href="{{ asset('css/header.css') }}" rel="stylesheet">
 
@@ -105,13 +102,13 @@
               @endguest
 							<ul class="languages-icon">
 								<li class="nav-item">
-									<a class="nav-link" href="#"><img src="../images/flags/french.png"></a>
+									<a class="nav-link" href="#"><img src="{{ asset('images/flags/french.png') }}"></a>
 									</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#"><img src="../images/flags/english.png"></a>
+									<a class="nav-link" href="#"><img src="{{ asset('images/flags/english.png') }}"></a>
 									</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#"><img src="../images/flags/spanish.png"></a>
+									<a class="nav-link" href="#"><img src="{{ asset('images/flags/spanish.png') }}"></a>
 									</li>
 							</ul>
 					</ul>
@@ -119,7 +116,7 @@
 				</section>
 				
 				<div class="top-logo">
-					<a href="#"><img src="../images/logo-gamezone.png"></a>
+					<a href="#"><img src="{{ asset('images/logo-gamezone.png') }}"></a>
 				</div>
 			<header>
 
@@ -127,17 +124,20 @@
 
 		<section class="top-header">
 			<div class="navig-bar">
-	    	<ul class="languages-icon">
+	    	{{-- <ul class="languages-icon">
           <li class="nav-item">
-            <a class="languages-link" href="#"><img src="../images/flags/french.png"></a>
+            <a class="languages-link" href="#"><img src="{{ asset('images/flags/french.png') }}"></a>
           </li>
           <li class="nav-item">
-            <a class="languages-link" href="#"><img src="../images/flags/english.png"></a>
+            <a class="languages-link" href="#"><img src="{{ asset('images/flags/english.png') }}"></a>
           </li>
           <li class="nav-item">
-            <a class="languages-link" href="#"><img src="../images/flags/spanish.png"></a>
+            <a class="languages-link" href="#"><img src="{{ asset('images/flags/spanish.png') }}"></a>
           </li>
-        </ul>
+        </ul> --}}
+        <div class="contactHeader">
+          <span>Contactez nos experts: </span>
+        </div>
         <div class="account">
           <div class="avatar">
             <img src="{{ asset(Auth::user()->avatar) }}">
@@ -153,28 +153,19 @@
 
 		<nav class="navigation-bar">
 			<div class="logo-icon">
-					<a href="#"><img src="../images/logo-gamezone.png"></a>
-      <ul class="menu">
+        <a href="#"><img src="{{ asset('images/logo-gamezone.png') }}"></a>
+        <ul class="menu">
           <li><a class="nav-menu" href="">le parc</a></li>
           <li><a class="nav-menu" href="">les attractions</a></li>
           <li><a class="nav-menu" href="">le plan</a></li>
           <li><a class="nav-menu" href="">se rendre au parc</a></li>
-					<li><a class="nav-menu" href="">tarifs et billetterie</a></li>
-					<li><a class="nav-menu" href="">horaire et calendrier</a></li>
-					<li><a class="nav-menu" href="">my game</a></li>
-					<li><a class="nav-menu" href="">informations</a></li>
+          <li><a class="nav-menu" href="">tarifs et billetterie</a></li>
+          <li><a class="nav-menu" href="">horaire et calendrier</a></li>
+          <li><a class="nav-menu" href="">my game</a></li>
+          <li><a class="nav-menu" href="">informations</a></li>
         </ul>
-				</div>
-	</nav>
-
-		<section class="header-bottom">
-
-        <h1>GAME ZONE</h1>
-        <p>Le premier parc d’attraction <br>
-        au monde entièrement dédié à <br>
-        l’univers des jeux-vidéos.</p>
-
-    </section>
+			</div>
+	  </nav>
 
         <main class="py-4">
             @yield('content')
