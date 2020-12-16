@@ -15,7 +15,20 @@ class CalendarController extends Controller
     {
       $number_of_days = cal_days_in_month(CAL_GREGORIAN, date('m'), date('Y'));
       $first_day_timestamp = strtotime("first day of this month");
-      return view('Calendar.index', ['days' => $number_of_days, 'first_day_timestamp' => $first_day_timestamp, 'month' => date('F', strtotime('this month'))]);
+      $lastMondayOffFirstDay = date('d',strtotime('last monday', strtotime('first day of this month'))); // On se base sur le premier jour du mois, et on cherche le last monday
+      $numberDaysLastMonth = date('d', strtotime('last day of last month')); // On determine le nombre de jours dans le mois précédent
+      $monthOffset = ($numberDaysLastMonth-$lastMondayOffFirstDay)+1; //Determine le nombre de jours depuis les dernier lundi, par rapport au premier jour de ce mois 
+                                                                      //(Ex: Le mois commence Jeudi 1, Il y a donc 3 jours depuis le dernier lundi)   
+      $firstTuesday = date('d', strtotime("first tuesday of this month"));
+      $lastSunday = date('d', strtotime("last sunday of this month"));
+      return view('Calendar.index', [
+                                      'days' => $number_of_days, 
+                                      'first_day_timestamp' => $first_day_timestamp, 
+                                      'month' => date('F', strtotime('this month')), 
+                                      'monthOffset' => $monthOffset,
+                                      'firstTuesday' => $firstTuesday,
+                                      'lastSunday' => $lastSunday
+                                    ]);
     }
 
     /**
