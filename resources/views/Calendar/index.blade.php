@@ -3,8 +3,16 @@
 @section('title', 'Tous les utilisateurs')
 
 @section('content')
+<section class="header-bottom-calendar">
+        <h1>GAME ZONE</h1>
+        <p>Le premier parc d’attraction <br>
+        au monde entièrement dédié à <br>
+        l’univers des jeux-vidéos.</p>
+    </section>
+
 <div class="calendarContainer">
   <div class="calendar">
+    <h2>DATE DU JOUR</h2>
     <table>
       <th>L</th>
       <th>M</th>
@@ -48,5 +56,46 @@
       </tr>
     </table>
   </div>
+  <div class="day-open">
+    <div class="day">
+      <div class="square-close"></div>
+      <p>parc fermé</p>
+    </div>
+    <div class="day">
+      <div class="square-open"></div>
+      <p>parc ouvert</p>
+    </div>
+    <div class="day">
+      <div class="square-special"></div>
+      <p>Journée spécial</p>
+    </div>
+    <div class="day">
+      <div class="square-night"></div>
+      <p>Nocturne</p>
+    </div>
+  </div>
+
+  <div class="days-special">
+    <div class="day-special">
+      <h3>Journée spéciale</h3>
+      <p>Textdsc vxd vsff vs dvsd v wdv dd vx ddv sdv sf v fsv fs v<br>
+    wwwwwwwwwwwwwwwwwwwwwwww</p>
+    </div>
+    <div class="day-special">
+      <h3>Nocturne</h3>
+      <p>Textdsc vxd vsff vs dvsd v wdv dd vx ddv sdv sf v fsv fs v<br>
+    wwwwwwwwwwwwwwwwwwwwwwww</p>
+    </div>
+  </div>
+  <h2>Préparer sa visite</h2>
+  <div class="preparation">
+    <div>
+      <p><a href="">Se rendre au parc</a></p>
+    </div>
+    <div>
+      <p><a href="">Tarif et billetterie</a></p>
+    </div>
+  </div>
 </div>
+
 @endsection
