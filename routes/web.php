@@ -42,3 +42,5 @@ Route::resource('Calendar', 'CalendarController')->only([
 Route::get('/cookies', 'HomeController@cookies')->name('cookies');
 
 Route::get('/legal', 'HomeController@legal')->name('legal');
+
+Route::get('/sale', 'HomeController@sale')->name('sale');

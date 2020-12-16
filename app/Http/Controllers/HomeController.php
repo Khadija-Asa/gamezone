@@ -46,4 +46,8 @@ class HomeController extends Controller
     {
         return view('legal');
     }
+    public function sale()
+    {
+        return view('sale');
+    }
 }
