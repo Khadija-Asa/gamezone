@@ -1,71 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   font-family: 'Josefin Sans', sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+/*MENU BURGER*/
 
-body {
-  margin: 0;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #212529;
-  text-align: left;
-  background-color: #f8fafc;
+.ham {
+  background-color: transparent;
+  background-image: url("../images/burger-white.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  width: 30px;
+  height: 35px;
+  z-index: 1000;
 }
 
-.container {
+.nav-bar {
   background-color: #282C53;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.showClose {
+  background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
+  background-color: transparent;
+}
+
+.navbar {
+  background: #282C53;
+  left: 0;
+  width: 100vw;
+  overflow: hidden;
   color: white;
+  transform: translateY(-150%);
+  transition: transform 0.30s ease;
+  position: absolute;
+  padding-top: 15px;
+}
+
+.showNav {
+  transform: translateY(0);
+}
+
+.navbar li {
+  display: flex;
+  font-size: 15px;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-decoration: none;
 }
 
 .nav-item a {
   background-color: #282C53;
-  color: white !important;
+  color: white;
   text-align: center;
   list-style-type: none;
+  margin-top: 35px;
   text-transform: uppercase;
 }
+
+.nav-item a:hover {
+  color: #EFC732 !important;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*languages*/
 
 .languages-icon img {
   height: 20px;
   width: 20px;
 }
 
-.languages-icon li {
-  list-style-type: none;
+.languages-icon {
+  display: flex;
+  justify-content: center;
 }
 
-.cart a {
+.languages-icon li {
+  list-style: none;
+  margin: 15px;
+}
+
+/*icon*/
+
+.cart a,
+.user a {
   color: white;
   font-size: 20px;
   margin-left: 10px;
 }
 
+/*logo*/
+
 .top-logo {
   background-color: #323868;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 20px;
 }
 
 .top-logo img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  width: 30%;
 }
 
-.header-image {
-  background: cover / center no-repeat url(../images/vrgamezone.png);
-  height: 50px;
-  width: 50px;
+/*header-bottom*/
+
+.header-bottom {
+  color: #EFC732;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/vrgamezone.png)!important;
+  background: center;
+  background-size: cover;
+  height: 65vh;
+  text-shadow: 1px 1px #000;
 }
 
-h1 {
-  text-transform: uppercase;
+.header-bottom p {
+  text-align: center;
   color: #EFC732;
 }
 
+.top-header,
+.navigation-bar {
+  display: none;
+}
+
+/*MQ*/
+
+@media only screen and (min-width: 768px) {
+  .ham {
+    margin-right: 30px;
+  }
+  .top-logo img {
+    width: 20%;
+  }
+  .navbar {
+    padding-top: 20px;
+  }
+  .cart a,
+  .user a {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .header-bottom {
+    align-items: flex-start;
+  }
+  .header-bottom h1,
+  .header-bottom p {
+    margin-left: 100px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .ham,
+  .top-nav,
+  .navbar,
+  .top-logo {
+    display: none;
+  }
+  .top-header {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+  }
+  .navigation-bar {
+    background-color: #323868;
+    display: block;
+    height: 220px;
+  }
+  .nav-menu {
+    color: white;
+    display: flex;
+  }
+  .logo-icon {
+    position:absolute;
+  }
+  .logo-icon img {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+  }
+  ul {
+    display: flex;
+    justify-content: end;
+    text-decoration: none;
+  }
+  li {
+    font-size: 13px;
+    margin: 15px;
+    text-transform: uppercase;
+    list-style: none;
+  }
+  .menu li:hover {
+    color: #EFC732 !important;
+    text-decoration: none;
+  }
+}
