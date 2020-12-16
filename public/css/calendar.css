@@ -1,16 +1,81 @@
+/*Global*/
+/*Calendar*/
+
 .calendarContainer {
-
+  background-image: url(../images/backgroud.png);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
 }
-
+h1 {
+  margin-bottom: 50px;
+  font-size: 40px;
+  color: #EFC732;
+}
+.calendarContainer h2 {
+  text-align: center;
+  font-size: 30px;
+  color: #EFC732;
+  margin-top: 40px;
+}
+.preparation div {
+  margin: 70px;
+  padding: 105px 50px;
+  border-radius: 50%;
+background: #323868;
+box-shadow:  13px 13px 26px #222647, 
+             -10px -10px 26px #424a89;
+}
+table th {
+  color: #C4C4C4;
+  font-size: 30px;
+}
+.days-special {
+  margin-top: 40px;
+}
+.day-special {
+  background-color: #C4C4C4;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 10px;
+  margin: 20px 5px;
+}
+.day-special p {
+  margin-top: 20px;
+  color: #000;
+}
+/*header-bottom*/
+ .header-bottom-calendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/background-header.png)!important;
+  background: center;
+  background-size: cover;
+  height: 65vh;
+  text-shadow: 1px 1px #000;
+}
+.header-bottom-calendar p {
+  text-align: center;
+  color: #EFC732;
+}
 .calendar {
   border-radius: 10px;
+  margin-bottom: 20px;
 }
-
+.calendar h2 {
+  color: #EFC732;
+  margin: 20px;
+  text-align: center;
+}
 .calendar td {
   border-radius: 50%;
   padding: 5px;
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   text-align: center;
   font-size: 20px;
   font-weight: 500;
@@ -32,4 +97,55 @@
 
 .ordinary {
   background-color: #56A342; 
+}
+.day-open {
+  display: flex;
+  margin: 0 10px;
+}
+.day-open .day {
+  display: flex;
+  margin-left: 20px;
+}
+.day-open .day p {
+  padding-left: 2px;
+  font-size: 10px;
+}
+
+.square-close,
+.square-open,
+.square-special,
+.square-night {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+.square-close {
+  background-color: #C4C4C4;
+}
+.square-night {
+  background-color: black;
+}
+.square-open {
+  background-color: darkgreen;
+}
+.square-special {
+  background-color: rgb(6, 6, 51);
+}
+
+@media screen and (min-width: 800px) {
+  /*Header bottom*/
+  .header-bottom-calendar {
+    align-items: flex-start;
+  }
+  .header-bottom-calendar h1,
+  .header-bottom-calendar p {
+    margin-left: 100px;
+  }
+  .preparation {
+    display: flex;
+    justify-content: center;
+  }
+  .days-special {
+    display: flex;
+  }
 }
