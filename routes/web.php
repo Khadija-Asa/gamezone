@@ -27,3 +27,4 @@ Route::resource('Address', 'AddressController');
 Route::resource('Attraction', 'AttractionController');
 Route::get('/contact', 'SendEmailController@index')->name('contact');
 Route::post('/contact/send', 'SendEmailController@send')->name('mail.send');
+Route::get('/mention', 'HomeController@mention')->name('mention');

@@ -17,8 +17,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/attractions.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/mention.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">

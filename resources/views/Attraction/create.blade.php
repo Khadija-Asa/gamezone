@@ -33,6 +33,7 @@
             <div class="form-group">
               <label for="min_height">Taille minimum</label>
               <select name="min_height" id="min_height">
+                <option value="0">Accessible à tous</option>
                 <option value="110">1m10</option>
                 <option value="130">1m30</option>
               </select>

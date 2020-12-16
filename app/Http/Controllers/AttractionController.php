@@ -45,8 +45,8 @@ class AttractionController extends Controller
           'min_height'=>'required'
       ]);
 
-      $logo_url = $request->file('bg_image')->store('public/attractions');
-      $bg_image_url = $request->file('logo')->store('public/attractions');
+      $logo_url = $request->file('logo')->store('public/attractions');
+      $bg_image_url = $request->file('bg_image')->store('public/attractions');
       $logo_url = substr($logo_url, 7); //On enlève 'public/' de la string, pour faire l'affichage correctement dans la vue
       $bg_image_url = substr($bg_image_url, 7);
 
