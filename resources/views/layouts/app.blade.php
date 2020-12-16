@@ -26,11 +26,14 @@
     <link href="{{ asset('css/mention.css') }}" rel="stylesheet">
     <link href="{{ asset('css/map.css') }}" rel="stylesheet">
     <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
+<<<<<<< HEAD
     <link href="{{ asset('css/recruitment.css') }}" rel="stylesheet">
     <link href="{{ asset('css/calendar.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+=======
+>>>>>>> removed flags
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
 		<link href="{{ asset('css/header.css') }}" rel="stylesheet">
 
@@ -107,13 +110,13 @@
 								@endguest
 							<ul class="languages-icon">
 								<li class="nav-item">
-									<a class="nav-link" href="#"><img src="../images/flags/french.png"></a>
+									<a class="nav-link" href="#"><img src="{{ asset('images/flags/french.png') }}"></a>
 									</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#"><img src="../images/flags/english.png"></a>
+									<a class="nav-link" href="#"><img src="{{ asset('images/flags/english.png') }}"></a>
 									</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#"><img src="../images/flags/spanish.png"></a>
+									<a class="nav-link" href="#"><img src="{{ asset('images/flags/spanish.png') }}"></a>
 									</li>
 							</ul>
 					</ul>
@@ -121,7 +124,7 @@
 				</section>
 				
 				<div class="top-logo">
-					<a href="#"><img src="../images/logo-gamezone.png"></a>
+					<a href="#"><img src="{{ asset('images/logo-gamezone.png') }}"></a>
 				</div>
 			<header>
 
@@ -129,47 +132,48 @@
 
 		<section class="top-header">
 			<div class="navig-bar">
-		<ul class="languages-icon">
-								<li class="nav-item">
-									<a class="languages-link" href="#"><img src="../images/flags/french.png"></a>
-									</li>
-								<li class="nav-item">
-									<a class="languages-link" href="#"><img src="../images/flags/english.png"></a>
-									</li>
-								<li class="nav-item">
-									<a class="languages-link" href="#"><img src="../images/flags/spanish.png"></a>
-									</li>
-							</ul>
-					<div class="account">
-						<a href="#">Mon compte</a>
-						</div>
-				</div>
-			</section>
+	    	{{-- <ul class="languages-icon">
+          <li class="nav-item">
+            <a class="languages-link" href="#"><img src="{{ asset('images/flags/french.png') }}"></a>
+          </li>
+          <li class="nav-item">
+            <a class="languages-link" href="#"><img src="{{ asset('images/flags/english.png') }}"></a>
+          </li>
+          <li class="nav-item">
+            <a class="languages-link" href="#"><img src="{{ asset('images/flags/spanish.png') }}"></a>
+          </li>
+        </ul> --}}
+        <div class="contactHeader">
+          <span>Contactez nos experts: </span>
+        </div>
+        <div class="account">
+          <div class="avatar">
+            <img src="{{ asset(Auth::user()->avatar) }}">
+          </div>
+          <div>
+            Bienvenue, {{ Auth::user()->nickname }}<br>
+            Expérience: {{ Auth::user()->exp }}<br>
+            <a href="{{ route('User.edit', ['User' => Auth::user()->id]) }}">Mon compte</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
 		<nav class="navigation-bar">
 			<div class="logo-icon">
-					<a href="#"><img src="../images/logo-gamezone.png"></a>
-      <ul class="menu">
+        <a href="#"><img src="{{ asset('images/logo-gamezone.png') }}"></a>
+        <ul class="menu">
           <li><a class="nav-menu" href="">le parc</a></li>
           <li><a class="nav-menu" href="">les attractions</a></li>
           <li><a class="nav-menu" href="">le plan</a></li>
           <li><a class="nav-menu" href="">se rendre au parc</a></li>
-					<li><a class="nav-menu" href="">tarifs et billetterie</a></li>
-					<li><a class="nav-menu" href="">horaire et calendrier</a></li>
-					<li><a class="nav-menu" href="">my game</a></li>
-					<li><a class="nav-menu" href="">informations</a></li>
+          <li><a class="nav-menu" href="">tarifs et billetterie</a></li>
+          <li><a class="nav-menu" href="">horaire et calendrier</a></li>
+          <li><a class="nav-menu" href="">my game</a></li>
+          <li><a class="nav-menu" href="">informations</a></li>
         </ul>
-				</div>
-	</nav>
-
-		<section class="header-bottom">
-
-        <h1>GAME ZONE</h1>
-        <p>Le premier parc d’attraction <br>
-        au monde entièrement dédié à <br>
-        l’univers des jeux-vidéos.</p>
-
-    </section>
+			</div>
+	  </nav>
 
         <main class="py-4">
             @yield('content')
