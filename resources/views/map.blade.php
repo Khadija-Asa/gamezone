@@ -1,10 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-<input type="checkbox" id="servicesCheckbox" checked> <label for="servicesCheckbox">Services</label>
-<input type="checkbox" id="restaurantsCheckbox" checked> <label for="restaurantsCheckbox">Restaurants</label>
-<input type="checkbox" id="shopsCheckbox" checked> <label for="shopsCheckbox">Boutiques</label>
-<input type="checkbox" id="photosCheckbox" checked> <label for="photosCheckbox">Points photos</label>
+<div>
+  <h3>Services</h3>
+  <input type="checkbox" id="servicesCheckbox" checked> <label for="servicesCheckbox">Services</label>
+  <input type="checkbox" id="restaurantsCheckbox" checked> <label for="restaurantsCheckbox">Restaurants</label>
+  <input type="checkbox" id="shopsCheckbox" checked> <label for="shopsCheckbox">Boutiques</label>
+  <input type="checkbox" id="photosCheckbox" checked> <label for="photosCheckbox">Points photos</label>
+</div>
+<div>
+  <h3>Attraction accessibles</h3>
+  <input type="radio" id="tall0" name="tall" checked> <label for="tall0">Je mesure plus de 1m30</label>
+  <input type="radio" id="tall1" name="tall"> <label for="tall1">Je mesure moins de 1m10</label>
+  <input type="radio" id="tall2" name="tall"> <label for="tall2">Je mesure moins de 1m30</label>
+</div>
 <div class="map">
     <img src="{{ asset('images/map.png') }}" class="globalMap">
     <img src="{{ asset('images/photos_point.png') }}" class="photo1" id="photos">
