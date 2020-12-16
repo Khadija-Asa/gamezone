@@ -38,4 +38,8 @@ class HomeController extends Controller
     {
         return view('recruitment');
     }
+    public function cookies()
+    {
+        return view('cookies');
+    }
 }

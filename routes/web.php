@@ -38,3 +38,5 @@ Route::get('/recruitment', 'HomeController@recruitment')->name('recruitment');
 Route::resource('Calendar', 'CalendarController')->only([
   'index'
 ]);
+
+Route::get('/cookies', 'HomeController@cookies')->name('cookies');
