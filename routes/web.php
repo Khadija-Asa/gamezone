@@ -34,3 +34,4 @@ Route::post('/contact/send', 'SendEmailController@send')->name('mail.send');
 Route::get('/mention', 'HomeController@mention')->name('mention');
 
 Route::get('/map', 'HomeController@map')->name('map');
+Route::get('/pricelist', 'HomeController@pricelist')->name('pricelist');
