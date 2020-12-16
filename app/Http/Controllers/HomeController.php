@@ -34,4 +34,8 @@ class HomeController extends Controller
     {
         return view('map');
     }
+    public function recruitment()
+    {
+        return view('recruitment');
+    }
 }
