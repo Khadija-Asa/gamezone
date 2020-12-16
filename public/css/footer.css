@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+hr {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 60%;
+  border: 1px solid #EFC732;
+}
+
+.bottom-page {
+  background : center / cover no-repeat url(../images/back-footer.png);
+  text-align: center;
+}
+
+.social-media {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.social-media a {
+  color: black;
+  font-size: 20px;
+  margin: 5px;
+}
+
+.logo-image img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 40%;
+}
+
+.social-media a:hover {
+  color: #EFC732;
+}
+
+h3 {
+  color: #EFC732;
+  text-transform: uppercase;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.links,
+.laws {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.links a,
+.laws a {
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.laws a:hover,
+.links a:hover {
+  color: #EFC732;
+}
+
+.opening {
+  color: white;
+  line-height: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.copyright {
+  color: white;
+  font-size: 12px;
+  margin-top: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+  .logo-image img {
+    width: 20%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .social-media {
+    display: flex;
+    justify-content: center;
+  }
+  .social-media a {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  h3 {
+    margin-right: 30px;
+  }
+  .logo-image img {
+    width: 10%;
+  }
+  .links,
+  .laws {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .links a,
+  .laws a {
+    margin-right: 25px;
+  }
+  hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 30%;
+  }
+  a {
+    font-size: 15px;
+  }
+}
