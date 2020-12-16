@@ -176,3 +176,13 @@
     top: 4%; 
     left: 67%;
 }
+
+.mapContainer {
+  background-color: #323868;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.checkboxes img {
+  width: 30px;
+}
