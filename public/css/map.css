@@ -1,0 +1,178 @@
+.map {
+    max-width: 1000px;
+    margin: auto;
+    position: relative; /* On met la map en relatif, pour que la position: absolute des marqueurs se fassent par rapport à la map */
+}
+
+.globalMap {
+    width: 100%;
+}
+
+.photo1, .photo2, .photo3, .photo4, .photo5,
+.restaurant1, .restaurant2, .restaurant3, .restaurant4, .restaurant5,
+.shop1, .shop2, .shop3, .shop4, .shop5,
+.service1, .service2, .service3, .service4, .service5 {
+    position: absolute; /* On place les images en absolute, par rapport au dernier parent relatif, qui est donc le .map */
+    width: 3.4%; /* En % (du parent, donc .map) pour la responsive */
+}
+
+.awesomeHeroes,
+.battleKart,
+.championsLeague,
+.championsLeagueSurvivor,
+.contagionVR,
+.fighter,
+.gameCenter,
+.heroesTeam,
+.superFighter {
+    position: absolute;
+    width: 12%;
+}
+
+.photo1 {
+    top: 42%; /* On tatonne dans la console web pour savoir où placer le marqueur, en % (si l'image change de taille, le % conservera la position correcte du marqueur) */
+    left: 39%;
+}
+
+.photo2 {
+    top: 24%;
+    left: 51%;
+}
+
+.photo3 {
+    top: 19%;
+    left: 61%;
+}
+
+.photo4 {
+    top: 30%;
+    left: 71%;
+}
+
+.photo5 {
+    top: 23%;
+    left: 85%;
+}
+
+
+.restaurant1 {
+    top: 42%; 
+    left: 29%;
+}
+
+.restaurant2 {
+    top: 48%;
+    left: 46%;
+}
+
+.restaurant3 {
+    top: 9%;
+    left: 60%;
+}
+
+.restaurant4 {
+    top: 38%;
+    left: 73%;
+}
+
+.restaurant5 {
+    top: 18%;
+    left: 77%;
+}
+
+
+.shop1 {
+    top: 55%; 
+    left: 34%;
+}
+
+.shop2 {
+    top: 40%;
+    left: 53%;
+}
+
+.shop3 {
+    top: 13%;
+    left: 65%;
+}
+
+.shop4 {
+    top: 24%;
+    left: 65%;
+}
+
+.shop5 {
+    top: 33%;
+    left: 84%;
+}
+
+
+.service1 {
+    top: 44%; 
+    left: 49%;
+}
+
+.service2 {
+    top: 34%;
+    left: 43%;
+}
+
+.service3 {
+    top: 24%;
+    left: 41%;
+}
+
+.service4 {
+    top: 42%;
+    left: 69%;
+}
+
+.service5 {
+    top: 27%;
+    left: 78%;
+}
+
+.awesomeHeroes {
+    top: 23%; 
+    left: 29%;
+}
+
+.battleKart {
+    top: 59%; 
+    left: 57%;
+}
+
+.championsLeague {
+    top: 43%; 
+    left: 83%;
+}
+
+.championsLeagueSurvivor {
+    top: 8%; 
+    left: 38%;
+}
+
+.contagionVR {
+    top: 4%; 
+    left: 80%;
+}
+
+.fighter {
+    top: 51%; 
+    left: 19%;
+}
+
+.gameCenter {
+    top: 31%; 
+    left: 16%;
+}
+
+.heroesTeam {
+    top: 23%; 
+    left: 88%;
+}
+
+.superFighter {
+    top: 4%; 
+    left: 67%;
+}
