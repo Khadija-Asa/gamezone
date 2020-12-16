@@ -32,110 +32,146 @@
 </head>
 
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
 
-						<div class="cart">
-                <a href="{{ url('/') }}"><i class="fas fa-shopping-basket"></i></a>
-							</div>
+<!--mobile-->
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+		<header class="nav-bar">
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">Se connecter</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">S'enregistrer</a>
-                                </li>
-                            @endif
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">attractions</a>
-                                </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">plan</a>
-                                </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">se rendre au parc</a>
-                                </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">tarifs et billetterie</a>
-                                </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">horaires et calendrier</a>
-                                </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">my game</a>
-                                </li>
-														<li class="nav-item">
-                                <a class="nav-link" href="#">informations</a>
-                                </li>
-														
-													<ul class="languages-icon">
-																<li class="nav-item">
-                                <a class="nav-link" href="#"><img src="../images/flags/french.png"></a>
-                                </li>
-														<li class="nav-item">
-                                <a class="nav-link" href="#"><img src="../images/flags/english.png"></a>
-                                </li>
-														<li class="nav-item">
-                                <a class="nav-link" href="#"><img src="../images/flags/spanish.png"></a>
-                                </li>
-													</ul>
-
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->nickname }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-				<div class="top-logo">
-					<img src="../images/logo-gamezone.png">
-				</div>
-
-				<section class="top-image">
-
-					<div class="header-image">
+				<section class="top-nav">	
+					<div class="cart">
+						<a href="{{ url('/') }}"><i class="fas fa-shopping-basket"></i></a>
 					</div>
-					<h1>game zone</h1>
-					<h2>Le premier parc d'attraction au monde entièrement dédié à l'univers des jeux-vidéos.
+					<div class="user">
+						<a href="{{ url('/User') }}"><i class="far fa-user"></i></a>
+					</div>
+
+			<button class="ham"></button>
+				<nav class="navbar">
+
+						<ul>
+							<li class="nav-item">
+            <a class="nav-link" href="#">le parc</a>
+            </li>
+							<li class="nav-item">
+            <a class="nav-link" href="#">les attractions</a>
+            </li>
+							<li class="nav-item">
+            <a class="nav-link" href="#">le plan</a>
+            </li>
+							<li class="nav-item">
+            <a class="nav-link" href="#">se rendre au parc</a>
+            </li>
+							<li class="nav-item">
+            <a class="nav-link" href="#">tarifs et billetterie</a>
+            </li>
+						<li class="nav-item">
+            <a class="nav-link" href="#">horaires et calendrier</a>
+            </li>
+						<li class="nav-item">
+            <a class="nav-link" href="#">my game</a>
+            </li>
+						<li class="nav-item">
+            <a class="nav-link" href="#">informations</a>
+            </li>
+
+							@guest
+								<li class="nav-item">
+									<a class="nav-link" href="{{ route('login') }}">Se connecter</a>
+									</li>
+							@if (Route::has('register'))
+								<li class="nav-item">
+									<a class="nav-link" href="{{ route('register') }}">S'enregistrer</a>
+									</li>
+							@endif
+								@else
+										<li class="nav-item dropdown">
+											<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+												{{ Auth::user()->nickname }}</a>
+
+								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+											<a class="dropdown-item" href="{{ route('logout') }}"
+												onclick="event.preventDefault();
+											document.getElementById('logout-form').submit();">
+											{{ __('Logout') }}</a>
+
+									<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+										@csrf
+									</form>
+										</div>
+										</li>
+								@endguest
+							<ul class="languages-icon">
+								<li class="nav-item">
+									<a class="nav-link" href="#"><img src="../images/flags/french.png"></a>
+									</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#"><img src="../images/flags/english.png"></a>
+									</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#"><img src="../images/flags/spanish.png"></a>
+									</li>
+							</ul>
+					</ul>
+				</nav>
+				</section>
 				
-				<section>
+				<div class="top-logo">
+					<a href="#"><img src="../images/logo-gamezone.png"></a>
+				</div>
+			<header>
+
+<!--pc-->
+
+		<section class="top-header">
+			<div class="navig-bar">
+		<ul class="languages-icon">
+								<li class="nav-item">
+									<a class="languages-link" href="#"><img src="../images/flags/french.png"></a>
+									</li>
+								<li class="nav-item">
+									<a class="languages-link" href="#"><img src="../images/flags/english.png"></a>
+									</li>
+								<li class="nav-item">
+									<a class="languages-link" href="#"><img src="../images/flags/spanish.png"></a>
+									</li>
+							</ul>
+					<div class="account">
+						<a href="#">Mon compte</a>
+						</div>
+				</div>
+			</section>
+
+		<nav class="navigation-bar">
+			<div class="logo-icon">
+					<a href="#"><img src="../images/logo-gamezone.png"></a>
+      <ul class="menu">
+          <li><a class="nav-menu" href="">le parc</a></li>
+          <li><a class="nav-menu" href="">les attractions</a></li>
+          <li><a class="nav-menu" href="">le plan</a></li>
+          <li><a class="nav-menu" href="">se rendre au parc</a></li>
+					<li><a class="nav-menu" href="">tarifs et billetterie</a></li>
+					<li><a class="nav-menu" href="">horaire et calendrier</a></li>
+					<li><a class="nav-menu" href="">my game</a></li>
+					<li><a class="nav-menu" href="">informations</a></li>
+        </ul>
+				</div>
+	</nav>
+
+		<section class="header-bottom">
+
+        <h1>GAME ZONE</h1>
+        <p>Le premier parc d’attraction <br>
+        au monde entièrement dédié à <br>
+        l’univers des jeux-vidéos.</p>
+
+    </section>
 
         <main class="py-4">
             @yield('content')
         </main>
     </div>
-</body>
+
+			
+		<script src="js/script.js"></script> 
+	</body>
 </html>
