@@ -18,6 +18,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 </head>
 <body>
     <div id="app">
@@ -75,6 +77,53 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <footer>
+
+    <section class="bottom-page">
+
+      <div class="social-media">
+        <h3>suivez gamezone :</h3>
+        <a href="www.twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="www.youtube.com"><i class="fab fa-youtube"></i></a>
+        <a href="www.instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="www.facebook.com"><i class="fab fa-facebook"></i></a>
+      </div>
+
+      <div class="logo-image">
+        <a href="#"><img src="logo-gamezone.png" alt="logo"></a>
+      </div>
+
+      <div class="links">
+          <a href="">nous contacter</a>
+          <a href="">on recrute</a>
+          <a href="">dans la presse</a>
+          <a href="">à propos du parc</a>
+      </div>
+
+      <hr>
+
+      <div class="opening">
+        <p>
+          Du lundi au jeudi : 9h - 19h <br>
+          Du vendredi au samedi : 9h - 20h <br>
+          Le dimanche : 9h - 18h
+        </p>
+      </div>
+
+      <hr>
+
+      <div class="laws">
+        <a href="">conditions de vente</a>
+        <a href="">cookies</a>
+        <a href="">conditions légales</a>
+      </div>
+
+      <p class="copyright"><i class="far fa-copyright"></i>Copyright Gamezone</p>
+    </section>
+
+
+  </footer>
     </div>
 </body>
 </html>
