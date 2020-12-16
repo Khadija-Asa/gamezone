@@ -57,3 +57,4 @@ Route::group(['middleware' => 'is.admin'], function() {
     'store', 'create', 'update', 'show', 'destroy'
   ]);
 });
+Route::get('/pricelist', 'HomeController@pricelist')->name('pricelist');

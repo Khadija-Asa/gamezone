@@ -49,4 +49,8 @@ class HomeController extends Controller
     {
         return view('sale');
     }
+    public function pricelist()
+    {
+        return view('pricelist');
+    }
 }
