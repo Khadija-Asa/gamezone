@@ -1,3 +1,27 @@
+/*Global*/
+/*Page Map*/
+/*header-bottom*/
+.header-bottom-map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/background-header.png)!important;
+    background: center;
+    background-size: cover;
+    height: 65vh;
+    text-shadow: 1px 1px #000;
+  }
+  .header-bottom-map p {
+    text-align: center;
+    color: #EFC732;
+  }
+  .header-bottom-map h1 {
+    margin-bottom: 50px;
+    font-size: 40px;
+    color: #EFC732;
+  }
+  /*Section Map*/
 .map {
     max-width: 1000px;
     margin: auto;
@@ -181,8 +205,38 @@
   background-color: #323868;
   width: 100%;
   min-height: 100vh;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
 }
-
+.mapContainer div {
+  margin-bottom: 20px;
+}
+.mapContainer div h3 {
+    margin-bottom: 20px;
+    color: #EFC732;
+    font-size: 30px;
+}
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+}
 .checkboxes img {
   width: 30px;
+}
+/*PC*/
+@media screen and (min-width: 800px) {
+    /*Header bottom*/
+    .header-bottom-map {
+      align-items: flex-start;
+    }
+    .header-bottom-map h1,
+    .header-bottom-map p {
+      margin-left: 100px;
+    }
+    .mapContainer {
+      flex-direction: row;
+    }
 }

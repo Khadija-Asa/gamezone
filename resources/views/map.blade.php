@@ -1,10 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
+
+<section class="header-bottom-map">
+  <h1>GAME ZONE</h1>
+  <p>LA CARTE DU PARC</p>
+</section>
+
 <section class="mapContainer">
   <div class="checkboxes">
-    <div>
-      <h3>Services</h3>
+      <div>
+        <h3>Services</h3>
       <div>
         <input type="checkbox" id="servicesCheckbox" checked> 
         <label for="servicesCheckbox"><img src="{{ asset('images/services.png') }}"> Services</label>
@@ -22,10 +28,10 @@
         <label for="photosCheckbox"><img src="{{ asset('images/photos_point.png') }}"> Points photos</label>
       </div>
     </div>
-    <div>
+    <div class="">
       <h3>Attraction accessibles</h3>
-      <input type="radio" id="tall0" name="tall" checked> <label for="tall0">Je mesure plus de 1m30</label>
-      <input type="radio" id="tall1" name="tall"> <label for="tall1">Je mesure moins de 1m10</label>
+      <input type="radio" id="tall0" name="tall" checked> <label for="tall0">Je mesure plus de 1m30</label><br>
+      <input type="radio" id="tall1" name="tall"> <label for="tall1">Je mesure moins de 1m10</label><br>
       <input type="radio" id="tall2" name="tall"> <label for="tall2">Je mesure moins de 1m30</label>
     </div>
   </div>
