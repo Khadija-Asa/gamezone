@@ -83,28 +83,28 @@
 								<li class="nav-item">
 									<a class="nav-link" href="{{ route('login') }}">Se connecter</a>
 									</li>
-							@if (Route::has('register'))
-								<li class="nav-item">
-									<a class="nav-link" href="{{ route('register') }}">S'enregistrer</a>
-									</li>
-							@endif
-								@else
-										<li class="nav-item dropdown">
-											<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-												{{ Auth::user()->nickname }}</a>
+                @if (Route::has('register'))
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ route('register') }}">S'enregistrer</a>
+                    </li>
+                @endif
+              @else
+                  <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                      {{ Auth::user()->nickname }}</a>
 
-								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-											<a class="dropdown-item" href="{{ route('logout') }}"
-												onclick="event.preventDefault();
-											document.getElementById('logout-form').submit();">
-											{{ __('Logout') }}</a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}</a>
 
-									<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-										@csrf
-									</form>
-										</div>
-										</li>
-								@endguest
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                  @csrf
+                </form>
+                  </div>
+                  </li>
+              @endguest
 							<ul class="languages-icon">
 								<li class="nav-item">
 									<a class="nav-link" href="#"><img src="../images/flags/french.png"></a>
@@ -129,22 +129,29 @@
 
 		<section class="top-header">
 			<div class="navig-bar">
-		<ul class="languages-icon">
-								<li class="nav-item">
-									<a class="languages-link" href="#"><img src="../images/flags/french.png"></a>
-									</li>
-								<li class="nav-item">
-									<a class="languages-link" href="#"><img src="../images/flags/english.png"></a>
-									</li>
-								<li class="nav-item">
-									<a class="languages-link" href="#"><img src="../images/flags/spanish.png"></a>
-									</li>
-							</ul>
-					<div class="account">
-						<a href="#">Mon compte</a>
-						</div>
-				</div>
-			</section>
+	    	<ul class="languages-icon">
+          <li class="nav-item">
+            <a class="languages-link" href="#"><img src="../images/flags/french.png"></a>
+          </li>
+          <li class="nav-item">
+            <a class="languages-link" href="#"><img src="../images/flags/english.png"></a>
+          </li>
+          <li class="nav-item">
+            <a class="languages-link" href="#"><img src="../images/flags/spanish.png"></a>
+          </li>
+        </ul>
+        <div class="account">
+          <div class="avatar">
+            <img src="{{ asset(Auth::user()->avatar) }}">
+          </div>
+          <div>
+            Bienvenue, {{ Auth::user()->nickname }}<br>
+            Expérience: {{ Auth::user()->exp }}<br>
+            <a href="{{ route('User.edit', ['User' => Auth::user()->id]) }}">Mon compte</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
 		<nav class="navigation-bar">
 			<div class="logo-icon">
