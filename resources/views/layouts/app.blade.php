@@ -17,8 +17,12 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/register.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/attractions.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/mention.css') }}" rel="stylesheet">
     <link href="{{ asset('css/map.css') }}" rel="stylesheet">
 </head>
 <body>

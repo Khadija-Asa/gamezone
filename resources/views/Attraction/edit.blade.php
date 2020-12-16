@@ -36,12 +36,13 @@
           <div class="form-group">
             <label for="min_height">Taille minimum</label>
             <select name="min_height" id="min_height">
+            <option value="0">Accessible à tous</option>
               @if ($attraction->min_height === 130)
                 <option value="110">1m10</option>
                 <option value="130" selected>1m30</option>
-              @else
-                <option value="110" selected>1m10</option>
-                <option value="130">1m30</option>
+              @elseif ($attraction->min_height === 130)
+                <option value="110">1m10</option>
+                <option value="130" selected>1m30</option>
               @endif
             </select>
           </div>

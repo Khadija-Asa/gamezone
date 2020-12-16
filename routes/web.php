@@ -30,4 +30,8 @@ Route::resource('Schedule', 'ScheduleController')->only([
 ]);
 Route::get('/contact', 'SendEmailController@index')->name('contact');
 Route::post('/contact/send', 'SendEmailController@send')->name('mail.send');
+<<<<<<< HEAD
+Route::get('/mention', 'HomeController@mention')->name('mention');
+=======
+>>>>>>> acd1a58f532b6d86f1b9691bf14784348e54786c
 Route::get('/map', 'HomeController@map')->name('map');

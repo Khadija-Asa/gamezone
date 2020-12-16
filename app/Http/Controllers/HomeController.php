@@ -26,7 +26,10 @@ class HomeController extends Controller
     {
         return view('home');
     }
-
+    public function mention()
+    {
+        return view('mention');
+    }
     public function map()
     {
         return view('map');

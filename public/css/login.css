@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.header-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/background-header.png)!important;
+    background: center;
+    background-size: cover;
+    height: 65vh;
+    text-shadow: 1px 1px #000;
+  }
+  .header-bottom h1 {
+      margin-bottom: 50px;
+      font-size: 40px;
+  }
+  .header-bottom h1, .header-bottom p {
+    text-align: center;
+    color: #EFC732;
+  }
+.card-login {
+    padding-top: 50px;
+}
+.card-header-login {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.form-group-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+.container {
+    background-color: #edecec;
+}
+.loginbutton {
+    margin-top: 20px;
+    padding: 10px 50px;
+    background-color: #881F6A;
+    color: #EFC732;
+    border-radius: 10px;
+    border: none;
+}
+.buttonlogingroup {
+    display: flex;
+    flex-direction: column;
+}
+.forgetpassword {
+    padding: 15px 0;
+}
+@media screen and (min-width: 800px) {
+    .header-bottom {
+      align-items: flex-start;
+    }
+    .header-bottom h1,
+    .header-bottom p {
+      margin-left: 100px;
+    }
+}
