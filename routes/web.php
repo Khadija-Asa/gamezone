@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes();
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 Route::resource('User', 'UsersController');
 Route::resource('Address', 'AddressController');
 Route::resource('Attraction', 'AttractionController');
