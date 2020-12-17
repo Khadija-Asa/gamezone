@@ -14,15 +14,15 @@
     <div class="attraction" style="background-image: url('storage/{{$attraction->bg_image_url }}')">
         <div>
           <!-- <p>Nom: {{ $attraction->name }}</p> -->
-          <p class="logo-attraction"><img src="{{ asset('storage/'.$attraction->logo_url.'') }}" style="max-width: 300px;"></p>
+          <p class="logo-attraction"><img src="{{ asset('storage/'.$attraction->logo_url.'') }}" style="max-width: 300px;" alt="logo"></p>
           <p>Gain xp : {{ $attraction->exp_given }} xp/partie</p>
           <p>{{ $attraction->min_height }} cm/min</p>
           <p class="description">{{ $attraction->description }}</p>
-          <p><a href="">JE VEUX ESSAYER</a></p>
+          <p><a href="" title="lien vers les tarifs">JE VEUX ESSAYER</a></p>
           <!-- <p>{{ $attraction->important_informations }}</p> -->
           @if (Auth::user()->admin === 1)
 
-          <a class="button-reservation" href="{{ route('Attraction.edit', ['Attraction' => $attraction->id]) }}" class="btn btn-primary">
+          <a class="button-reservation" href="{{ route('Attraction.edit', ['Attraction' => $attraction->id]) }}" class="btn btn-primary" title="Modifier">
             <span class="fa fa-edit"> Modifier</span>
           </a>
           <form action="{{ route('Attraction.destroy', ['Attraction' => $attraction->id]) }}" method="POST" style="display: contents">
@@ -39,7 +39,7 @@
     @guest
     @else
     @if (Auth::user()->admin ===1)
-      <a href="{{ route('Attraction.create') }}" class="btn btn-primary">
+      <a href="{{ route('Attraction.create') }}" class="btn btn-primary" title="Ajouter une attraction">
         <span class="fa fa-edit"> Ajouter une attraction</span>
       </a>
     @endif

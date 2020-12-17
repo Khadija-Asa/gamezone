@@ -17,12 +17,12 @@
           </div>
           <div class="form-group">
             <label for="logo">Logo de l'attraction</label>
-            <img src="{{ asset('storage/'.$attraction->logo_url.'') }}" style="max-width: 200px;"><br>
+            <img src="{{ asset('storage/'.$attraction->logo_url.'') }}" style="max-width: 200px;" alt="logo"><br>
             <input name="logo" id="logo" type="file" tabindex="1" autofocus>
           </div>
           <div class="form-group">
             <label for="bg_image">Image de fond</label>
-            <img src="{{ asset('storage/'.$attraction->bg_image_url.'') }}" style="max-width: 200px;"><br>
+            <img src="{{ asset('storage/'.$attraction->bg_image_url.'') }}" style="max-width: 200px;" alt="background"><br>
             <input name="bg_image" id="bg_image" type="file" tabindex="1" autofocus>
           </div>
           <div class="form-group">
