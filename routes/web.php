@@ -18,35 +18,45 @@ use Illuminate\Support\Facades\Auth;
 //     return view('welcome');
 // });
 
+
+//ALL
 Auth::routes();
-
-
-Route::resource('User', 'UsersController');
-Route::resource('Address', 'AddressController');
-Route::resource('Attraction', 'AttractionController');
-Route::resource('Schedule', 'ScheduleController')->only([
-  'index', 'store', 'create', 'edit', 'update', 'destroy'
+Route::get('/', 'HomeController@index')->name('home');
+Route::resource('Attraction', 'AttractionController')->only([
+  'index'
 ]);
-Route::get('/contact', 'SendEmailController@index')->name('contact');
-Route::post('/contact/send', 'SendEmailController@send')->name('mail.send');
-
-Route::get('/mention', 'HomeController@mention')->name('mention');
-
-Route::get('/map', 'HomeController@map')->name('map');
-Route::get('/recruitment', 'HomeController@recruitment')->name('recruitment');
 Route::resource('Calendar', 'CalendarController')->only([
   'index'
 ]);
+Route::resource('Schedule', 'ScheduleController')->only([
+  'index'
+]);
+Route::get('/contact', 'SendEmailController@index')->name('contact');
+Route::post('/contact/send', 'SendEmailController@send')->name('mail.send');
+Route::get('/cookies', 'HomeController@cookies')->name('cookies');
+Route::get('/sale', 'HomeController@sale')->name('sale');
 Route::get('/legal', 'HomeController@legal')->name('legal');
+Route::get('/map', 'HomeController@map')->name('map');
+Route::get('/mention', 'HomeController@mention')->name('mention');
+Route::get('/recruitment', 'HomeController@recruitment')->name('recruitment');
 
-
+// UTILISATEURS ENREGISTRES
 Route::group(['middleware' => 'auth'], function() {
-
-  Route::get('/cookies', 'HomeController@cookies')->name('cookies');
-  
-  Route::get('/sale', 'HomeController@sale')->name('sale');
+  Route::resource('User', 'UsersController')->only([
+    'show', 'edit', 'update', 'destroy'
+  ]);
+  Route::resource('Address', 'AddressController');
 });
 
+//ADMINS
 Route::group(['middleware' => 'is.admin'], function() {
-  Route::get('/', 'HomeController@index')->name('home');
+  Route::resource('User', 'UsersController')->only([
+    'index'
+  ]);
+  Route::resource('Schedule', 'ScheduleController')->only([
+    'store', 'create', 'edit', 'update', 'destroy'
+  ]);
+  Route::resource('Attraction', 'AttractionController')->only([
+    'store', 'create', 'update', 'show', 'destroy'
+  ]);
 });
