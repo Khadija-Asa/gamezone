@@ -101,7 +101,7 @@
       </div>
 
       <div class="logo-image">
-        <a href="#"><img src="logo-gamezone.png" alt="logo"></a>
+        <a href="#"><img src="{{ asset('images/logo-gamezone.png') }}" alt="logo"></a>
       </div>
 
       <div class="links">
