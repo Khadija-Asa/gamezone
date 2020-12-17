@@ -5,22 +5,38 @@
 
 #snake {
   margin: 0 auto;
+<<<<<<< HEAD
+=======
+  width: 50%;
+>>>>>>> 4143515c4e4a36e772dec9f1ec12250a04a1bc7b
 }
 
 .snake-game {
   background-image: url(../images/Group\ 30\ \(1\).png) !important;
   background-size: cover;
+<<<<<<< HEAD
   display: flex;
   align-items: center;
+=======
+>>>>>>> 4143515c4e4a36e772dec9f1ec12250a04a1bc7b
 }
 
 .play {
   border: 0;
   line-height: 2.5;
   padding: 0 20px;
+<<<<<<< HEAD
   font-size: 1rem;
   text-align: center;
   margin-top: 20px;
+=======
+  position: relative;
+  font-size: 1rem;
+  float: right;
+  margin-right: 40%;
+  margin-top: 10%;
+  text-align: center;
+>>>>>>> 4143515c4e4a36e772dec9f1ec12250a04a1bc7b
   color: #EFC732;
   text-shadow: 1px 1px 1px #000;
   border-radius: 10px;
@@ -40,6 +56,7 @@
 .play:active {
   box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
               inset 2px 2px 3px rgba(0, 0, 0, .6);
+<<<<<<< HEAD
 }
 
 .instructions {
@@ -52,4 +69,6 @@
 
 .instructions p {
   font-size: 20px;
+=======
+>>>>>>> 4143515c4e4a36e772dec9f1ec12250a04a1bc7b
 }
