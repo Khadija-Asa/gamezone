@@ -3,12 +3,6 @@
   padding: 0;
 }
 
-h1,
-h2 {
-  color: white;
-  font-size: 15px;
-}
-
 .paragraph {
   background-image: url(../images/Group\ 30\ \(1\).png)!important;
   background: center;
@@ -17,7 +11,7 @@ h2 {
   padding-top: 80px;
 }
 
-p {
+.paragraph p {
   color: white !important;
   font-size: 10px;
   text-align: justify !important;

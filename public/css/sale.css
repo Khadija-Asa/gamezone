@@ -11,7 +11,7 @@
   padding-top: 80px;
 }
 
-p {
+.paragraph p {
   color: white !important;
   font-size: 10px;
   text-align: justify !important;

@@ -59,3 +59,5 @@ Route::group(['middleware' => 'is.admin'], function() {
 });
 Route::get('/pricelist', 'HomeController@pricelist')->name('pricelist');
 Route::get('/informations', 'HomeController@informations')->name('informations');
+Route::get('/sale', 'HomeController@sale')->name('sale');
+Route::get('/game', 'HomeController@game')->name('game');

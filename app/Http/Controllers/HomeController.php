@@ -57,4 +57,8 @@ class HomeController extends Controller
     {
         return view('informations');
     }
+    public function game()
+    {
+        return view('game');
+    }
 }
