@@ -38,40 +38,40 @@
 		<header class="nav-bar">
 
 				<section class="top-nav">	
-					<div class="cart">
-						<a href="{{ url('/') }}"><i class="fas fa-shopping-basket"></i></a>
-					</div>
 					<div class="user">
 						<a href="{{ url('/User') }}"><i class="far fa-user"></i></a>
-					</div>
+          </div>
+          <!-- <div class="cart">
+						<a href="{{ url('/') }}"><i class="fas fa-shopping-basket"></i></a>
+					</div> -->
 
 			<button class="ham"></button>
 				<nav class="navbar">
 
 						<ul>
 							<li class="nav-item">
-            <a class="nav-link" href="#">le parc</a>
+            <a class="nav-link" href="#">Parc</a>
             </li>
 							<li class="nav-item">
-            <a class="nav-link" href="#">les attractions</a>
+            <a class="nav-link" href="#">Attractions</a>
             </li>
 							<li class="nav-item">
-            <a class="nav-link" href="#">le plan</a>
+            <a class="nav-link" href="#">Plan</a>
             </li>
 							<li class="nav-item">
-            <a class="nav-link" href="#">se rendre au parc</a>
+            <a class="nav-link" href="#">Se rendre au parc</a>
             </li>
 							<li class="nav-item">
-            <a class="nav-link" href="#">tarifs et billetterie</a>
+            <a class="nav-link" href="#">Tarifs et billetterie</a>
             </li>
 						<li class="nav-item">
-            <a class="nav-link" href="#">horaires et calendrier</a>
+            <a class="nav-link" href="#">Horaires et calendrier</a>
             </li>
 						<li class="nav-item">
-            <a class="nav-link" href="#">my game</a>
+            <a class="nav-link" href="#">My game</a>
             </li>
 						<li class="nav-item">
-            <a class="nav-link" href="#">informations</a>
+            <a class="nav-link" href="#">Informations</a>
             </li>
 
 							@guest
@@ -88,17 +88,23 @@
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                       {{ Auth::user()->nickname }}</a>
 
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('logout') }}"
-                      onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}</a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                      document.getElementById('logout-form').submit();">
+                      Déconnexion</a>
 
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                   @csrf
                 </form>
                   </div>
                   </li>
+                  <li class="avatar">
+                <img src="{{ asset(Auth::user()->avatar) }}">
+              </li>
+              <li>
+                {{ Auth::user()->exp }} xp
+              </li>
               @endguest
 							<ul class="languages-icon">
 								<li class="nav-item">
@@ -109,7 +115,8 @@
 									</li>
 								<li class="nav-item">
 									<a class="nav-link" href="#"><img src="{{ asset('images/flags/spanish.png') }}"></a>
-									</li>
+                  </li>
+              
 							</ul>
 					</ul>
 				</nav>
@@ -136,33 +143,37 @@
           </li>
         </ul> --}}
         <div class="contactHeader">
-          <span>Contactez nos experts: </span>
+          <p>Contactez nos experts : <span class="phone-experts">08 59 62 08 59</span> Service 0,15€/min + prix appel</p>
         </div>
+        @guest
+        @else
         <div class="account">
           <div class="avatar">
             <img src="{{ asset(Auth::user()->avatar) }}">
           </div>
           <div>
-            Bienvenue, {{ Auth::user()->nickname }}<br>
-            Expérience: {{ Auth::user()->exp }}<br>
+            {{ Auth::user()->nickname }}<br>
+            {{ Auth::user()->exp }} xp<br>
             <a href="{{ route('User.edit', ['User' => Auth::user()->id]) }}">Mon compte</a>
           </div>
         </div>
+        @endguest
       </div>
     </section>
 
 		<nav class="navigation-bar">
 			<div class="logo-icon">
-        <a href="#"><img src="{{ asset('images/logo-gamezone.png') }}"></a>
-        <ul class="menu">
-          <li><a class="nav-menu" href="">le parc</a></li>
-          <li><a class="nav-menu" href="">les attractions</a></li>
-          <li><a class="nav-menu" href="">le plan</a></li>
-          <li><a class="nav-menu" href="">se rendre au parc</a></li>
-          <li><a class="nav-menu" href="">tarifs et billetterie</a></li>
-          <li><a class="nav-menu" href="">horaire et calendrier</a></li>
-          <li><a class="nav-menu" href="">my game</a></li>
-          <li><a class="nav-menu" href="">informations</a></li>
+        <!-- <a href="#"><img src="{{ asset('images/logo-gamezone.png') }}"></a> -->
+        <ul>
+          <li><a href="#"><img src="{{ asset('images/logo-gamezone.png') }}"></a></li>
+          <li><a class="nav-menu" href="">Parc</a></li>
+          <li><a class="nav-menu" href="">Attractions</a></li>
+          <li><a class="nav-menu" href="">Plan</a></li>
+          <li><a class="nav-menu" href="">Se rendre au parc</a></li>
+          <li><a class="nav-menu" href="">Tarifs et billetterie</a></li>
+          <li><a class="nav-menu" href="">Horaire et calendrier</a></li>
+          <li><a class="nav-menu" href="">My game</a></li>
+          <li><a class="nav-menu" href="">Informations</a></li>
         </ul>
 			</div>
 	  </nav>

@@ -43,6 +43,11 @@
   position: absolute;
   padding-top: 15px;
 }
+          
+.navbar .avatar img {
+  width: 20%;
+  margin-top: 10px;
+}
 
 .showNav {
   transform: translateY(0);
@@ -78,7 +83,6 @@ a {
   display: flex;
   justify-content: space-between;
 }
-
 /*languages*/
 
 .languages-icon img {
@@ -104,7 +108,11 @@ a {
   font-size: 20px;
   margin-left: 10px;
 }
-
+/*contactHeader*/
+.contactHeader {
+  color: #ffffff;
+  margin-left: 200px;
+}
 /*logo*/
 
 .top-logo {
@@ -187,33 +195,35 @@ a {
   .navigation-bar {
     background-color: #323868;
     display: block;
-    height: 220px;
   }
-  .nav-menu {
+  .navigation-bar .nav-menu {
     color: white;
-    display: flex;
   }
-  .logo-icon {
-    position:absolute;
-  }
-  .logo-icon img {
+  .navigation-bar .logo-icon img {
     display: block;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
+    width: 10%;
+    position: absolute;
+    top: 115px;
+    left: 30px;
   }
-  ul {
-    display: flex;
-    justify-content: end;
+  .navigation-bar ul {
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
   }
-  li {
-    font-size: 13px;
-    margin: 15px;
+  .navigation-bar li {
+    font-size: 1px;
     text-transform: uppercase;
     list-style: none;
+  }
+  .navigation-bar ul li a {
+    margin: 0 10px;
+    text-align: center;
+  }
+  .navigation-bar ul li a:hover {
+    color: #EFC732;
+    border-bottom: 2px solid #EFC732;
   }
   .menu li:hover {
     color: #EFC732 !important;
@@ -231,6 +241,13 @@ a {
     display: flex;
     justify-content: center;
     align-items: top;
+    color: #ffffff;
+  }
+  .phone-experts {
+    background-color: #ffffff;
+    color: black;
+    padding: 9px 40px;
+    border-radius: 15px;
   }
   .navig-bar {
     width: 100%;
@@ -238,5 +255,6 @@ a {
     padding: 0 25px;
     display: flex;
     justify-content: space-between;
+
   }
 }
