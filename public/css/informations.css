@@ -1,0 +1,53 @@
+/*GLOBAL*/
+/*header-bottom*/
+.header-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/background-header.png)!important;
+  background-position: top center;
+  background-size: cover;
+  height: 65vh;
+  text-shadow: 1px 1px #000;
+}
+.header-bottom p {
+  text-align: center;
+  color: #EFC732;
+}
+span {
+  color: #EFC732;
+}
+.image-information {
+  background-image: url(../images/boy.png);
+  background-size: cover;
+  height: 300px;
+}
+.informations .paragraphe {
+  margin: 100px;
+}
+
+
+
+
+
+
+/*PC*/
+@media screen and (min-width: 800px) {
+  /*Header bottom*/
+  .header-bottom {
+    align-items: flex-start;
+  }
+  .header-bottom h1,
+  .header-bottom p {
+    margin-left: 100px;
+  }
+  .image-information  {
+    height: 400px;
+    background-position: center;
+  }
+  .informations .paragraphe p {
+    line-height: 30px;
+    font-size: 20px;
+  }
+}
