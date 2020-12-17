@@ -8,7 +8,11 @@
 <<<<<<< HEAD
 =======
   width: 50%;
+<<<<<<< HEAD
 >>>>>>> game added
+=======
+>>>>>>> 4143515c4e4a36e772dec9f1ec12250a04a1bc7b
+>>>>>>> c1d421440c86e471da5b895ba49f00d981ebb572
 }
 
 .snake-game {
@@ -18,7 +22,11 @@
   display: flex;
   align-items: center;
 =======
+<<<<<<< HEAD
 >>>>>>> game added
+=======
+>>>>>>> 4143515c4e4a36e772dec9f1ec12250a04a1bc7b
+>>>>>>> c1d421440c86e471da5b895ba49f00d981ebb572
 }
 
 .play {
@@ -36,7 +44,11 @@
   margin-right: 40%;
   margin-top: 10%;
   text-align: center;
+<<<<<<< HEAD
 >>>>>>> game added
+=======
+>>>>>>> 4143515c4e4a36e772dec9f1ec12250a04a1bc7b
+>>>>>>> c1d421440c86e471da5b895ba49f00d981ebb572
   color: #EFC732;
   text-shadow: 1px 1px 1px #000;
   border-radius: 10px;
@@ -70,5 +82,9 @@
 .instructions p {
   font-size: 20px;
 =======
+<<<<<<< HEAD
 >>>>>>> game added
+=======
+>>>>>>> 4143515c4e4a36e772dec9f1ec12250a04a1bc7b
+>>>>>>> c1d421440c86e471da5b895ba49f00d981ebb572
 }

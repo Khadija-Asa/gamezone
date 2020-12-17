@@ -50,12 +50,15 @@ class HomeController extends Controller
         return view('sale');
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function pricelist()
     {
         return view('pricelist');
     }
 =======
 >>>>>>> game added
+=======
+>>>>>>> c1d421440c86e471da5b895ba49f00d981ebb572
     public function game()
     {
         return view('game');
