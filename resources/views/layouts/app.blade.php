@@ -26,11 +26,7 @@
     <link href="{{ asset('css/mention.css') }}" rel="stylesheet">
     <link href="{{ asset('css/map.css') }}" rel="stylesheet">
     <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/recruitment.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/calendar.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
 		<link href="{{ asset('css/header.css') }}" rel="stylesheet">
 
@@ -113,13 +109,13 @@
               @endguest
 							<ul class="languages-icon">
 								<li class="nav-item">
-									<a class="nav-link" href="#"><img src="{{ asset('images/flags/french.png') }}"></a>
+									<!-- <a class="nav-link" href="#"><img src="{{ asset('images/flags/french.png') }}"></a> -->
 									</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#"><img src="{{ asset('images/flags/english.png') }}"></a>
+									<!-- <a class="nav-link" href="#"><img src="{{ asset('images/flags/english.png') }}"></a> -->
 									</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#"><img src="{{ asset('images/flags/spanish.png') }}"></a>
+									<!-- <a class="nav-link" href="#"><img src="{{ asset('images/flags/spanish.png') }}"></a> -->
                   </li>
               
 							</ul>
