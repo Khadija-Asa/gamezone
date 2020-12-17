@@ -50,4 +50,8 @@ class HomeController extends Controller
     {
         return view('sale');
     }
+    public function game()
+    {
+        return view('game');
+    }
 }
