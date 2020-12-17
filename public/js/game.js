@@ -56,6 +56,19 @@ function direction(event){
     }
 }
 
+function disableScroll(e){
+	
+	if (e.keyCode) {
+		/^(32|33|34|35|36|38|40)$/.test(e.keyCode) && e.preventDefault();
+	}else {
+		e.preventDefault();
+	}
+
+}
+
+addEventListener("keydown", disableScroll, false);
+
+
 function collision(head,array){
     for(let i = 0; i < array.length; i++){
         if(head.x == array[i].x && head.y == array[i].y){
@@ -70,7 +83,7 @@ function draw(){
     ctx.drawImage(ground,0,0);
     
     for( let i = 0; i < snake.length ; i++){
-        ctx.fillStyle = ( i == 0 )? "black" : "purple";
+        ctx.fillStyle = ( i == 0 )? "black" : "#881F6A";
         ctx.fillRect(snake[i].x,snake[i].y,box,box);
         
         ctx.strokeStyle = "white";
@@ -112,11 +125,10 @@ function draw(){
     snake.unshift(newHead);
     
     ctx.fillStyle = "white";
-    ctx.font = "45px Changa one";
+    ctx.font = "40px Roboto";
     ctx.fillText(score,2*box,1.6*box);
 }
 
-let game = setInterval(draw,130);
-console.log('joue');
+let game = setInterval(draw,110);
 
 });
