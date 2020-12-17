@@ -27,7 +27,9 @@
     <link href="{{ asset('css/map.css') }}" rel="stylesheet">
     <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
-	<link href="{{ asset('css/header.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/calendar.css') }}" rel="stylesheet">
+		<link href="{{ asset('css/header.css') }}" rel="stylesheet">
+		<link href="{{ asset('css/recruitment.css') }}" rel="stylesheet">
     <link href="{{ asset('css/pricelist.css') }}" rel="stylesheet">
     <link href="{{ asset('css/recruitment.css') }}" rel="stylesheet">
     <link href="{{ asset('css/show.css') }}" rel="stylesheet">
@@ -64,22 +66,22 @@
 
 						<ul>
 							<li class="nav-item">
-            <a class="nav-link" href="#">Parc</a>
+            <a class="nav-link" href="{{ route('home') }}">Parc</a>
             </li>
 							<li class="nav-item">
-            <a class="nav-link" href="#">Attractions</a>
+            <a class="nav-link" href="{{ route('Attraction.index') }}">Attractions</a>
             </li>
 							<li class="nav-item">
-            <a class="nav-link" href="#">Plan</a>
+            <a class="nav-link" href="{{ route('map') }}">Plan</a>
             </li>
 							<li class="nav-item">
             <a class="nav-link" href="#">Se rendre au parc</a>
             </li>
 							<li class="nav-item">
-            <a class="nav-link" href="#">Tarifs et billetterie</a>
+            <a class="nav-link" href="{{ route('pricelist') }}">Tarifs et billetterie</a>
             </li>
 						<li class="nav-item">
-            <a class="nav-link" href="#">Horaires et calendrier</a>
+            <a class="nav-link" href="{{ route('Calendar.index') }}">Horaires et calendrier</a>
             </li>
 						<li class="nav-item">
             <a class="nav-link" href="#">My game</a>
@@ -180,12 +182,12 @@
         <!-- <a href="#"><img src="{{ asset('images/logo-gamezone.png') }}"></a> -->
         <ul>
           <li><a href="#"><img src="{{ asset('images/logo-gamezone.png') }}"></a></li>
-          <li><a class="nav-menu" href="">Parc</a></li>
-          <li><a class="nav-menu" href="">Attractions</a></li>
-          <li><a class="nav-menu" href="">Plan</a></li>
+          <li><a class="nav-menu" href="{{ route('home') }}">Parc</a></li>
+          <li><a class="nav-menu" href="{{ route('Attraction.index') }}">Attractions</a></li>
+          <li><a class="nav-menu" href="{{ route('map') }}">Plan</a></li>
           <li><a class="nav-menu" href="">Se rendre au parc</a></li>
-          <li><a class="nav-menu" href="">Tarifs et billetterie</a></li>
-          <li><a class="nav-menu" href="">Horaire et calendrier</a></li>
+          <li><a class="nav-menu" href="{{ route('pricelist') }}">Tarifs et billetterie</a></li>
+          <li><a class="nav-menu" href="{{ route('Calendar.index') }}">Horaire et calendrier</a></li>
           <li><a class="nav-menu" href="">My game</a></li>
           <li><a class="nav-menu" href="">Informations</a></li>
         </ul>
@@ -213,8 +215,8 @@
       </div>
 
       <div class="links">
-          <a href="">nous contacter</a>
-          <a href="">on recrute</a>
+          <a href="{{ route('contact') }}">nous contacter</a>
+          <a href="{{ route('recruitment') }}">on recrute</a>
           <a href="">dans la presse</a>
           <a href="">à propos du parc</a>
       </div>
@@ -232,9 +234,9 @@
       <hr>
 
       <div class="laws">
-        <a href="">conditions de vente</a>
-        <a href="">cookies</a>
-        <a href="">conditions légales</a>
+        <a href="{{ route('sale') }}">conditions de vente</a>
+        <a href="{{ route('cookies') }}">cookies</a>
+        <a href="{{ route('legal') }}">conditions légales</a>
       </div>
 
       <p class="copyright"><i class="far fa-copyright"></i>Copyright Gamezone</p>

@@ -93,7 +93,7 @@
       <p><a href="">Se rendre au parc</a></p>
     </div>
     <div>
-      <p><a href="">Tarif et billetterie</a></p>
+      <p><a href="{{ route('pricelist') }}">Tarif et billetterie</a></p>
     </div>
   </div>
 </div>
