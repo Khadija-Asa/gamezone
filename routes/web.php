@@ -57,3 +57,5 @@ Route::group(['middleware' => 'is.admin'], function() {
     'store', 'create', 'update', 'show', 'destroy'
   ]);
 });
+Route::get('/sale', 'HomeController@sale')->name('sale');
+Route::get('/game', 'HomeController@game')->name('game');
