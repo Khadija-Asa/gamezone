@@ -49,10 +49,13 @@ class HomeController extends Controller
     {
         return view('sale');
     }
+<<<<<<< HEAD
     public function pricelist()
     {
         return view('pricelist');
     }
+=======
+>>>>>>> game added
     public function game()
     {
         return view('game');
