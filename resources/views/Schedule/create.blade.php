@@ -15,6 +15,7 @@
               @foreach ($daysList as $dayOfList)
                 <option value="{{ $dayOfList }}">{{ $dayOfList }}</option>
               @endforeach
+            </select>
           </div>
           <div class="form-group">
             <label for="start_hour">Heure d'ouverture</label>

@@ -43,6 +43,9 @@
           @endforeach
         </tbody>
       </table>
+      <a href="{{ route('Schedule.create') }}" class="btn btn-primary">
+        <span class="fa fa-edit"> Ajouter une horaire</span>
+      </a>
     </div>
   @else
     <p>Vous n'avez pas la permission d'accéder à cette page !</p>
