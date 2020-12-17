@@ -20,8 +20,8 @@ class IsAdmin
         if (auth()->user()->admin === 1){
           return $next($request);
         }
-        return redirect()->route('map');
+        return redirect()->route('home');
       }
-      return redirect()->route('map');
+      return redirect()->route('home');
     }
 }
