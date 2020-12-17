@@ -14,7 +14,7 @@
     <div class="attraction" style="background-image: url('storage/{{$attraction->bg_image_url }}')">
         <div>
           <!-- <p>Nom: {{ $attraction->name }}</p> -->
-          <p class="logo-attraction"><img src="{{ asset('storage/'.$attraction->logo_url.'') }}" style="max-width: 300px;"></p>
+          <p class="logo-attraction"><img src="{{ asset('storage/'.$attraction->logo_url.'') }}" style="max-width: 300px;" alt="logo"></p>
           <p>Gain xp : {{ $attraction->exp_given }} xp/partie</p>
           <p>{{ $attraction->min_height }} cm/min</p>
           <p class="description">{{ $attraction->description }}</p>
