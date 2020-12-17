@@ -26,7 +26,10 @@
     <link href="{{ asset('css/mention.css') }}" rel="stylesheet">
     <link href="{{ asset('css/map.css') }}" rel="stylesheet">
     <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
+<<<<<<< HEAD
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+=======
+>>>>>>> 520b5d9d518189db29ee0ccb92a3a42ef80011d2
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
 		<link href="{{ asset('css/header.css') }}" rel="stylesheet">
 
