@@ -27,10 +27,10 @@
     <link href="{{ asset('css/map.css') }}" rel="stylesheet">
     <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
-    
-		<link href="{{ asset('css/header.css') }}" rel="stylesheet">
-
+	<link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/pricelist.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/recruitment.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/show.css') }}" rel="stylesheet">
 </head>
 
 <body>
