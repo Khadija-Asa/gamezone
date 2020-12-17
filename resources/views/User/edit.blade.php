@@ -6,9 +6,6 @@
         <p>MON COMPTE</p>
     </section>
 <div class="container">
-  @guest
-    <p>Vous n'avez pas la permission d'accéder à cette page</p>
-  @else
     @if (Auth::user()->admin === 1 OR Auth::user()->id === $user->id)
     <div class="editaccountcontent">
       <div class="col-8">
