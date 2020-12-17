@@ -21,7 +21,6 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes();
 
 
-Route::get('/', 'HomeController@index')->name('home');
 Route::resource('User', 'UsersController');
 Route::resource('Address', 'AddressController');
 Route::resource('Attraction', 'AttractionController');
@@ -38,9 +37,16 @@ Route::get('/recruitment', 'HomeController@recruitment')->name('recruitment');
 Route::resource('Calendar', 'CalendarController')->only([
   'index'
 ]);
-
-Route::get('/cookies', 'HomeController@cookies')->name('cookies');
-
 Route::get('/legal', 'HomeController@legal')->name('legal');
 
-Route::get('/sale', 'HomeController@sale')->name('sale');
+
+Route::group(['middleware' => 'auth'], function() {
+
+  Route::get('/cookies', 'HomeController@cookies')->name('cookies');
+  
+  Route::get('/sale', 'HomeController@sale')->name('sale');
+});
+
+Route::group(['middleware' => 'is.admin'], function() {
+  Route::get('/', 'HomeController@index')->name('home');
+});
