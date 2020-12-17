@@ -31,6 +31,7 @@
     <link href="{{ asset('css/pricelist.css') }}" rel="stylesheet">
     <link href="{{ asset('css/recruitment.css') }}" rel="stylesheet">
     <link href="{{ asset('css/show.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/edit.css') }}" rel="stylesheet">
 </head>
 
 <body>
