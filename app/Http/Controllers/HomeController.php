@@ -53,4 +53,8 @@ class HomeController extends Controller
     {
         return view('pricelist');
     }
+    public function informations()
+    {
+        return view('informations');
+    }
 }
