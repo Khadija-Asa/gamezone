@@ -24,8 +24,10 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
-        $scheduleList=DB::table('schedules')->get();
-        View::share('scheduleList',$scheduleList); 
+    {   
+        if(DB::getSchemaBuilder()->hasTable('schedules')) {
+            $scheduleList=DB::table('schedules')->get();
+            View::share('scheduleList',$scheduleList); 
+        }
     }
 }
