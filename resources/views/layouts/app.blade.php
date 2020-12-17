@@ -42,6 +42,7 @@
     <link href="{{ asset('css/productindex.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/game.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link href="{{ asset('css/routes.css') }}" rel="stylesheet">
 </head>
 
 <body>

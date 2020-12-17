@@ -83,3 +83,5 @@ Route::group(['middleware' => 'is.admin'], function() {
     'index'
   ]);
 });
+Route::get('/pricelist', 'HomeController@pricelist')->name('pricelist');
+Route::get('/routes', 'HomeController@routes')->name('routes');

@@ -69,4 +69,8 @@ class HomeController extends Controller
         $cart = Cart::with(['user', 'cart_items'])->find($id);
         return view('order', ['cart' => $cart]);
     }
+    public function routes()
+    {
+        return view('routes');
+    }
 }
