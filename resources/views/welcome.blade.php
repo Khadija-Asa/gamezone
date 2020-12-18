@@ -71,6 +71,21 @@
             <p class="title">{{ $article->title }}</p>
             <p class="content">{{ $article->content }}<br>
             <span class="publishDate">Publié le {{ $article->created_at }}</span></p>
+            @guest
+            @else
+              @if(Auth::user()->admin === 1)
+              <a class="button-reservation" href="{{ route('Article.edit', ['Article' => $article->id]) }}" class="btn btn-primary">
+                <span class="fa fa-edit"> Modifier</span>
+              </a>
+              <form action="{{ route('Article.destroy', ['Article' => $article->id]) }}" method="POST" style="display: contents">
+                @csrf
+                @method('DELETE')
+                <button class="deletebuttonaccount" type="submit">
+                  <span class="fa fa-trash">Supprimer</span>
+                </button>
+              </form><br>
+              @endif
+            @endguest
           </div>
         @endforeach  
 
