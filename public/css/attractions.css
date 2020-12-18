@@ -10,9 +10,14 @@ a {
 .attractions {
   background-image: url(../images/backgroud.png);
   padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .attraction {
   margin: 10px;
+  background-size: cover;
+  background-position: center;
 }
 .attraction:hover {
   outline: 2px solid #EFC732;

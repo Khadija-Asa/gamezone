@@ -18,7 +18,7 @@
           <p>Gain xp : {{ $attraction->exp_given }} xp/partie</p>
           <p>{{ $attraction->min_height }} cm/min</p>
           <p class="description">{{ $attraction->description }}</p>
-          <p><a href="">JE VEUX ESSAYER</a></p>
+          <p><a href="{{ route('Calendar.index') }}">JE VEUX ESSAYER</a></p>
           <!-- <p>{{ $attraction->important_informations }}</p> -->
           @guest
           @else
@@ -26,27 +26,12 @@
               <a class="button-reservation" href="{{ route('Attraction.edit', ['Attraction' => $attraction->id]) }}" class="btn btn-primary">
                 <span class="fa fa-edit"> Modifier</span>
               </a>
-              <form action="{{ route('Attraction.destroy', ['Attraction' => $attraction->id]) }}" method="POST" style="display: contents">
-                @csrf
-                @method('DELETE')
-                <button class="btn btn-danger" type="submit">
-                  <span class="fa fa-trash">Supprimer</span>
-                </button>
-              </form>
             @endif
           @endguest
         </div>
       </div>
     @endforeach
-    @guest
-    @else
-    @if (Auth::user()->admin ===1)
-      <a href="{{ route('Attraction.create') }}" class="btn btn-primary">
-        <span class="fa fa-edit"> Ajouter une attraction</span>
-      </a>
-    @endif
-    @endguest
-  
+</div>
   @endsection
 
 
