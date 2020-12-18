@@ -32,6 +32,9 @@ table th {
   color: #C4C4C4;
   font-size: 30px;
 }
+td {
+  margin: 10px;
+}
 .days-special {
   margin-top: 40px;
 }
@@ -101,15 +104,17 @@ table th {
 }
 .day-open {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 10px;
 }
 .day-open .day {
   display: flex;
-  margin-left: 20px;
+  margin-top: 10px;
+  width: 200px;
 }
 .day-open .day p {
-  padding-left: 2px;
-  font-size: 10px;
+  padding-left: 20px;
+  font-size: 20px;
 }
 
 .square-close,
@@ -124,13 +129,13 @@ table th {
   background-color: #C4C4C4;
 }
 .square-night {
-  background-color: black;
+  background-color: #881F6A;
 }
 .square-open {
   background-color: darkgreen;
 }
 .square-special {
-  background-color: rgb(6, 6, 51);
+  background-color: #070B34;
 }
 
 @media screen and (min-width: 800px) {
@@ -148,5 +153,8 @@ table th {
   }
   .days-special {
     display: flex;
+  }
+  .calendarContainer table {
+    border-spacing: 15px;
   }
 }

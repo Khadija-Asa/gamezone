@@ -59,15 +59,15 @@
   <div class="day-open">
     <div class="day">
       <div class="square-close"></div>
-      <p>parc fermé</p>
+      <p>Fermé</p>
     </div>
     <div class="day">
       <div class="square-open"></div>
-      <p>parc ouvert</p>
+      <p>Ouvert</p>
     </div>
     <div class="day">
       <div class="square-special"></div>
-      <p>Journée spécial</p>
+      <p>Journée spéciale</p>
     </div>
     <div class="day">
       <div class="square-night"></div>
