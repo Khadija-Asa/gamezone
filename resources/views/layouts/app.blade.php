@@ -240,9 +240,9 @@
 
       <div class="opening">
         <p>
-          Du lundi au jeudi : 9h - 19h <br>
-          Du vendredi au samedi : 9h - 20h <br>
-          Le dimanche : 9h - 18h
+          @foreach ($scheduleList as $scheduleDay)
+              {{ $scheduleDay->day }} : {{ $scheduleDay->start_hour}} - {{ $scheduleDay->end_hour}}<br>
+          @endforeach
         </p>
       </div>
 
