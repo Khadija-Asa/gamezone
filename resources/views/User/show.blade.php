@@ -61,6 +61,7 @@
         @if (Auth::user()->admin === 1 && Auth::user()->id === $user->id)
         <div class="adminBoard">
           <p class="adminSectionTitle">Administration du site</p>
+          <hr>
           <a href="{{ route('Attraction.create') }}" class="btn btn-primary">
             <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Ajouter une attraction</span>
             </button>

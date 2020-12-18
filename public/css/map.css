@@ -223,6 +223,8 @@
 .checkboxes {
     display: flex;
     flex-direction: column;
+    text-align: left;
+    margin-left: 50px;
 }
 .checkboxes img {
   width: 30px;
