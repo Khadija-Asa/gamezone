@@ -52,14 +52,17 @@
 <!--mobile-->
 
 		<header class="nav-bar">
-
-				<section class="top-nav">	
+      <section class="top-nav">	
+        @guest
+        <div></div>
+        @else
 					<div class="user">
 						<a href="{{ route('User.show', ['User' => Auth::user()->id]) }}"><i class="far fa-user"></i></a>
           </div>
           <!-- <div class="cart">
 						<a href="{{ url('/') }}"><i class="fas fa-shopping-basket"></i></a>
 					</div> -->
+        @endguest
 
 			<button class="ham"></button>
 				<nav class="navbar">
