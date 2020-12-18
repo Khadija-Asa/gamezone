@@ -20,20 +20,22 @@
           <p class="description">{{ $attraction->description }}</p>
           <p><a href="">JE VEUX ESSAYER</a></p>
           <!-- <p>{{ $attraction->important_informations }}</p> -->
-          @if (Auth::user()->admin === 1)
-
-          <a class="button-reservation" href="{{ route('Attraction.edit', ['Attraction' => $attraction->id]) }}" class="btn btn-primary">
-            <span class="fa fa-edit"> Modifier</span>
-          </a>
-          <form action="{{ route('Attraction.destroy', ['Attraction' => $attraction->id]) }}" method="POST" style="display: contents">
-            @csrf
-            @method('DELETE')
-            <button class="btn btn-danger" type="submit">
-              <span class="fa fa-trash">Supprimer</span>
-            </button>
-          </form>
+          @guest
+          @else
+            @if (Auth::user()->admin === 1)
+              <a class="button-reservation" href="{{ route('Attraction.edit', ['Attraction' => $attraction->id]) }}" class="btn btn-primary">
+                <span class="fa fa-edit"> Modifier</span>
+              </a>
+              <form action="{{ route('Attraction.destroy', ['Attraction' => $attraction->id]) }}" method="POST" style="display: contents">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger" type="submit">
+                  <span class="fa fa-trash">Supprimer</span>
+                </button>
+              </form>
+            @endif
+          @endguest
         </div>
-        @endif
       </div>
     @endforeach
     @guest

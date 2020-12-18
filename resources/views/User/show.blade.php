@@ -44,22 +44,6 @@
         </ul>
         </div>
         </div>
-        @if (Auth::user()->admin === 1)
-        <div class="adminBoard">
-          <a href="{{ route('Attraction.create') }}" class="btn btn-primary">
-            <button class="editbuttonaccount"><span class="fa fa-edit"> Ajouter une attraction</span>
-            </button>
-          </a>
-          <a href="{{ route('Schedule.index') }}" class="btn btn-primary">
-            <button class="editbuttonaccount"><span class="fa fa-edit"> Modifier les horaires</span>
-            </button>
-          </a>
-          <a href="{{ route('User.index') }}" class="btn btn-primary">
-            <button class="editbuttonaccount"><span class="fa fa-edit"> Liste des utilisateurs enregistrés</span>
-            </button>
-          </a>
-        </div>
-        @endif
         <div class="buttonaccount">
           <a href="{{ route('User.edit', ['User' => $user->id]) }}" class="btn btn-primary">
             <button class="editbuttonaccount"><span class="fa fa-edit"> Modifier</span>
@@ -73,5 +57,22 @@
             </button>
           </form>
         </div>
+        @if (Auth::user()->admin === 1)
+        <div class="adminBoard">
+          <p class="adminSectionTitle">Administration du site</p>
+          <a href="{{ route('Attraction.create') }}" class="btn btn-primary">
+            <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Ajouter une attraction</span>
+            </button>
+          </a>
+          <a href="{{ route('Schedule.index') }}" class="btn btn-primary">
+            <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Modifier les horaires</span>
+            </button>
+          </a>
+          <a href="{{ route('User.index') }}" class="btn btn-primary">
+            <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Liste des utilisateurs</span>
+            </button>
+          </a>
+        </div>
+        @endif
 </div>
 @endsection
