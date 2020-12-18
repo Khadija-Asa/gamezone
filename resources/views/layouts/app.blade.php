@@ -139,7 +139,7 @@
 				</section>
 				
 				<div class="top-logo">
-					<a href="#"><img src="{{ asset('images/logo-gamezone.png') }}"></a>
+					<a href="{{ route('home') }}"><img src="{{ asset('images/logo-gamezone.png') }}"></a>
 				</div>
 			<header>
 
@@ -193,7 +193,7 @@
 			<div class="logo-icon">
         <!-- <a href="#"><img src="{{ asset('images/logo-gamezone.png') }}"></a> -->
         <ul>
-          <li><a href="#"><img src="{{ asset('images/logo-gamezone.png') }}"></a></li>
+          <li><a href="{{ route('home') }}"><img src="{{ asset('images/logo-gamezone.png') }}"></a></li>
           <li><a class="nav-menu" href="{{ route('home') }}">Parc</a></li>
           <li><a class="nav-menu" href="{{ route('Attraction.index') }}">Attractions</a></li>
           <li><a class="nav-menu" href="{{ route('map') }}">Plan</a></li>
@@ -223,7 +223,7 @@
       </div>
 
       <div class="logo-image">
-        <a href="#"><img src="{{ asset('images/logo-gamezone.png') }}" alt="logo"></a>
+        <a href="{{ route('home') }}"><img src="{{ asset('images/logo-gamezone.png') }}" alt="logo"></a>
       </div>
 
       <div class="links">
