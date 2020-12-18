@@ -178,7 +178,11 @@
             <div>
               {{ Auth::user()->nickname }}<br>
               {{ Auth::user()->exp }} xp<br>
-              <a href="{{ route('User.show', ['User' => Auth::user()->id]) }}">Mon compte</a>
+              <a href="{{ route('User.show', ['User' => Auth::user()->id]) }}">Mon compte</a><br>
+              <a class="dropdown-item" href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();">
+              Déconnexion</a>
             </div>
           </div>
         @endguest
