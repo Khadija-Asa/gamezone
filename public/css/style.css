@@ -115,6 +115,39 @@ p,
 .index .main-attraction .bottom {
   background-image: url(../images/picture-parc-two.png);
 }
+.articles {
+  margin: 40px;
+}
+.article {
+  margin: 50px auto;
+  border-radius: 5px;
+  max-width: 200px;
+  max-width: 500px;
+  background-color: #272c55;
+  box-shadow: 13px 13px 26px #222647, -5px -5px 26px #424a89;
+}
+.articles:first-child {
+  margin-top: 50px;
+}
+.articles:last-child {
+  margin-bottom: 50px;
+}
+.article .title {
+  padding: 20px;
+  font-size: 20px;
+  color: #EFC732;
+}
+.article .content {
+  padding: 20px;
+}
+.article .publishDate {
+  margin-top: 30px;
+  color: gray;
+  float: right;
+}
+.article:last-child {
+  clear: both;
+}
 /*PC*/
 @media screen and (min-width: 800px) {
   /*Header bottom*/

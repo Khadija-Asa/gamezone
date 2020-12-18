@@ -63,10 +63,20 @@
         </div>
         <div class="bottom"></div>
     </section>
-    <section class="news">
-        <h2>NEWS</h2>
+    @if (!is_null($articles))
+      <h2>NEWS</h2>
+      <section class="articles">
+        @foreach ($articles as $article)
+          <div class="article">
+            <p class="title">{{ $article->title }}</p>
+            <p class="content">{{ $article->content }}<br>
+            <span class="publishDate">Publié le {{ $article->created_at }}</span></p>
+          </div>
+        @endforeach  
 
-    </section>
+      </section>
+    @else
+    @endif
 
     
     
