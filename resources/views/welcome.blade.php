@@ -53,13 +53,13 @@
             <p>Venez vous <span>amuser</span> dans l’une de nos attractions !<br>
                 Massacrez des zombies, provoquez un déluge de la justice ou pilotez des karts : chacunes de nos attractions 
                 possèdent ses propres caractéristiques. <span>Testez les toutes !</span></p>
-            <a href="">En savoir plus</a>
+            <a href="{{ route('Attraction.index') }}">En savoir plus</a>
         </div>
         <div class="center">
-            <img src="../images/gamecente.png" alt="logo-gamecenter">
-            <img src="../images/awsomeheros.png" alt="logo-awsomeheros">
-            <img src="../images/championsleaguesurvivor.png" alt="logo-champions-leagie-survivor">
-            <img src="../images/heroesteam.png" alt="logo-heroesteam">
+            <img src="{{ asset('images/gamecente.png') }}" alt="logo-gamecenter">
+            <img src="{{ asset('images/awsomeheros.png') }}" alt="logo-awsomeheros">
+            <img src="{{ asset('images/championsleaguesurvivor.png') }}" alt="logo-champions-leagie-survivor">
+            <img src="{{ asset('images/heroesteam.png') }}" alt="logo-heroesteam">
         </div>
         <div class="bottom"></div>
     </section>

@@ -17,7 +17,7 @@
         <label for="lessThan2">Nombre d'enfants entre 0 et 2 ans</label>
       </div>
       <div>
-        <span class="price">Palce à 0€</span>
+        <span class="price">Place à 0€</span>
       </div>
       <div>
         <select id="lessThan2" class="select">
@@ -32,7 +32,7 @@
         <label for="between2and8">Nombre d'enfants entre 2 et 8 ans</label>
       </div>
       <div>
-      <span class="price">Palce à 12.50€</span>
+      <span class="price">Place à 12.50€</span>
       </div>
       <div>
         <select name="between2and8" id="between2and8" class="select">
@@ -47,7 +47,7 @@
         <label for="moreThan8">Nombre d'enfants mineurs de plus de 8 ans</label>
       </div>
       <div>
-        <span class="price">Palce à 13.50€</span>
+        <span class="price">Place à 13.50€</span>
       </div>
       <div>
         <select name="moreThan8" id="moreThan8" class="select">
@@ -62,7 +62,7 @@
         <label for="adults">Nombre d'adultes (plus de 18 ans)</label>
       </div>
       <div>
-        <span class="price">Palce à 15€</span>
+        <span class="price">Place à 15€</span>
       </div>
       <div>
         <select name="adults" id="adults" class="select">
@@ -81,7 +81,7 @@
       <p><a href="">Se rendre au parc</a></p>
     </div>
     <div>
-      <p><a href="">Tarif et billetterie</a></p>
+      <p><a href="{{ route('Schedule.index') }}">Afficher les horaires</a></p>
     </div>
   </div>
 </section>

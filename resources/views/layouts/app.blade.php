@@ -197,9 +197,9 @@
           <li><a class="nav-menu" href="{{ route('map') }}">Plan</a></li>
           <li><a class="nav-menu" href="">Se rendre au parc</a></li>
           <li><a class="nav-menu" href="{{ route('pricelist') }}">Tarifs et billetterie</a></li>
-          <li><a class="nav-menu" href="{{ route('Calendar.index') }}">Horaire et calendrier</a></li>
+          <li><a class="nav-menu" href="{{ route('Calendar.index') }}">Horaires et calendrier</a></li>
           <li><a class="nav-menu" href="">My game</a></li>
-          <li><a class="nav-menu" href="">Informations</a></li>
+          <li><a class="nav-menu" href="{{ route('informations') }}">Informations</a></li>
         </ul>
 			</div>
 	  </nav>
@@ -227,8 +227,8 @@
       <div class="links">
           <a href="{{ route('contact') }}">nous contacter</a>
           <a href="{{ route('recruitment') }}">on recrute</a>
-          <a href="">dans la presse</a>
-          <a href="">à propos du parc</a>
+          <a href="{{ route('informations') }}">dans la presse</a>
+          <a href="{{ route('informations') }}">à propos du parc</a>
       </div>
 
       <hr>
@@ -246,7 +246,7 @@
       <div class="laws">
         <a href="{{ route('sale') }}">conditions de vente</a>
         <a href="{{ route('cookies') }}">cookies</a>
-        <a href="{{ route('legal') }}">conditions légales</a>
+        <a href="{{ route('legal') }}">mentions légales</a>
       </div>
 
       <p class="copyright"><i class="far fa-copyright"></i>Copyright Gamezone</p>

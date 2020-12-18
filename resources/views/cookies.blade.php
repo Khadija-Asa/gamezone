@@ -3,10 +3,7 @@
 @section('content')
 
 <div class="paragraph">
-  <h1>Charte relative aux cookies 
-  <br>
-  <br>
-  Cliquer ici pour modifier vos préférences en matière de cookies.</h1>
+  <h1>Charte relative aux cookies cookies.</h1>
   <br>
   <br>
   <h2>Qu'est-ce qu'un cookie ?</h2>
