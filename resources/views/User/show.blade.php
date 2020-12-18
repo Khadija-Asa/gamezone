@@ -8,6 +8,7 @@
         <p>MON COMPTE</p>
 </section>
 <div class="container-account">
+  @if (Auth::user()->admin === 1 || Auth::user()->id === $user->id)
       <div class="group-account">
           <div class="accountleft">
           <ul class="list-group-account-left">
@@ -57,7 +58,7 @@
             </button>
           </form>
         </div>
-        @if (Auth::user()->admin === 1)
+        @if (Auth::user()->admin === 1 && Auth::user()->id === $user->id)
         <div class="adminBoard">
           <p class="adminSectionTitle">Administration du site</p>
           <a href="{{ route('Attraction.create') }}" class="btn btn-primary">
@@ -74,5 +75,8 @@
           </a>
         </div>
         @endif
+  @else
+        <p class="errorInformation">Vous n'avez pas la permission d'accéder à cette page</p>
+  @endif
 </div>
 @endsection
