@@ -28,6 +28,9 @@ Route::resource('Attraction', 'AttractionController')->only([
 Route::resource('Calendar', 'CalendarController')->only([
   'index'
 ]);
+Route::resource('Article', 'ArticleController')->only([
+  'store', 'create', 'edit', 'update', 'destroy'
+]);
 Route::get('/contact', 'SendEmailController@index')->name('contact');
 Route::post('/contact/send', 'SendEmailController@send')->name('mail.send');
 Route::get('/cookies', 'HomeController@cookies')->name('cookies');

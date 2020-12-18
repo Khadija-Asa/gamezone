@@ -24,7 +24,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+      return view('Article.create');
     }
 
     /**
@@ -35,7 +35,19 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $request->validate([
+          'title'=>'required',
+          'content'=>'required'
+      ]);
+
+
+      $article = new Article([
+          'title' => $request->get('title'),
+          'content' => $request->get('content')
+      ]);
+      $article->save();
+
+      return redirect()->route('home');
     }
 
     /**
