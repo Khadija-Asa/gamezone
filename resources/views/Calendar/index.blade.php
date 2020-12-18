@@ -78,13 +78,13 @@
   <div class="days-special">
     <div class="day-special">
       <h3>Journée spéciale</h3>
-      <p>Textdsc vxd vsff vs dvsd v wdv dd vx ddv sdv sf v fsv fs v<br>
-    wwwwwwwwwwwwwwwwwwwwwwww</p>
+      <p>Venez vivre une journée remplie d'evènements spéciaux, rien que pour vous !<br>
+      Tous les derniers dimanches du mois !</p>
     </div>
     <div class="day-special">
       <h3>Nocturne</h3>
-      <p>Textdsc vxd vsff vs dvsd v wdv dd vx ddv sdv sf v fsv fs v<br>
-    wwwwwwwwwwwwwwwwwwwwwwww</p>
+      <p>Profitez encore plus de votre journée !<br>
+      Tous les Vendredi et Samedi, votre parc ferme plus tard !</p>
     </div>
   </div>
   <h2>Préparer sa visite</h2>
