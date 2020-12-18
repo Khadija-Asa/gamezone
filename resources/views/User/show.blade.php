@@ -74,6 +74,10 @@
             <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Liste des utilisateurs</span>
             </button>
           </a>
+          <a href="{{ route('Article.create') }}" class="btn btn-primary">
+            <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Ajouter une news</span>
+            </button>
+          </a>
         </div>
         @endif
   @else

@@ -148,6 +148,17 @@ p,
 .article:last-child {
   clear: both;
 }
+.pagination {
+  display: flex;
+}
+.articles nav {
+  display: flex;
+  justify-content: center;
+}
+.articles li {
+  padding: 10px;
+  font-size: 20px;
+}
 /*PC*/
 @media screen and (min-width: 800px) {
   /*Header bottom*/

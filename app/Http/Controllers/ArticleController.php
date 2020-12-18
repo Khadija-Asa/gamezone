@@ -47,7 +47,7 @@ class ArticleController extends Controller
       ]);
       $article->save();
 
-      return redirect()->route('home');
+      return redirect()->route('home', ['#news']);
     }
 
     /**
@@ -86,7 +86,7 @@ class ArticleController extends Controller
       $article = Article::find($id);
       $article->fill($request->all());
       $article->save();
-      return redirect()->route('home');
+      return redirect()->route('home', ['#news']);
     }
 
     /**
@@ -100,6 +100,6 @@ class ArticleController extends Controller
       $article = Article::find($id);
       $article->delete();
 
-      return redirect()->route('home');
+      return redirect()->route('home', ['#news']);
     }
 }

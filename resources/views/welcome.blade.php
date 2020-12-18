@@ -65,7 +65,7 @@
     </section>
     @if (!is_null($articles))
       <h2>NEWS</h2>
-      <section class="articles">
+      <section class="articles" id="news">
         @foreach ($articles as $article)
           <div class="article">
             <p class="title">{{ $article->title }}</p>
@@ -87,7 +87,8 @@
               @endif
             @endguest
           </div>
-        @endforeach  
+        @endforeach 
+        {{ $articles->links() }} 
 
       </section>
     @else
