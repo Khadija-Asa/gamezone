@@ -28,6 +28,9 @@ Route::resource('Attraction', 'AttractionController')->only([
 Route::resource('Calendar', 'CalendarController')->only([
   'index'
 ]);
+Route::resource('Product', 'ProductController')->only([
+  'index'
+]);
 Route::get('/contact', 'SendEmailController@index')->name('contact');
 Route::post('/contact/send', 'SendEmailController@send')->name('mail.send');
 Route::get('/cookies', 'HomeController@cookies')->name('cookies');
@@ -61,6 +64,9 @@ Route::group(['middleware' => 'is.admin'], function() {
     'store', 'create', 'edit', 'update', 'show', 'destroy'
   ]);
   Route::resource('Article', 'ArticleController')->only([
+    'store', 'create', 'edit', 'update', 'destroy'
+  ]);
+  Route::resource('Product', 'ProductController')->only([
     'store', 'create', 'edit', 'update', 'destroy'
   ]);
 });

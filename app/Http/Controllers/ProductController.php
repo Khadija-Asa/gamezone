@@ -14,7 +14,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+      $products = Product::all();
+      return view('Product.index', ['products' => $products]);
     }
 
     /**
@@ -24,7 +25,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+      return view('Product.create');
     }
 
     /**
@@ -35,7 +36,25 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $request->validate([
+          'name'=>'required',
+          'description'=>'required',
+          'price'=>'required',
+          'image'=>'required'
+      ]);
+
+      $image_url = $request->file('image')->store('public/products');
+      $image_url = substr($image_url, 7);
+
+      $product = new Product([
+          'name' => $request->get('name'),
+          'description' => $request->get('description'),
+          'price' => $request->get('price'),
+          'image_url' => $image_url
+      ]);
+      $product->save();
+
+      return redirect()->route('Product.index');
     }
 
     /**
