@@ -65,23 +65,28 @@ class ArticleController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\Article  $article
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Article $article)
+    public function edit(Article $article, $id)
     {
-        //
+      $article = Article::all()->find($id);
+      return view('Article.edit', ['article' => $article]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Article  $article
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $article)
+    public function update(Request $request, $id)
     {
-        //
+      $article = Article::find($id);
+      $article->fill($request->all());
+      $article->save();
+      return redirect()->route('home');
     }
 
     /**

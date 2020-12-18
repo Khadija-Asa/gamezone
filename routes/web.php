@@ -28,9 +28,6 @@ Route::resource('Attraction', 'AttractionController')->only([
 Route::resource('Calendar', 'CalendarController')->only([
   'index'
 ]);
-Route::resource('Article', 'ArticleController')->only([
-  'store', 'create', 'edit', 'update', 'destroy'
-]);
 Route::get('/contact', 'SendEmailController@index')->name('contact');
 Route::post('/contact/send', 'SendEmailController@send')->name('mail.send');
 Route::get('/cookies', 'HomeController@cookies')->name('cookies');
@@ -39,6 +36,10 @@ Route::get('/legal', 'HomeController@legal')->name('legal');
 Route::get('/map', 'HomeController@map')->name('map');
 Route::get('/mention', 'HomeController@mention')->name('mention');
 Route::get('/recruitment', 'HomeController@recruitment')->name('recruitment');
+Route::get('/pricelist', 'HomeController@pricelist')->name('pricelist');
+Route::get('/informations', 'HomeController@informations')->name('informations');
+Route::get('/sale', 'HomeController@sale')->name('sale');
+Route::get('/game', 'HomeController@game')->name('game');
 
 // UTILISATEURS ENREGISTRES
 Route::group(['middleware' => 'auth'], function() {
@@ -59,8 +60,7 @@ Route::group(['middleware' => 'is.admin'], function() {
   Route::resource('Attraction', 'AttractionController')->only([
     'store', 'create', 'edit', 'update', 'show', 'destroy'
   ]);
+  Route::resource('Article', 'ArticleController')->only([
+    'store', 'create', 'edit', 'update', 'destroy'
+  ]);
 });
-Route::get('/pricelist', 'HomeController@pricelist')->name('pricelist');
-Route::get('/informations', 'HomeController@informations')->name('informations');
-Route::get('/sale', 'HomeController@sale')->name('sale');
-Route::get('/game', 'HomeController@game')->name('game');
