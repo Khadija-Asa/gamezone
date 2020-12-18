@@ -9,6 +9,7 @@
     background-image: url(../images/background-header.png)!important;
     background: center;
     background-size: cover;
+    background-position: top center;
     height: 65vh;
     text-shadow: 1px 1px #000;
   }
