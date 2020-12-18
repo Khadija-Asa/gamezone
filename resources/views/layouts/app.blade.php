@@ -31,18 +31,13 @@
 		<link href="{{ asset('css/header.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/recruitment.css') }}" rel="stylesheet">
     <link href="{{ asset('css/pricelist.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/recruitment.css') }}" rel="stylesheet">
     <link href="{{ asset('css/show.css') }}" rel="stylesheet">
     <link href="{{ asset('css/edit.css') }}" rel="stylesheet">
     <link href="{{ asset('css/informations.css') }}" rel="stylesheet">
-		<link href="{{ asset('css/header.css') }}" rel="stylesheet">
-
-    <link href="{{ asset('css/recruitment.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/calendar.css') }}" rel="stylesheet">
-   
     <link href="{{ asset('css/sale.css') }}" rel="stylesheet">
     <link href="{{ asset('css/legal.css') }}" rel="stylesheet">
     <link href="{{ asset('css/cookies.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/schedule.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/game.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 </head>

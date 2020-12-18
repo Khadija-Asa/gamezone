@@ -1,0 +1,35 @@
+.containerHours > table {
+  margin: auto;
+}
+.containerHours table thead {
+  display: none;
+}
+.containerHours table tr{
+  display: block;
+  margin-bottom: 40px;
+}
+.containerHours table td {
+  display: block;
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .containerHours {
+    margin: 25px;
+  }
+  .containerHours table {
+    border-spacing: 10px;
+  }
+  .containerHours table thead {
+    display: table-header-group;
+  }
+  .containerHours table tr{
+    display: table-row;
+  }
+  .containerHours table td {
+    display: table-cell;
+  }
+  .containerHours {
+    text-align: center;
+  }
+}
