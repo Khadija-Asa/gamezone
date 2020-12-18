@@ -46,6 +46,9 @@
 .editbuttonaccount {
     margin-right: 5px;
 }
+.adminBoard {
+  margin: auto;
+}
 @media screen and (min-width: 800px) {
     .group-account {
         padding-top: 50px;

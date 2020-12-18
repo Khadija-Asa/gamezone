@@ -191,6 +191,7 @@ a {
     display: flex;
     justify-content: space-between;
     width: auto;
+    min-height: 50px;
   }
   .navigation-bar {
     background-color: #323868;

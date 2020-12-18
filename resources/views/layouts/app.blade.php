@@ -101,7 +101,7 @@
                 @endif
               @else
                   <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('User.show', ['User' => Auth::user()->id]) }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                       {{ Auth::user()->nickname }}</a>
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -162,17 +162,25 @@
           <p>Contactez nos experts : <span class="phone-experts">08 59 62 08 59</span> Service 0,15€/min + prix appel</p>
         </div>
         @guest
+          <div class="account">
+            <div>
+              <a class="nav-link" href="{{ route('login') }}">Se connecter</a>
+              @if (Route::has('register'))
+                 / <a class="nav-link" href="{{ route('register') }}">S'enregistrer</a>
+              @endif
+            </div>
+          </div>
         @else
-        <div class="account">
-          <div class="avatar">
-            <img src="{{ asset(Auth::user()->avatar) }}">
+          <div class="account">
+            <div class="avatar">
+              <img src="{{ asset(Auth::user()->avatar) }}">
+            </div>
+            <div>
+              {{ Auth::user()->nickname }}<br>
+              {{ Auth::user()->exp }} xp<br>
+              <a href="{{ route('User.show', ['User' => Auth::user()->id]) }}">Mon compte</a>
+            </div>
           </div>
-          <div>
-            {{ Auth::user()->nickname }}<br>
-            {{ Auth::user()->exp }} xp<br>
-            <a href="{{ route('User.edit', ['User' => Auth::user()->id]) }}">Mon compte</a>
-          </div>
-        </div>
         @endguest
       </div>
     </section>

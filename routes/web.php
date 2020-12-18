@@ -54,7 +54,7 @@ Route::group(['middleware' => 'is.admin'], function() {
     'index', 'store', 'create', 'edit', 'update', 'destroy'
   ]);
   Route::resource('Attraction', 'AttractionController')->only([
-    'store', 'create', 'update', 'show', 'destroy'
+    'store', 'create', 'edit', 'update', 'show', 'destroy'
   ]);
 });
 Route::get('/pricelist', 'HomeController@pricelist')->name('pricelist');

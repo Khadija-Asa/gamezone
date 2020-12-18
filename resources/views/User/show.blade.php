@@ -17,9 +17,11 @@
             <li class="list-group-item-left">
               Expérience: {{ $user->exp }}
             </li>
+            @if (Auth::user()->admin === 1)
               <li class="list-group-item-left">
                 Administrateur: {{ $user->admin }}
               </li>
+            @endif
               </ul>
           </div>
           <div class="accountright">
@@ -42,6 +44,22 @@
         </ul>
         </div>
         </div>
+        @if (Auth::user()->admin === 1)
+        <div class="adminBoard">
+          <a href="{{ route('Attraction.create') }}" class="btn btn-primary">
+            <button class="editbuttonaccount"><span class="fa fa-edit"> Ajouter une attraction</span>
+            </button>
+          </a>
+          <a href="{{ route('Schedule.index') }}" class="btn btn-primary">
+            <button class="editbuttonaccount"><span class="fa fa-edit"> Modifier les horaires</span>
+            </button>
+          </a>
+          <a href="{{ route('User.index') }}" class="btn btn-primary">
+            <button class="editbuttonaccount"><span class="fa fa-edit"> Liste des utilisateurs enregistrés</span>
+            </button>
+          </a>
+        </div>
+        @endif
         <div class="buttonaccount">
           <a href="{{ route('User.edit', ['User' => $user->id]) }}" class="btn btn-primary">
             <button class="editbuttonaccount"><span class="fa fa-edit"> Modifier</span>
