@@ -42,7 +42,7 @@
 
 				<section class="top-nav">	
 					<div class="user">
-						<a href="{{ url('/User') }}"><i class="far fa-user"></i></a>
+						<a href="{{ url('/User') }}" title="user"><i class="far fa-user"></i></a>
           </div>
           <!-- <div class="cart">
 						<a href="{{ url('/') }}"><i class="fas fa-shopping-basket"></i></a>

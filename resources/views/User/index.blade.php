@@ -19,10 +19,10 @@
                 {{ $user->nickname }}
               </td>
               <td>
-                <a href="{{ route('User.show', ['User' => $user->id]) }} " class="btn btn-success">
+                <a href="{{ route('User.show', ['User' => $user->id]) }} " class="btn btn-success" title="details">
                   <span class="fa fa-eye"> Détails</span>
                 </a>
-                <a href="{{ route('User.edit', ['User' => $user->id]) }}" class="btn btn-primary">
+                <a href="{{ route('User.edit', ['User' => $user->id]) }}" class="btn btn-primary" title="modifier">
                   <span class="fa fa-edit"> Modifier</span>
                 </a>
                 <form action="{{ route('User.destroy', ['User' => $user->id]) }}" method="POST" style="display: contents">

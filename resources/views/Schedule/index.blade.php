@@ -28,7 +28,7 @@
                   {{ $day->end_hour }}
                 </td>
                 <td>
-                  <a href="{{ route('Schedule.edit', ['Schedule' => $day->id]) }}" class="btn btn-primary">
+                  <a href="{{ route('Schedule.edit', ['Schedule' => $day->id]) }}" class="btn btn-primary" title="modifier">
                     <span class="fa fa-edit"> Modifier</span>
                   </a>
                   <form action="{{ route('Schedule.destroy', ['Schedule' => $day->id]) }}" method="POST" style="display: contents">
@@ -43,7 +43,7 @@
           @endforeach
         </tbody>
       </table>
-      <a href="{{ route('Schedule.create') }}" class="btn btn-primary">
+      <a href="{{ route('Schedule.create') }}" class="btn btn-primary" title="ajouter horaire">
         <span class="fa fa-edit"> Ajouter une horaire</span>
       </a>
     </div>

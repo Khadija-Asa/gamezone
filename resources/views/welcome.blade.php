@@ -53,7 +53,7 @@
             <p>Venez vous <span>amuser</span> dans l’une de nos attractions !<br>
                 Massacrez des zombies, provoquez un déluge de la justice ou pilotez des karts : chacunes de nos attractions 
                 possèdent ses propres caractéristiques. <span>Testez les toutes !</span></p>
-            <a href="">En savoir plus</a>
+            <a href="" title="En savoir plus">En savoir plus</a>
         </div>
         <div class="center">
             <img src="../images/gamecente.png" alt="logo-gamecenter">

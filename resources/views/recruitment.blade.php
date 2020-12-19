@@ -26,7 +26,7 @@ Postulez</p>
 </div>
     </div>
     <div class="inforecruitment">
-        <img src="../images/adress.png" alt="adress">
+        <img src="../images/adress.png" alt="adresse">
         <div class="inforecruitmenttext">
         <p>Soit en venant directement :<br>
         666 rue du jeu<br>
