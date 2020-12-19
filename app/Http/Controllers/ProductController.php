@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\CartItem;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -109,11 +110,15 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Product  $product
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        //
+        $cartItem = CartItem::where('product_id', $id)->delete(); // On supprime d'abord l'article de tous les paniers
+        $product = Product::find($id); //Puis on supprime le produit
+        $product->delete();
+  
+        return redirect()->route('Product.index');
     }
 }
