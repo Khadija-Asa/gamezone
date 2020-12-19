@@ -90,6 +90,9 @@
 						<li class="nav-item">
             <a class="nav-link" href="#">Informations</a>
             </li>
+						<li class="nav-item">
+            <a class="nav-link" href="{{ route('Product.index') }}">Boutique</a>
+            </li>
 
 							@guest
 								<li class="nav-item">
@@ -206,6 +209,7 @@
           <li><a class="nav-menu" href="{{ route('Calendar.index') }}">Horaires et calendrier</a></li>
           <li><a class="nav-menu" href="">My game</a></li>
           <li><a class="nav-menu" href="{{ route('informations') }}">Informations</a></li>
+          <li><a class="nav-menu" href="{{ route('Product.index') }}">Boutique</a></li>
         </ul>
 			</div>
 	  </nav>
