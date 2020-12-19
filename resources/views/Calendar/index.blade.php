@@ -90,7 +90,7 @@
   <h2>Préparer sa visite</h2>
   <div class="preparation">
     <div>
-      <p><a href="">Se rendre au parc</a></p>
+      <p><a href="" title="Se rendre au parc">Se rendre au parc</a></p>
     </div>
     <div>
       <p><a href="{{ route('pricelist') }}">Tarif et billetterie</a></p>

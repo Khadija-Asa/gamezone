@@ -78,7 +78,7 @@
   </div>
   <div class="preparation">
     <div>
-      <p><a href="">Se rendre au parc</a></p>
+      <p><a href="" title="Se rendre au parc">Se rendre au parc</a></p>
     </div>
     <div>
       <p><a href="{{ route('Schedule.index') }}">Afficher les horaires</a></p>

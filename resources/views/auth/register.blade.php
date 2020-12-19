@@ -94,25 +94,25 @@
                         <div class="avatar-group">
                         <div class="avatar">
                           <label for="avatar1" class="col-md-4 col-form-label text-md-right">
-                            <img src="{{ asset('images/avatars/1.png') }}" style="max-width: 200px;">
+                            <img src="{{ asset('images/avatars/1.png') }}" style="max-width: 200px;" alt="avatar">
                           </label>
                           <input type="radio" id="avatar1" name="avatar" value="images/avatars/1.png">
                           </div>
                           <div class="avatar">
                           <label for="avatar2" class="col-md-4 col-form-label text-md-right">
-                            <img src="{{ asset('images/avatars/2.png') }}" style="max-width: 200px;">
+                            <img src="{{ asset('images/avatars/2.png') }}" style="max-width: 200px;" alt="avatar">
                           </label>
                           <input type="radio" id="avatar2" name="avatar" value="images/avatars/2.png">
                           </div>
                           <div class="avatar">
                           <label for="avatar3" class="col-md-4 col-form-label text-md-right">
-                            <img src="{{ asset('images/avatars/3.png') }}" style="max-width: 200px;">
+                            <img src="{{ asset('images/avatars/3.png') }}" style="max-width: 200px;" alt="avatar">
                           </label>
                           <input type="radio" id="avatar3" name="avatar" value="images/avatars/3.png">
                           </div>
                           <div class="avatar">
                           <label for="avatar4" class="col-md-4 col-form-label text-md-right">
-                            <img src="{{ asset('images/avatars/4.png') }}" style="max-width: 200px;">
+                            <img src="{{ asset('images/avatars/4.png') }}" style="max-width: 200px;" alt="avatar">
                           </label>
                           <input type="radio" id="avatar4" name="avatar" value="images/avatars/4.png">
                           </div>

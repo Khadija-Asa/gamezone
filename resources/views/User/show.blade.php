@@ -13,7 +13,7 @@
           <div class="accountleft">
           <ul class="list-group-account-left">
             <li class="list-group-item-left">
-              <img src="{{ asset($user->avatar) }}" style="max-width: 200px;">
+              <img src="{{ asset($user->avatar) }}" style="max-width: 200px;" alt="avatar">
             </li>
             <li class="list-group-item-left">
               Expérience: {{ $user->exp }}
@@ -46,7 +46,7 @@
         </div>
         </div>
         <div class="buttonaccount">
-          <a href="{{ route('User.edit', ['User' => $user->id]) }}" class="btn btn-primary">
+          <a href="{{ route('User.edit', ['User' => $user->id]) }}" class="btn btn-primary" title="modifier">
             <button class="editbuttonaccount"><span class="fa fa-edit"> Modifier</span>
             </button>
           </a>
