@@ -53,6 +53,9 @@ Route::group(['middleware' => 'auth'], function() {
     'show', 'edit', 'update', 'destroy'
   ]);
   Route::resource('Address', 'AddressController');
+  Route::resource('CartItem', 'CartItemController')->only([
+    'store'
+  ]);
 });
 
 //ADMINS
