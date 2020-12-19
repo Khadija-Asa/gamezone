@@ -114,11 +114,20 @@ class CartItemController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\CartItem  $cartItem
+     * @param  int  $itemId
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CartItem $cartItem)
+    public function destroy($itemId)
     {
-        //
+        $product = CartItem::all()->find($itemId);
+        $cart_id = $product->cart_id;
+        $product->delete();
+        $cartExists = CartItem::where('cart_id', $cart_id)->count(); // S'il n'y a plus le cart_id spécifié dans CartItem
+        if($cartExists == 0) {
+          $cart = Cart::all()->find($cart_id);
+          $cart->delete();  //On supprime le cart en question de Cart
+          return redirect()->route('Product.index'); 
+        }
+        return redirect()->route('Cart.show', ['Cart' => $cart_id]); 
     }
 }
