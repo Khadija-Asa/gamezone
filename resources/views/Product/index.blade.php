@@ -5,6 +5,7 @@
 @section('content')
 
   @foreach ($products as $product)
+  <div class="product">
       {{ $product->name }}<br>
       {{ $product->description }}<br>
       {{ $product->price }}<br>
@@ -20,16 +21,17 @@
           <div class="buttonModify">
             <button class="editbutton" name="submit" type="submit" id="contact-submit">Ajouter au panier</button>
           </div>
+        @else
+          <p><a href="{{ route('login') }}" title="Se connecter">Connectez-vous</a> pour ajouter ce produit à votre panier !</p>
+        @endif
+      </form>
           @if (Auth::user()->admin === 1)
             <a href="{{ route('Product.edit', ['Product' => $product->id]) }}" class="btn btn-primary">
               <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Modifier le produit</span>
               </button>
             </a>
           @endif
-        @else
-          <p><a href="{{ route('login') }}" title="Se connecter">Connectez-vous</a> pour ajouter ce produit à votre panier !</p>
-        @endif
-      </form>
+  </div>
   @endforeach
   {{ $products->links() }} 
 @endsection
