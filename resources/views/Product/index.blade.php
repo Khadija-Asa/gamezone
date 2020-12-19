@@ -30,6 +30,13 @@
               <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Modifier le produit</span>
               </button>
             </a>
+            <form action="{{ route('Product.destroy', ['Product' => $product->id]) }}" method="POST" style="display: contents">
+              @csrf
+              @method('DELETE')
+              <button class="editbutton" type="submit">
+                <span class="fa fa-trash">Supprimer le produit</span>
+              </button>
+            </form>
           @endif
   </div>
   @endforeach
