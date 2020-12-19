@@ -30,6 +30,7 @@
                     {{ $item->product->price * $item->quantity }}
                 </td>
                 <td>
+                  @if(!($cart->status === 'paid'))
                     <form action="{{ route('CartItem.destroy', ['CartItem' => $item->id]) }}" method="POST" style="display: contents">
                     @csrf
                     @method('DELETE')
@@ -37,6 +38,7 @@
                         <span class="fa fa-trash">Supprimer</span>
                     </button>
                     </form>
+                  @endif
                 </td>
             </tr>
             @endforeach
