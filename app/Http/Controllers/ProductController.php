@@ -71,24 +71,39 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit($id)
     {
-        //
+        $product = Product::all()->find($id);
+        return view('Product.edit', ['product' => $product]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Product  $product
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, $id)
     {
-        //
+        $product = Product::find($id);
+        $product->fill([
+          'name' => $request->get('name'),
+          'description' => $request->get('description'),
+          'price' => $request->get('price'),
+        ]);
+        if ($request->hasFile('image')) {
+          $image_url = $request->file('image')->store('public/products');
+          $image_url = substr($image_url, 7);
+          $product->fill([
+            'image_url' => $image_url
+          ]);
+        }
+        $product->save();
+        return redirect()->route('Product.index');
     }
 
     /**
