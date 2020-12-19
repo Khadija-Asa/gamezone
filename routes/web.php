@@ -31,6 +31,9 @@ Route::resource('Calendar', 'CalendarController')->only([
 Route::resource('Product', 'ProductController')->only([
   'index'
 ]);
+Route::resource('Cart', 'CartController')->only([
+  'show', 'store', 'create', 'edit', 'update', 'destroy'
+]);
 Route::get('/contact', 'SendEmailController@index')->name('contact');
 Route::post('/contact/send', 'SendEmailController@send')->name('mail.send');
 Route::get('/cookies', 'HomeController@cookies')->name('cookies');
@@ -68,5 +71,8 @@ Route::group(['middleware' => 'is.admin'], function() {
   ]);
   Route::resource('Product', 'ProductController')->only([
     'store', 'create', 'edit', 'update', 'destroy'
+  ]);
+  Route::resource('Cart', 'CartController')->only([
+    'index'
   ]);
 });
