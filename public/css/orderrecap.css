@@ -1,0 +1,49 @@
+.orderRecapContainer {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.orderRecapContainer > table {
+    border-radius: 5px;
+    box-shadow: 13px 13px 26px #222647, -5px -5px 26px #424a89;
+}
+.orderRecapContainer table thead {
+    display: none;
+}
+.orderRecapContainer table tr{
+    display: block;
+    margin-bottom: 40px;
+}
+.orderRecapContainer table td {
+    display: block;
+    text-align: left;
+}
+.address {
+    max-width: 300px;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 13px 13px 26px #222647, -5px -5px 26px #424a89;
+}
+
+  @media only screen and (min-width: 768px) {
+    .orderRecapContainer {
+      margin: 25px;
+      margin-top: 50px;
+    }
+    .orderRecapContainer table {
+      border-spacing: 10px;
+    }
+    .orderRecapContainer table thead {
+      display: table-header-group;
+    }
+    .orderRecapContainer table tr{
+      display: table-row;
+    }
+    .orderRecapContainer table td {
+      display: table-cell;
+    }
+    .orderRecapContainer {
+      text-align: center;
+    }
+  }

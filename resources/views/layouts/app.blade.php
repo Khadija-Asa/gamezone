@@ -38,6 +38,7 @@
     <link href="{{ asset('css/legal.css') }}" rel="stylesheet">
     <link href="{{ asset('css/cookies.css') }}" rel="stylesheet">
     <link href="{{ asset('css/schedule.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/orderrecap.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/game.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 </head>
@@ -54,9 +55,11 @@
 					<div class="user">
 						<a href="{{ route('User.show', ['User' => Auth::user()->id]) }}"><i class="far fa-user"></i></a>
           </div>
-          <!-- <div class="cart">
-						<a href="{{ url('/') }}"><i class="fas fa-shopping-basket"></i></a>
-					</div> -->
+          @if (!Auth::user()->getIdCart()->isEmpty()) <!-- On fait apparaite le panier que s'il contient qqch -->
+            <div class="cart">
+              <a href="{{ route('Cart.show', ['Cart' => Auth::user()->getIdCart()[0]['id']]) }}"><i class="fas fa-shopping-basket"></i></a>
+            </div>
+          @endif
         @endguest
 
 			<button class="ham"></button>
@@ -177,6 +180,9 @@
               {{ Auth::user()->nickname }}<br>
               {{ Auth::user()->exp }} xp<br>
               <a href="{{ route('User.show', ['User' => Auth::user()->id]) }}">Mon compte</a><br>
+              @if (!Auth::user()->getIdCart()->isEmpty()) <!-- On fait apparaite le panier que s'il contient qqch -->
+                <a href="{{ route('Cart.show', ['Cart' => Auth::user()->getIdCart()[0]['id']]) }}">Mon panier</a><br>
+              @endif
               <a class="dropdown-item" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
               document.getElementById('logout-form').submit();">

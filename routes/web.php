@@ -31,12 +31,6 @@ Route::resource('Calendar', 'CalendarController')->only([
 Route::resource('Product', 'ProductController')->only([
   'index'
 ]);
-Route::resource('Cart', 'CartController')->only([
-  'show', 'store', 'create', 'edit', 'update', 'destroy'
-]);
-Route::resource('CartItem', 'CartItemController')->only([
-  'destroy'
-]);
 Route::get('/contact', 'SendEmailController@index')->name('contact');
 Route::post('/contact/send', 'SendEmailController@send')->name('mail.send');
 Route::get('/cookies', 'HomeController@cookies')->name('cookies');
@@ -56,8 +50,15 @@ Route::group(['middleware' => 'auth'], function() {
     'show', 'edit', 'update', 'destroy'
   ]);
   Route::resource('Address', 'AddressController');
+  Route::resource('Cart', 'CartController')->only([
+    'show'
+  ]);
   Route::resource('CartItem', 'CartItemController')->only([
-    'store'
+    'store', 'destroy'
+  ]);
+  Route::get('/order/{id}', 'HomeController@order')->name('order');
+  Route::resource('Cart', 'CartController')->only([
+    'update'
   ]);
 });
 

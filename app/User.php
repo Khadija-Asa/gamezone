@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Auth;
 
 class User extends Authenticatable
 {
@@ -26,4 +27,13 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function getIdCart() {
+        $cart = Cart::select('id')->where('user_id', Auth::user()->id)->where('status', 'pending')->get();
+        return $cart;
+    }
+
+    public function getAddresses() {
+        return $this->hasMany(AddressesUser::class);
+    }
 }
