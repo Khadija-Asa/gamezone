@@ -20,7 +20,7 @@
             </li>
             @if (Auth::user()->admin === 1)
               <li class="list-group-item-left">
-                Administrateur: {{ $user->admin }}
+                Administrateur
               </li>
             @endif
               </ul>
@@ -60,24 +60,41 @@
         </div>
         @if (Auth::user()->admin === 1 && Auth::user()->id === $user->id)
         <div class="adminBoard">
-          <p class="adminSectionTitle">Administration du site</p>
+          <p class="adminSectionTitle">Administration</p>
           <hr>
-          <a href="{{ route('Attraction.create') }}" class="btn btn-primary">
-            <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Ajouter une attraction</span>
-            </button>
-          </a>
-          <a href="{{ route('Schedule.index') }}" class="btn btn-primary">
-            <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Modifier les horaires</span>
-            </button>
-          </a>
-          <a href="{{ route('User.index') }}" class="btn btn-primary">
-            <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Liste des utilisateurs</span>
-            </button>
-          </a>
-          <a href="{{ route('Article.create') }}" class="btn btn-primary">
-            <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Ajouter une news</span>
-            </button>
-          </a>
+          <div class="adminBoard">
+            <p class="adminSectionTitle">Site</p>
+            <a href="{{ route('Attraction.create') }}" class="btn btn-primary">
+              <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Ajouter une attraction</span>
+              </button>
+            </a>
+            <a href="{{ route('Schedule.index') }}" class="btn btn-primary">
+              <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Modifier les horaires</span>
+              </button>
+            </a>
+            <a href="{{ route('Article.create') }}" class="btn btn-primary">
+              <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Ajouter une news</span>
+              </button>
+            </a>
+          </div>
+          <div class="adminBoard">
+            <p class="adminSectionTitle">Utilisateurs</p>
+            <a href="{{ route('User.index') }}" class="btn btn-primary">
+              <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Liste des utilisateurs</span>
+              </button>
+            </a>
+            <a href="{{ route('Cart.index') }}" class="btn btn-primary">
+              <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Liste des paniers</span>
+              </button>
+            </a>
+          </div>
+          <div class="adminBoard">
+            <p class="adminSectionTitle">Boutique</p>
+            <a href="{{ route('Product.create') }}" class="btn btn-primary">
+              <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Ajouter un produit</span>
+              </button>
+            </a>
+          </div>
         </div>
         @endif
   @else

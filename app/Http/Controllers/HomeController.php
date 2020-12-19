@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Attraction;
 use App\Article;
+use App\Cart;
 
 class HomeController extends Controller
 {
@@ -62,5 +63,10 @@ class HomeController extends Controller
     public function game()
     {
         return view('game');
+    }
+    public function order($id) //L'id correspond ici au cart, d'où l'on peut retirer toutes les informations dont on a besoin
+    {
+        $cart = Cart::with(['user', 'cart_items'])->find($id);
+        return view('order', ['cart' => $cart]);
     }
 }

@@ -30,17 +30,10 @@
                 @endif
             </td>
             <td>
-              <a href="{{ route('Cart.edit', ['Cart' => $cart->id]) }}" class="btn btn-primary">
-                <button class="editbuttonaccount adminButton"><span class="fa fa-edit">Modifier</span>
+              <a href="{{ route('Cart.show', ['Cart' => $cart->id]) }}" class="btn btn-primary">
+                <button class="editbuttonaccount adminButton"><span class="fa fa-edit">Voir</span>
                 </button>
               </a>
-              <form action="{{ route('Cart.destroy', ['Cart' => $cart->id]) }}" method="POST" style="display: contents">
-                @csrf
-                @method('DELETE')
-                <button class="editbuttonaccount" type="submit">
-                  <span class="fa fa-trash">Supprimer</span>
-                </button>
-              </form>
             </td>
           </tr>
       @endforeach
