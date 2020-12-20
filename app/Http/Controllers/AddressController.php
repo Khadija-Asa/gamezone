@@ -18,8 +18,8 @@ class AddressController extends Controller
      */
     public function index()
     {
-      $adresses = Address::with(['addresses'])->find(Auth::id());
-      return view('Address.index', ['addresses' => $adresses]);
+      $user = User::with(['getAddresses'])->find(Auth::id());
+      return view('Address.index', ['user' => $user]);
     }
 
     /**
