@@ -1,27 +1,27 @@
 @extends('layouts.app')
 
 @section('content')
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+ integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+ crossorigin=""></script>
+<body onload="init()">
 
 <section class="header-bottom-map">
   <h1>GAME ZONE</h1>
   <p>SE RENDRE AU PARC</p>
 </section>
 
-<section class="routes">
-
-  <div>
+  <div class="h2-routes">
     <h2>NOUS TROUVER</h2>
   </div>
+  
+  <div id="mapid"></div>
 
-  <div class="map">
-    <div class="pc">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6051.655708192405!2d3.505097840646467!3d50.377596180824085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2edd9e9607687%3A0xfac745f81d635c4b!2sNouvelle%20Forge!5e0!3m2!1sfr!2sfr!4v1608461244618!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </div>
-    <div class="mobile">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6051.655708192405!2d3.505097840646467!3d50.377596180824085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2edd9e9607687%3A0xfac745f81d635c4b!2sNouvelle%20Forge!5e0!3m2!1sfr!2sfr!4v1608461244618!5m2!1sfr!2sfr" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </div>
-  </div>
-
+<section class="routes">
   <div>
     <h2>BLABLA CAR</h2>
   </div>
@@ -47,4 +47,30 @@
   </div>
 </section>
 
+<script>
+  function init() {
+    const parcThabor = {
+      lat: 48.114384,
+      lng: -1.669494
+    }
+
+    const zoomLevel = 7;
+
+    const map = L.map('mapid').setView([51.505, -0.09], 13);
+
+    const mainLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoiemFyYXRjaHkiLCJhIjoiY2tpeDZ4b242M29objJxbGJiNXNweDh2biJ9.y1Hh5jIGyY4mjfLAeVoHEw'
+    });
+
+    mainLayer.addTo(map);
+
+
+  }
+</script>
+</body>
 @endsection

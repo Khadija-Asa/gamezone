@@ -15,12 +15,21 @@
   text-align: center;
   margin-top: 20px;
 }
-.map {
-  width: 100%;
+.h2-routes {
+  text-align: center;
+  color:  #EFC732;
+  margin: 30px;
 }
-.map .pc {
-  display: none;
-}
+
+#mapid { 
+  text-align: center;
+  height: 400px;
+  width: 90%;
+  margin: auto;
+ }
+
+
+
 
 .blabla-car {
   display: flex;
@@ -65,11 +74,5 @@ box-shadow:  13px 13px 26px #222647,
   }.button-blabla-car p a {
     background-color: #881F6A;
     margin: 0 100px;
-  }
-  .map .pc {
-    display: block;
-  }
-  .map .mobile {
-    display: none;
   }
 }
