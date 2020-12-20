@@ -1,0 +1,75 @@
+/*GLOBAL*/
+/*Route*/
+.routes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.routes h2 {
+  text-align: center;
+  color:  #EFC732;
+  margin-top: 20px;
+}
+.routes .map {
+  text-align: center;
+  margin-top: 20px;
+}
+.map {
+  width: 100%;
+}
+.map .pc {
+  display: none;
+}
+
+.blabla-car {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.button-blabla-car p {
+  margin: 30px 0;
+}
+.button-blabla-car p a {
+  background-color: #881F6A;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.button-blabla-car p a:hover {
+  color: #EFC732;
+}
+.preparation {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.preparation div  {
+  margin: 50px 0;
+  padding: 75px 50px;
+  border-radius: 50%;
+background: #323868;
+box-shadow:  13px 13px 26px #222647, 
+             -10px -10px 26px #424a89;
+}
+@media screen and (min-width: 800px) {
+  .preparation {
+    flex-direction: row;
+  }
+  .preparation div {
+    margin: 100px 100px;
+    padding: 90px 80px;
+  }
+  .blabla-car {
+    flex-direction: row;
+    justify-content: space-between;
+  }.button-blabla-car p a {
+    background-color: #881F6A;
+    margin: 0 100px;
+  }
+  .map .pc {
+    display: block;
+  }
+  .map .mobile {
+    display: none;
+  }
+}
