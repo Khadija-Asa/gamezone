@@ -15,7 +15,7 @@ class AttractionController extends Controller
      */
     public function index()
     {
-      $attractions = Attraction::with(['user'])->all();
+      $attractions = Attraction::all();
       return view('Attraction.index', ['attractions' => $attractions]);
     }
 
