@@ -46,6 +46,10 @@
         </div>
         </div>
         <div class="buttonaccount">
+          <a href="{{ route('Address.index') }}" class="btn btn-primary" title="modifier">
+            <button class="editbuttonaccount"><span class="fa fa-edit"> Ajouter une adresse</span>
+            </button>
+          </a>
           <a href="{{ route('User.edit', ['User' => $user->id]) }}" class="btn btn-primary" title="modifier">
             <button class="editbuttonaccount"><span class="fa fa-edit"> Modifier</span>
             </button>
