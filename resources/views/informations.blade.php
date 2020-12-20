@@ -26,6 +26,22 @@
 Nous nous consacrons à la création des expériences ludiques les plus épiques qui aient jamais existé. Vous pourrez essayer des attractions uniques que vous ne trouverez nul part ailleurs et qui contribueront à faire augmenter votre jauge d’expérience, seul ou en équipe, devenez le numéro 1 !</p>
   </div>
 
+  <div class="news">
+    <p><span>ILS PARLENT DE NOUS DANS LES JOURNAUX</span><br>
+      <div class="news-images">
+        <img src="{{ asset('images/breakingnews.png') }}" alt="Journal présentant Gamezone">
+        <img src="{{ asset('images/newspaper.png') }}" alt="Journal présentant Gamezone">
+      </div>
+    </p>
+     <p><span>ET DANS LES MAGASINES</span><br>
+      <div class="news-images">
+        <img src="{{ asset('images/news1.png') }}" alt="Magasine présentant Gamezone">
+        <img src="{{ asset('images/news2.png') }}" alt="Magasine présentant Gamezone">
+        <img src="{{ asset('images/news3.png') }}" alt="Magasine présentant Gamezone">
+      </div>
+    </p>
+  </div>
+
 </section>
 
 

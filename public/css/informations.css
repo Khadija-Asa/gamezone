@@ -16,7 +16,13 @@ span {
   margin: 100px;
 }
 
-
+.news-images img {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 30px;
+  width: 60%;
+}
 
 
 
@@ -38,5 +44,14 @@ span {
   .informations .paragraphe p {
     line-height: 30px;
     font-size: 20px;
+  }
+  .news-images {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .news-images img {
+    border-radius: 20px;
+    width: 30%;
   }
 }
