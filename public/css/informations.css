@@ -1,16 +1,5 @@
 /*GLOBAL*/
 /*header-bottom*/
-.header-bottom {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../images/background-header.png)!important;
-  background-position: top center;
-  background-size: cover;
-  height: 65vh;
-  text-shadow: 1px 1px #000;
-}
 .header-bottom p {
   text-align: center;
   color: #EFC732;
@@ -27,7 +16,13 @@ span {
   margin: 100px;
 }
 
-
+.news-images img {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 30px;
+  width: 60%;
+}
 
 
 
@@ -49,5 +44,14 @@ span {
   .informations .paragraphe p {
     line-height: 30px;
     font-size: 20px;
+  }
+  .news-images {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .news-images img {
+    border-radius: 20px;
+    width: 30%;
   }
 }
