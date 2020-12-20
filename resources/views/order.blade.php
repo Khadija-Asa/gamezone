@@ -5,6 +5,10 @@
   @if(Auth::user()->id === $cart->user_id)
     <div class="address">
       <p>Addresse de Livraison</p><br>
+      @if ($cart->user->getAddresses->isEmpty())
+        Vous n'avez pas encore ajouté d'addresse.<br>
+        <a href="{{ route('Address.index') }}" title="Ajouter une addresse">Cliquez-ici pour configurer une nouvelle addresse.</a>
+      @endif
       @foreach ($cart->user->getAddresses as $address)
         {{ $address->user->first_name }}
         {{ $address->user->last_name }}<br>
@@ -42,13 +46,15 @@
               @endforeach
       </tbody>
     </table>
-    <form action="{{ route('Cart.update', ['Cart'=>$cart->id]) }}" enctype="multipart/form-data" method="POST" >
-      @csrf
-      @method('PUT')
-      <div class="buttonModify">
-        <button class="editbutton" name="submit" type="submit" id="contact-submit">Valider ma commande</button>
-      </div>
-    </form>
+    @if (!$cart->user->getAddresses->isEmpty())
+      <form action="{{ route('Cart.update', ['Cart'=>$cart->id]) }}" method="POST" >
+        @csrf
+        @method('PUT')
+        <div class="buttonModify">
+          <button class="editbutton" name="submit" type="submit" id="contact-submit">Valider ma commande</button>
+        </div>
+      </form>
+    @endif
   @else
       <p>Vous n'avez pas la permission de consulter cette commande</p>
   @endif

@@ -24,6 +24,11 @@
 .buttonModify {
   text-align: center;
 }
+
+.disabled {
+    background-color:#4e57a7;
+    color: #201d20;
+}
 @media screen and (min-width: 800px) {
     .editbuttongroup {
         flex-direction: row;
