@@ -42,6 +42,11 @@
     color: #EFC732;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
+}
+.editbuttonaccount:hover, .deletebuttonaccount:hover {
+    background-color: #a34488;
+    color: #EFC732;
 }
 .editbuttonaccount {
     margin-right: 5px;

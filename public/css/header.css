@@ -142,7 +142,6 @@ a {
   height: 65vh;
   text-shadow: 1px 1px #000;
 }
-
 .header-bottom p {
   text-align: center;
   color: #EFC732;
@@ -238,9 +237,18 @@ a {
     margin: 0 10px;
     text-align: center;
   }
+  .navigation-bar ul li a:after {
+    display: block;
+    content: '';
+    border-bottom: 2px solid #EFC732;
+    transform: scaleX(0);
+    transition: transform 0.25s ease-in-out;
+  }
   .navigation-bar ul li a:hover {
     color: #EFC732;
-    border-bottom: 2px solid #EFC732;
+  }
+  .navigation-bar ul li a:hover:after {
+    transform: scaleX(1);
   }
   .menu li:hover {
     color: #EFC732 !important;
