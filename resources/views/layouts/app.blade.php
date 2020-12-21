@@ -185,7 +185,7 @@
               {{ Auth::user()->exp }} xp<br>
               <a href="{{ route('User.show', ['User' => Auth::user()->id]) }}">Mon compte</a><br>
               @if (!Auth::user()->getIdCart()->isEmpty()) <!-- On fait apparaite le panier que s'il contient qqch -->
-                <a href="{{ route('Cart.show', ['Cart' => Auth::user()->getIdCart()[0]['id']]) }}">Mon panier</a><br>
+                <a href="{{ route('Cart.show', ['Cart' => Auth::user()->getIdCart()[0]['id']]) }}">Mon panier ({{ Auth::user()->numberItems() }})</a><br>
               @endif
               <a class="dropdown-item" href="{{ route('logout') }}"
                 onclick="event.preventDefault();

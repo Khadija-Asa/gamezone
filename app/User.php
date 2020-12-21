@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Auth;
+use App\CartItem;
 
 class User extends Authenticatable
 {
@@ -31,6 +32,11 @@ class User extends Authenticatable
     public function getIdCart() {
         $cart = Cart::select('id')->where('user_id', Auth::user()->id)->where('status', 'pending')->get();
         return $cart;
+    }
+
+    public function numberItems() {
+      $items = CartItem::where('cart_id', Auth::user()->getIdCart()[0]['id'])->sum('quantity');
+      return $items;
     }
 
     public function getAddresses() {
