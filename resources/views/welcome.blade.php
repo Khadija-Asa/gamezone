@@ -63,7 +63,7 @@
         </div>
         <div class="bottom"></div>
     </section>
-    @if (!is_null($articles))
+    @if (!$articles->isEmpty())
       <h2>NEWS</h2>
       <section class="articles" id="news">
         @foreach ($articles as $article)
