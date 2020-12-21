@@ -17,6 +17,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- Styles -->
    
@@ -207,7 +208,7 @@
 			<!-- <div class="logo-icon"> -->
         <!-- <a href="#"><img src="{{ asset('images/logo-gamezone.png') }}"></a> -->
         <ul>
-          <li><a href="{{ route('home') }}" title="Accueil"><img src="{{ asset('images/logo-gamezone.png') }}" alt="Logo Gamezone"></a></li>
+          <li class="animate__animated animate__heartBeat animate__delay-4s"><a href="{{ route('home') }}" title="Accueil"><img src="{{ asset('images/logo-gamezone.png') }}" alt="Logo Gamezone"></a></li>
           <li><a class="nav-menu" href="{{ route('home') }}" title="Le parc">Parc</a></li>
           <li><a class="nav-menu" href="{{ route('Attraction.index') }}" title="Les attractions">Attractions</a></li>
           <li><a class="nav-menu" href="{{ route('map') }}" title="Le plan du parc">Plan</a></li>

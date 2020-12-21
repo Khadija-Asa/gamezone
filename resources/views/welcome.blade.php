@@ -4,8 +4,8 @@
 
 <div class="index">
     <section class="header-bottom">
-        <h1>GAME ZONE</h1>
-        <p>Le premier parc d’attraction <br>
+        <h1 class="animate__animated animate__bounceInLeft">GAME ZONE</h1>
+        <p class="animate__animated animate__bounceInLeft animate__delay-1s">Le premier parc d’attraction <br>
         au monde entièrement dédié à <br>
         l’univers des jeux-vidéos.</p>
     </section>
@@ -24,7 +24,7 @@
             <p>Gamers du monde entier : À vous de jouer !</p>
         </div>
 
-        <div class="center">
+        <div>
             <div>
                 <p>9</p>
                 <p>attractions</p>
