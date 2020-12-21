@@ -5,9 +5,7 @@
 @section('content')
 <div class="header-bottom">
         <h1>GAME ZONE</h1>
-        <p>Le premier parc d’attraction <br>
-        au monde entièrement dédié à <br>
-        l’univers des jeux-vidéos.</p>
+        <h2>ATTRACTIONS</h2>
 </div>
 <div class="attractions">
     @foreach ($attractions as $attraction)
