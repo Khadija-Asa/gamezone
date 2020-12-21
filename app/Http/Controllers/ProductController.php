@@ -55,7 +55,7 @@ class ProductController extends Controller
       ]);
       $product->save();
 
-      return redirect()->route('Product.index');
+      return redirect()->route('Product.index')->with('message', 'Le produit a bien été ajouté !');
     }
 
     /**
@@ -104,7 +104,7 @@ class ProductController extends Controller
           ]);
         }
         $product->save();
-        return redirect()->route('Product.index');
+        return redirect()->route('Product.index')->with('message', 'Le produit a bien été modifié !');
     }
 
     /**
@@ -119,6 +119,6 @@ class ProductController extends Controller
         $product = Product::find($id); //Puis on supprime le produit
         $product->delete();
   
-        return redirect()->route('Product.index');
+        return redirect()->route('Product.index')->with('message', 'Le produit a bien été supprimé !');
     }
 }

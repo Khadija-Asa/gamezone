@@ -62,7 +62,7 @@ class AttractionController extends Controller
       ]);
       $attraction->save();
 
-      return redirect()->route('Attraction.index');
+      return redirect()->route('Attraction.index')->with('message', 'L\'attraction a bien été ajoutée !');
     }
 
     /**
@@ -120,7 +120,7 @@ class AttractionController extends Controller
         ]);
       }
       $attraction->save();
-      return redirect()->route('Attraction.index');
+      return redirect()->route('Attraction.index')->with('message', 'L\'attraction a bien été modifiée !');
     }
 
     /**
@@ -134,6 +134,6 @@ class AttractionController extends Controller
       $attraction = Attraction::find($id);
       $attraction->delete();
 
-      return redirect()->route('Attraction.index');
+      return redirect()->route('Attraction.index')->with('message', 'L\'attraction a bien été supprimée !');
     }
 }

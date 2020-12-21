@@ -77,7 +77,7 @@ class CartController extends Controller
           'status' => 'paid',
         ]);
         $attraction->save();
-        return redirect()->route('Product.index');
+        return redirect()->route('Product.index')->with('message', 'La commande a été validée !');
     }
 
     /**

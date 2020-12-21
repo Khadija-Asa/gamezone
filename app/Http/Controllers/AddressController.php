@@ -59,7 +59,7 @@ class AddressController extends Controller
       $insertedId = $address->id;
 
       DB::insert('insert into addresses_users (user_id, address_id) values (?, ?)', [Auth::id(), $insertedId]);
-      return redirect()->route('Address.index');
+      return redirect()->route('Address.index')->with('message', 'L\'adresse a bien été ajoutée !');
     }
 
     /**
@@ -97,7 +97,7 @@ class AddressController extends Controller
         $address = Address::find($id);
         $address->fill($request->all());
         $address->save();
-        return redirect()->route('Address.index');
+        return redirect()->route('Address.index')->with('message', 'L\'adresse a bien été modifiée !');
     }
 
     /**
@@ -113,6 +113,6 @@ class AddressController extends Controller
       $address = Address::find($id);
       $address->delete();
 
-      return redirect()->route('Address.index');
+      return redirect()->route('Address.index')->with('message', 'L\'adresse a bien été supprimée !');
     }
 }

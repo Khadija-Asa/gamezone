@@ -3,12 +3,6 @@
 @section('content')
 
 <div class="index">
-
-  @if(session()->has('message'))
-    <div class="messageInformation">
-        {{ session()->get('message') }}
-    </div>
-  @endif
     <section class="header-bottom">
         <h1>GAME ZONE</h1>
         <p>Le premier parc d’attraction <br>

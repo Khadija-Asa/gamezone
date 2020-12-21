@@ -78,7 +78,7 @@ class UsersController extends Controller
       $user = User::find($id);
       $user->fill($request->all());
       $user->save();
-      return redirect()->route('User.show', ['User' => $id]);
+      return redirect()->route('User.show', ['User' => $id])->with('message', 'Votre compte a bien été modifié !');
     }
 
     /**

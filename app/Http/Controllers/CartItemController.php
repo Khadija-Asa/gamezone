@@ -74,7 +74,7 @@ class CartItemController extends Controller
           $cartItem->save();
         }
   
-        return redirect()->back();
+        return redirect()->back()->with('message', 'Le produit a bien été ajouté au panier !');
     }
 
     /**
@@ -128,6 +128,6 @@ class CartItemController extends Controller
           $cart->delete();  //On supprime le cart en question de Cart
           return redirect()->route('Product.index'); 
         }
-        return redirect()->route('Cart.show', ['Cart' => $cart_id]); 
+        return redirect()->route('Cart.show', ['Cart' => $cart_id])->with('message', 'Le produit a bien été retiré du panier !'); 
     }
 }

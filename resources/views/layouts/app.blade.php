@@ -216,6 +216,12 @@
 	  </nav>
 
         <main class="py-4">
+
+          @if(session()->has('message'))
+            <div class="messageInformation">
+                {{ session()->get('message') }}
+            </div>
+          @endif
             @yield('content')
         </main>
 

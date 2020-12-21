@@ -55,7 +55,7 @@ class ScheduleController extends Controller
       ]);
       $schedule->save();
 
-      return redirect()->route('Schedule.index');
+      return redirect()->route('Schedule.index')->with('message', 'L\horaire a bien été ajoutée !');
     }
 
     /**
@@ -97,7 +97,7 @@ class ScheduleController extends Controller
       $schedule = Schedule::find($id);
       $schedule->fill($request->all());
       $schedule->save();
-      return redirect()->route('Schedule.index');
+      return redirect()->route('Schedule.index')->with('message', 'L\'horaire a bien été modifiée !');
     }
 
     /**
@@ -111,6 +111,6 @@ class ScheduleController extends Controller
       $schedule = Schedule::find($id);
       $schedule->delete();
 
-      return redirect()->route('Schedule.index');
+      return redirect()->route('Schedule.index')->with('message', 'L\'horaire a bien été supprimée !');
     }
 }
