@@ -2,9 +2,9 @@
 
 @section('content')
 
-<section class="header-bottom-map">
+<section class="header-bottom">
   <h1>GAME ZONE</h1>
-  <p>SE RENDRE AU PARC</p>
+  <p>Se rendre au parc</p>
 </section>
 
   <div class="h2-routes">

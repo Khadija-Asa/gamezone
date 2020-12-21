@@ -274,7 +274,7 @@
         <a href="{{ route('legal') }}" title="Mentions légales">mentions légales</a>
       </div>
 
-      <p class="copyright"><i class="far fa-copyright"></i>Copyright Gamezone</p>
+      <p class="copyright">Copyright Gamezone</p>
     </section>
 
 

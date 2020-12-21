@@ -53,6 +53,11 @@ p {
 .attraction a:hover {
   color: #EFC732;
 }
+
+.attraction > div {
+  width: 100%;
+}
+
 /*header-bottom*/
 .header-bottom p {
   text-align: center;
