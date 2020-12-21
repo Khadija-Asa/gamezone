@@ -33,8 +33,14 @@ span {
   width: 60%;
 }
 
+.news p {
+  padding-top: 30px;
+  text-align: center;
+}
 
-
+.paragraphe p {
+  text-align: center;
+}
 
 /*PC*/
 @media screen and (min-width: 800px) {

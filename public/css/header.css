@@ -102,10 +102,10 @@ a {
 
 /*icon*/
 
-.cart a,
-.user a {
+.cart img,
+.user img {
   color: white;
-  font-size: 20px;
+  width: 30px;
   margin-left: 10px;
 }
 /*contactHeader*/

@@ -60,11 +60,11 @@
         <div></div>
         @else
 					<div class="user">
-						<a href="{{ route('User.show', ['User' => Auth::user()->id]) }}" title="Mon compte"><i class="far fa-user"></i></a>
+						<a href="{{ route('User.show', ['User' => Auth::user()->id]) }}" title="Mon compte"><img src="{{ asset('images/login.png') }}"></a>
           </div>
           @if (!Auth::user()->getIdCart()->isEmpty()) <!-- On fait apparaite le panier que s'il contient qqch -->
             <div class="cart">
-              <a href="{{ route('Cart.show', ['Cart' => Auth::user()->getIdCart()[0]['id']]) }}" title="Mon panier"><i class="fas fa-shopping-basket"></i></a>
+              <a href="{{ route('Cart.show', ['Cart' => Auth::user()->getIdCart()[0]['id']]) }}" title="Mon panier"><img src="{{ asset('images/cart.png') }}"></a>
             </div>
           @endif
         @endguest
@@ -112,7 +112,7 @@
                 @endif
               @else
                   <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('User.show', ['User' => Auth::user()->id]) }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                  <a class="nav-link" href="{{ route('User.show', ['User' => Auth::user()->id]) }}" title="Mon compte">
                       {{ Auth::user()->nickname }}</a>
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
