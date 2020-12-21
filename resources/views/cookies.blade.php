@@ -2,6 +2,13 @@
 
 @section('content')
 
+<div class="cookies-page">
+
+<section class="header-bottom">
+        <h1>GAME ZONE</h1>
+        <p>Les cookies</p>
+    </section>
+
 <div class="paragraph">
   <h1>Charte relative aux cookies cookies.</h1>
   <br>
@@ -111,5 +118,6 @@ Vous pouvez supprimer tous les cookies installés dans le répertoire de cookies
   Si vous n'utilisez aucun des navigateurs figurant ci-dessus, allez dans la fonction ‘Aide’, puis recherchez ‘Cookies’ pour trouver où est stocké le répertoire des cookies. Par ailleurs, vous pouvez également changer vos paramètres concernant les cookies Flash. Pour en savoir plus, cliquez sur le lien suivant.
   </p>
 </div>
+<div>
 
 @endsection

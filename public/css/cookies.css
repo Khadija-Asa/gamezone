@@ -3,6 +3,14 @@
   padding: 0;
 }
 
+.cookies-page .header-bottom {
+  background-image: url(../images/vrfamilygamezone.jpg)!important;
+  background-position: top center;
+  background-size: cover;
+  height: 65vh;
+  text-shadow: 1px 1px #000;
+}
+
 .paragraph h1,
 .paragraph h2 {
   color: white;

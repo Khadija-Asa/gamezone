@@ -2,6 +2,13 @@
 
 @section('content')
 
+<div class="sale-page">
+
+<section class="header-bottom">
+        <h1>GAME ZONE</h1>
+        <p>Les conditions de vente</p>
+    </section>
+
   <div class="paragraph">
     <p>
   <span class="clause">Clause n° 1 : Objet</span> 
@@ -99,6 +106,7 @@
   ... (signature du client) <br>
   ... (signature du représentant légal la société) <br>
     </p>
-  </div
+  </div>
+</div>
 
 @endsection

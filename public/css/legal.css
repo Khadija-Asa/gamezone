@@ -3,6 +3,14 @@
   padding: 0;
 }
 
+.legal-page .header-bottom {
+  background-image: url(../images/vrfamilygamezone.jpg)!important;
+  background-position: top center;
+  background-size: cover;
+  height: 65vh;
+  text-shadow: 1px 1px #000;
+}
+
 .paragraph {
   background-image: url(../images/Group\ 30\ \(1\).png)!important;
   background: center;

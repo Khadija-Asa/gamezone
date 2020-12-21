@@ -3,6 +3,13 @@
   padding: 0;
 }
 
+.game-page .header-bottom {
+  background-image: url(../images/minjeu-girl.jpg)!important;
+  background-size: cover;
+  height: 65vh;
+  text-shadow: 1px 1px #000;
+}
+
 #snake {
   margin: 0 auto;
   width: 50%;

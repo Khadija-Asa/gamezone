@@ -3,7 +3,7 @@
 @section('content')
 <section class="header-bottom">
         <h1>GAME ZONE</h1>
-        <p>NOUS CONTACTER</p>
+        <p>Nous contacter</p>
     </section>
 <div class="container-contact">
   <div class="row-contact">

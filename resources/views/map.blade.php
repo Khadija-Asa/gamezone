@@ -2,9 +2,11 @@
 
 @section('content')
 
-<section class="header-bottom-map">
+<div class="map-page">
+
+<section class="header-bottom">
   <h1>GAME ZONE</h1>
-  <p>LA CARTE DU PARC</p>
+  <p>La carte du parc</p>
 </section>
 
 <section class="mapContainer">
@@ -73,5 +75,5 @@
   </div>
 </section>
 <script type="text/javascript" src="{{ asset('js/map.js') }}"></script>
-
+<div>
 @endsection
