@@ -1,5 +1,6 @@
 .containerHours > table {
-  margin: auto;
+  margin: 50px auto;
+  padding: 100px 0;
 }
 .containerHours table thead {
   display: none;
@@ -10,14 +11,30 @@
 }
 .containerHours table td {
   display: block;
-  text-align: left;
+  text-align: center;
+  border-bottom: 1px solid cornsilk;
+}
+
+.containerHours thead tr th {
+  font-size: 20px;
+  border-bottom: 1px solid cornsilk;
+}
+.containerHours tbody tr td {
+  color: #ffffff;
+}
+.title-cart-table {
+  display: flex;
+  flex-direction: column;
+}
+.table-striped {
+  width: 200px;
 }
 @media only screen and (min-width: 768px) {
   .containerHours {
     margin: 25px;
   }
   .containerHours table {
-    border-spacing: 10px;
+    min-width: 90%;
   }
   .containerHours table thead {
     display: table-header-group;
@@ -30,5 +47,9 @@
   }
   .containerHours {
     text-align: center;
+  }
+  .header-bottom h1,
+  .header-bottom h2 {
+    margin-left: 100px;
   }
 }

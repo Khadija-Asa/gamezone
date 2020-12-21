@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="containerHours">
+<section class="header-bottom">
+  <h1>GAME ZONE</h1>
   <h2>Liste des utilisateurs</h2>
+</section>
+<div class="containerHours">
   <table class="table table-striped">
     <thead>
       <tr>

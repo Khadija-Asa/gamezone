@@ -14,7 +14,7 @@ body {
   background-size: cover;
 }
 .index span,
-.index h2,
+h2,
 .index h1,
 .index .header-bottom {
   color: #EFC732;

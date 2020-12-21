@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+<section class="header-bottom">
+  <h1>GAME ZONE</h1>
+  <h2>Mon panier</h2>
+</section>
 <div class="containerHours">
   @if(Auth::user()->id === $cart->user_id || Auth::user()->admin === 1)
     <table class="table table-striped">
