@@ -3,7 +3,7 @@
 @section('content')
 <section class="header-bottom">
         <h1>GAME ZONE</h1>
-        <p>MON COMPTE</p>
+        <p>Mon compte</p>
     </section>
 <div class="container">
     @if (Auth::user()->admin === 1 OR Auth::user()->id === $user->id)

@@ -5,7 +5,7 @@
 @section('content')
 <section class="header-bottom">
         <h1>GAME ZONE</h1>
-        <p>MON COMPTE</p>
+        <p>Mon compte</p>
 </section>
 <div class="container-account">
   @if (Auth::user()->admin === 1 || Auth::user()->id === $user->id)

@@ -40,6 +40,7 @@
     flex-direction: column;
 }
 .forgetpassword {
+    color: black;
     padding: 15px 0;
 }
 @media screen and (min-width: 800px) {

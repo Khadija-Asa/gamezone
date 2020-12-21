@@ -3,9 +3,12 @@
 @section('title', 'Tous les utilisateurs')
 
 @section('content')
+
+<div class="attraction-page">
+
 <div class="header-bottom">
         <h1>GAME ZONE</h1>
-        <h2>ATTRACTIONS</h2>
+        <p>Les attractions</p>
 </div>
 <div class="attractions">
     @foreach ($attractions as $attraction)
@@ -29,6 +32,7 @@
         </div>
       </div>
     @endforeach
+</div>
 </div>
   @endsection
 
