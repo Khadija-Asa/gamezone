@@ -3,6 +3,8 @@
 
 .calendarContainer {
   background-image: url(../images/backgroud.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -21,12 +23,16 @@ h1 {
   margin-top: 40px;
 }
 .preparation div {
-  margin: 70px;
-  padding: 105px 50px;
+  margin: 70px; 
   border-radius: 50%;
 background: #323868;
 box-shadow:  13px 13px 26px #222647, 
              -10px -10px 26px #424a89;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 table th {
   color: #C4C4C4;
