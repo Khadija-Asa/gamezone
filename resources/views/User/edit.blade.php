@@ -60,7 +60,7 @@
           @csrf
           @method('DELETE')
           <button class="editbutton" type="submit">
-            <span class="fa fa-trash">Supprimer le compte</span>
+            <span class="fa ">Supprimer le compte</span>
           </button>
           </div>
         </form>

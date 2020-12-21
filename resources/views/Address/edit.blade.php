@@ -32,7 +32,7 @@
           @csrf
           @method('DELETE')
           <button class="editbutton" type="submit">
-            <span class="fa fa-trash">Supprimer l'addresse</span>
+            <span class="fa ">Supprimer l'addresse</span>
           </button>
         </form>
       </div>

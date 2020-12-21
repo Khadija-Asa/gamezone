@@ -47,18 +47,18 @@
         </div>
         <div class="buttonaccount">
           <a href="{{ route('Address.index') }}" class="btn btn-primary" title="modifier">
-            <button class="editbuttonaccount"><span class="fa fa-edit"> Ajouter une adresse</span>
+            <button class="editbuttonaccount"><span class="fa "> Ajouter une adresse</span>
             </button>
           </a>
           <a href="{{ route('User.edit', ['User' => $user->id]) }}" class="btn btn-primary" title="modifier">
-            <button class="editbuttonaccount"><span class="fa fa-edit"> Modifier</span>
+            <button class="editbuttonaccount"><span class="fa "> Modifier</span>
             </button>
           </a>
           <form action="{{ route('User.destroy', ['User' => $user->id]) }}" method="POST" style="display: contents">
             @csrf
             @method('DELETE')
             <button class="deletebuttonaccount" type="submit">
-              <span class="fa fa-trash">Supprimer le compte</span>
+              <span class="fa ">Supprimer le compte</span>
             </button>
           </form>
         </div>
@@ -69,33 +69,33 @@
           <div class="adminBoard">
             <p class="adminSectionTitle">Site</p>
             <a href="{{ route('Attraction.create') }}" class="btn btn-primary">
-              <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Ajouter une attraction</span>
+              <button class="editbuttonaccount adminButton"><span class="fa "> Ajouter une attraction</span>
               </button>
             </a>
             <a href="{{ route('Schedule.index') }}" class="btn btn-primary">
-              <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Modifier les horaires</span>
+              <button class="editbuttonaccount adminButton"><span class="fa "> Modifier les horaires</span>
               </button>
             </a>
             <a href="{{ route('Article.create') }}" class="btn btn-primary">
-              <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Ajouter une news</span>
+              <button class="editbuttonaccount adminButton"><span class="fa "> Ajouter une news</span>
               </button>
             </a>
           </div>
           <div class="adminBoard">
             <p class="adminSectionTitle">Utilisateurs</p>
             <a href="{{ route('User.index') }}" class="btn btn-primary">
-              <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Liste des utilisateurs</span>
+              <button class="editbuttonaccount adminButton"><span class="fa "> Liste des utilisateurs</span>
               </button>
             </a>
             <a href="{{ route('Cart.index') }}" class="btn btn-primary">
-              <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Liste des paniers</span>
+              <button class="editbuttonaccount adminButton"><span class="fa "> Liste des paniers</span>
               </button>
             </a>
           </div>
           <div class="adminBoard">
             <p class="adminSectionTitle">Boutique</p>
             <a href="{{ route('Product.create') }}" class="btn btn-primary">
-              <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Ajouter un produit</span>
+              <button class="editbuttonaccount adminButton"><span class="fa "> Ajouter un produit</span>
               </button>
             </a>
           </div>

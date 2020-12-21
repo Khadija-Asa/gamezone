@@ -20,13 +20,13 @@
               </td>
               <td>
                 <a href="{{ route('Address.edit', ['Address' => $address->address->id]) }}" class="editbutton" title="éditer adresse" title="modifier l'adresse">
-                  <span class="fa fa-edit"> Modifier</span>
+                  <span class="fa "> Modifier</span>
                 </a>
                 <form action="{{ route('Address.destroy', ['Address' => $address->address->id]) }}" method="POST" style="display: contents">
                   @csrf
                   @method('DELETE')
                   <button class="editbutton" type="submit">
-                    <span class="fa fa-trash">Supprimer</span>
+                    <span class="fa ">Supprimer</span>
                   </button>
                 </form>
               </td>
@@ -37,7 +37,7 @@
   </table>
   <br>
   <a href="{{ route('Address.create') }}" class="editbutton" title="lien vers créer adresse">
-    <span class="fa fa-edit">Ajouter une adresse</span>
+    <span class="fa ">Ajouter une adresse</span>
   </a>
 </div>
 @endsection

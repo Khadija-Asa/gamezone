@@ -31,7 +31,7 @@
             </td>
             <td>
               <a href="{{ route('Cart.show', ['Cart' => $cart->id]) }}" class="btn btn-primary">
-                <button class="editbuttonaccount adminButton"><span class="fa fa-edit">Voir</span>
+                <button class="editbuttonaccount adminButton"><span class="fa ">Voir</span>
                 </button>
               </a>
             </td>

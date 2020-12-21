@@ -34,7 +34,7 @@
                       @csrf
                       @method('DELETE')
                       <button class="editbuttonaccount" type="submit">
-                          <span class="fa fa-trash">Supprimer</span>
+                          <span class="fa ">Supprimer</span>
                       </button>
                       </form>
                     @endif
@@ -48,7 +48,7 @@
   @endif
   @if(!($cart->status === 'paid'))
     <a href="{{ route('order', ['id' => $cart->id]) }}" class="btn btn-primary">
-      <button class="editbuttonaccount adminButton"><span class="fa fa-edit">Commander</span>
+      <button class="editbuttonaccount adminButton"><span class="fa ">Commander</span>
       </button>
     </a>
   @endif

@@ -25,14 +25,14 @@
             </td>
             <td>
               <a href="{{ route('Schedule.edit', ['Schedule' => $day->id]) }}" class="btn btn-primary">
-                <button class="editbuttonaccount adminButton"><span class="fa fa-edit">Modifier</span>
+                <button class="editbuttonaccount adminButton"><span class="fa ">Modifier</span>
                 </button>
               </a>
               <form action="{{ route('Schedule.destroy', ['Schedule' => $day->id]) }}" method="POST" style="display: contents">
                 @csrf
                 @method('DELETE')
                 <button class="editbuttonaccount" type="submit">
-                  <span class="fa fa-trash">Supprimer</span>
+                  <span class="fa ">Supprimer</span>
                 </button>
               </form>
             </td>
@@ -41,7 +41,7 @@
     </tbody>
   </table>
   <a href="{{ route('Schedule.create') }}" class="btn btn-primary">
-    <button class="editbuttonaccount adminButton"><span class="fa fa-edit">Ajouter une horaire</span>
+    <button class="editbuttonaccount adminButton"><span class="fa ">Ajouter une horaire</span>
     </button>
   </a>
 </div>
