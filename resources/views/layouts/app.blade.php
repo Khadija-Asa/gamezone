@@ -151,10 +151,10 @@
 				<div class="top-logo">
 					<a href="{{ route('home') }}" title="Accueil"><img src="{{ asset('images/logo-gamezone.png') }}" alt="Logo Gamezone"></a>
 				</div>
-			<header>
+      </header>
 
 <!--pc-->
-
+    <header>
 		<section class="top-header">
 			<div class="navig-bar">
 	    	{{-- <ul class="languages-icon">
@@ -219,7 +219,7 @@
         </ul>
 			<!-- </div> -->
 	  </nav>
-
+    </header>
         <main class="py-4">
 
           @if(session()->has('message'))
