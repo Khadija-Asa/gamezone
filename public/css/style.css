@@ -129,6 +129,7 @@ body {
   max-width: 500px;
   background-color: #272c55;
   box-shadow: 13px 13px 26px #222647, -5px -5px 26px #424a89;
+  padding: 10px;
 }
 .articles:first-child {
   margin-top: 50px;
