@@ -17,21 +17,21 @@ Postulez</p>
     <div class="inforecruitment">
         <img src="../images/phone.png" alt="phone">
         <div class="inforecruitmenttext">
-            <p>Soit par téléphone au :<br>
+            <p class="recruitment-text">Soit par téléphone au :<br>
             06XXXXXXXX</p>
         </div>
     </div>
     <div class="inforecruitment">
         <img src="../images/mail.png" alt="mail">
         <div class="inforecruitmenttext">
-        <p>Soit par E-mail :<br>
+        <p class="recruitment-text">Soit par E-mail :<br>
         xxxxxx@gamezone.fr</p>
 </div>
     </div>
     <div class="inforecruitment">
         <img src="../images/adress.png" alt="adresse">
         <div class="inforecruitmenttext">
-        <p>Soit en venant directement :<br>
+        <p class="recruitment-text">Soit en venant directement :<br>
         666 rue du jeu<br>
     59300 Gameland</p>
 </div>
