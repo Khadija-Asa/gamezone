@@ -213,7 +213,7 @@
           <li><a class="nav-menu" href="{{ route('routes') }}" title="Se rendre au parc">Se rendre au parc</a></li>
           <li><a class="nav-menu" href="{{ route('pricelist') }}" title="Tarifs">Tarifs et billetterie</a></li>
           <li><a class="nav-menu" href="{{ route('Calendar.index') }}" title="Calendrier">Horaires et calendrier</a></li>
-          <li><a class="nav-menu" href="">My game</a></li>
+          <li><a class="nav-menu" href="{{ route('game') }}" title="Mini-jeu">Mini-jeu</a></li>
           <li><a class="nav-menu" href="{{ route('informations') }}" title="A propos du parc">Informations</a></li>
           <li><a class="nav-menu" href="{{ route('Product.index') }}" title="La boutique">Boutique</a></li>
         </ul>
