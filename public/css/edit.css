@@ -20,6 +20,11 @@
     color: #EFC732;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
+}
+.editbutton:hover {
+    background-color: #a34488;
+    color: #EFC732;
 }
 .buttonModify {
   text-align: center;
