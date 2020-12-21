@@ -3,9 +3,7 @@
 @section('content')
 <section class="header-bottom">
         <h1>GAME ZONE</h1>
-        <p>Le premier parc d’attraction <br>
-        au monde entièrement dédié à <br>
-        l’univers des jeux-vidéos.</p>
+        <p>Se connecter</p>
     </section>
 <div class="container">
     <div class="row justify-content-center">

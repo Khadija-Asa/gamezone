@@ -3,9 +3,11 @@
 @section('title', 'Tous les utilisateurs')
 
 @section('content')
-<section class="header-bottom-map">
+<div class="shop-page">
+
+<section class="header-bottom">
   <h1>GAME ZONE</h1>
-  <p>BOUTIQUE SOUVENIRS</p>
+  <p>Boutique souvenirs</p>
 </section>
 
 <div class="product">
@@ -51,4 +53,6 @@
   @endforeach
   </div>
   {{ $products->links() }} 
+  
+  </div>
 @endsection
