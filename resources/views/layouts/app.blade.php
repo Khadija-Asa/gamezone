@@ -273,6 +273,10 @@
         <a href="{{ route('cookies') }}" title="A propos des cookies">cookies</a>
         <a href="{{ route('legal') }}" title="Mentions légales">mentions légales</a>
       </div>
+      
+      <div class="back-to-top">
+          <a href="{{ route('home') }}"><img src="../images/backtotop.png" alt="logo-back-to-top"></a>
+      </div>
 
       <p class="copyright">Copyright Gamezone</p>
     </section>

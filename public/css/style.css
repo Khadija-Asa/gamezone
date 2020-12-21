@@ -168,6 +168,14 @@ h2,
   padding: 10px;
   font-size: 20px;
 }
+/*back to top*/
+.back-to-top {
+  position: relative;
+  
+}
+.back-to-top a img {
+  width: 50px;
+}
 /*PC*/
 @media screen and (min-width: 800px) {
   /*Header bottom*/
