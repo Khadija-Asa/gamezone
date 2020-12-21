@@ -32,6 +32,7 @@
         @endif
       </form>
       <div class="adminbuttonindex">
+        @if (Auth::check())
           @if (Auth::user()->admin === 1)
             <a href="{{ route('Product.edit', ['Product' => $product->id]) }}" class="btn btn-primary">
               <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Modifier le produit</span>
@@ -45,6 +46,7 @@
               </button>
             </form>
           @endif
+        @endif
       </div>
     </div>
   
