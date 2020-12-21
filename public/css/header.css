@@ -156,7 +156,12 @@ a {
 .errorInformation {
   color: black;
 }
-
+.messageInformation {
+  background-color: #EFC732;
+  font-size: 20px;
+  padding: 20px 0;
+  text-align: center;
+}
 /*MQ*/
 
 @media only screen and (min-width: 768px) {

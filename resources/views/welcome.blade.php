@@ -4,13 +4,17 @@
 
 <div class="index">
 
+  @if(session()->has('message'))
+    <div class="messageInformation">
+        {{ session()->get('message') }}
+    </div>
+  @endif
     <section class="header-bottom">
         <h1>GAME ZONE</h1>
         <p>Le premier parc d’attraction <br>
         au monde entièrement dédié à <br>
         l’univers des jeux-vidéos.</p>
     </section>
-
     <section class="presentation">
         <div class="top">
             <h2>Présentation</h2>

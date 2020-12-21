@@ -91,9 +91,11 @@ class UsersController extends Controller
     {
       AddressesUser::where('user_id', $id)->delete(); //On supprime toutes les relations d'adresses
       $deleteCarts = Cart::all()->where('user_id', $id); //On selectionne tous les paniers
-      $items = CartItem::all()->where('cart_id', $deleteCarts[0]['id']); //On selectionne tous les items dans les paniers
-      foreach ($items as $item) { //Pour chaque item trouvé, on le supprime
-        $item->delete();
+      if (empty($deleteCarts)) {
+        $items = CartItem::all()->where('cart_id', $deleteCarts[0]['id']); //On selectionne tous les items dans les paniers
+        foreach ($items as $item) { //Pour chaque item trouvé, on le supprime
+          $item->delete();
+        }
       }
       foreach ($deleteCarts as $deleteCart) { //Pour chaque panier trouvé, on le supprime
         $deleteCart->delete();
@@ -101,6 +103,6 @@ class UsersController extends Controller
       $user = User::find($id); 
       $user->delete(); //On peut maintenant supprimer l'utilisateur
 
-      return redirect()->route('User.index');
+      return redirect()->route('home')->with('message', 'Votre compte a bien été supprimé!');
     }
 }
