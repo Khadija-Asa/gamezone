@@ -47,7 +47,7 @@
         </div>
         <div class="buttonaccount">
           <a href="{{ route('Address.index') }}" class="btn btn-primary" title="modifier">
-            <button class="editbuttonaccount"><span class="fa fa-edit"> Ajouter une adresse</span>
+            <button class="editbuttonaccount"><span class="fa fa-edit"> Mes addresses</span>
             </button>
           </a>
           <a href="{{ route('User.edit', ['User' => $user->id]) }}" class="btn btn-primary" title="modifier">
@@ -66,7 +66,7 @@
         <div class="adminBoard">
           <p class="adminSectionTitle">Administration</p>
           <hr>
-          <div class="adminBoard">
+          <div class="adminBoard adminBoardItem">
             <p class="adminSectionTitle">Site</p>
             <a href="{{ route('Attraction.create') }}" class="btn btn-primary">
               <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Ajouter une attraction</span>
@@ -81,7 +81,7 @@
               </button>
             </a>
           </div>
-          <div class="adminBoard">
+          <div class="adminBoard adminBoardItem">
             <p class="adminSectionTitle">Utilisateurs</p>
             <a href="{{ route('User.index') }}" class="btn btn-primary">
               <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Liste des utilisateurs</span>
@@ -92,7 +92,7 @@
               </button>
             </a>
           </div>
-          <div class="adminBoard">
+          <div class="adminBoard adminBoardItem">
             <p class="adminSectionTitle">Boutique</p>
             <a href="{{ route('Product.create') }}" class="btn btn-primary">
               <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Ajouter un produit</span>

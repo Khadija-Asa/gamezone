@@ -59,6 +59,9 @@
 .adminButton {
   margin: 10px;
 }
+.adminBoardItem {
+  padding: 10px 75px;
+}
 @media screen and (min-width: 800px) {
     .group-account {
         padding-top: 50px;
