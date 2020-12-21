@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\AddressesUser;
+use App\Cart;
+use App\CartItem;
 
 class UsersController extends Controller
 {
@@ -86,8 +89,17 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-      $user = User::find($id);
-      $user->delete();
+      AddressesUser::where('user_id', $id)->delete(); //On supprime toutes les relations d'adresses
+      $deleteCarts = Cart::all()->where('user_id', $id); //On selectionne tous les paniers
+      $items = CartItem::all()->where('cart_id', $deleteCarts[0]['id']); //On selectionne tous les items dans les paniers
+      foreach ($items as $item) { //Pour chaque item trouvé, on le supprime
+        $item->delete();
+      }
+      foreach ($deleteCarts as $deleteCart) { //Pour chaque panier trouvé, on le supprime
+        $deleteCart->delete();
+      }
+      $user = User::find($id); 
+      $user->delete(); //On peut maintenant supprimer l'utilisateur
 
       return redirect()->route('User.index');
     }

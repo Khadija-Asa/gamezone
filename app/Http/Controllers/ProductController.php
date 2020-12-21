@@ -115,7 +115,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        $cartItem = CartItem::where('product_id', $id)->delete(); // On supprime d'abord l'article de tous les paniers
+        CartItem::where('product_id', $id)->delete(); // On supprime d'abord l'article de tous les paniers
         $product = Product::find($id); //Puis on supprime le produit
         $product->delete();
   
