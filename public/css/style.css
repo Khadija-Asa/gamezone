@@ -93,6 +93,7 @@ h2,
   /*Bottom*/
   .index .presentation .bottom {
     background-image: url(../images/picture-parc.png);
+    background-attachment: fixed;
   }
 /*Section main-attractions*/
 .index .main-attraction img {
@@ -118,6 +119,7 @@ h2,
 }
 .index .main-attraction .bottom {
   background-image: url(../images/picture-parc-two.png);
+  background-attachment: fixed;
 }
 .articles {
   margin: 40px;
