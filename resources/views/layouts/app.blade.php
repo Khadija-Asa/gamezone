@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gamezone est le premier parc d'attractions dédié à l'univers du jeu-vidéo. Vivez une immersion unique dans des jeux-vidéos grandeur nature, comme Fortnite Aventure, PUBG Survivor ou encore Battle Kart VR.">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
