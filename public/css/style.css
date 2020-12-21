@@ -25,10 +25,11 @@
   text-align: center;
   color: #EFC732;
 }
-p,
+.index p,
 .index li,
 .main-attraction {
-  font-size: 15px;
+  font-size: 20px;
+  line-height: 30px;
   color: #fff;
   text-align: center;
 }
@@ -173,11 +174,11 @@ p,
   .index .presentation .top {
     margin: 0 200px;
   }
-.index .presentation .center {
-  display: flex;
-  justify-content: space-around;
+  .index .presentation .center {
+    display: flex;
+    justify-content: space-around;
 }
-.index .presentation .center p {
-  font-size: 30px;
+  .index .presentation .center p {
+    font-size: 30px;
 }
 }

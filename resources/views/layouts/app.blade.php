@@ -68,7 +68,7 @@
 
 						<ul>
 							<li class="nav-item">
-            <a class="nav-link" href="{{ route('home') }}">Parc</a>
+              <a class="nav-link" href="{{ route('home') }}">Parc</a>
             </li>
 							<li class="nav-item">
             <a class="nav-link" href="{{ route('Attraction.index') }}">Attractions</a>
@@ -198,7 +198,7 @@
     </section>
 
 		<nav class="navigation-bar">
-			<div class="logo-icon">
+			<!-- <div class="logo-icon"> -->
         <!-- <a href="#"><img src="{{ asset('images/logo-gamezone.png') }}"></a> -->
         <ul>
           <li><a href="{{ route('home') }}"><img src="{{ asset('images/logo-gamezone.png') }}"></a></li>
@@ -212,7 +212,7 @@
           <li><a class="nav-menu" href="{{ route('informations') }}">Informations</a></li>
           <li><a class="nav-menu" href="{{ route('Product.index') }}">Boutique</a></li>
         </ul>
-			</div>
+			<!-- </div> -->
 	  </nav>
 
         <main class="py-4">

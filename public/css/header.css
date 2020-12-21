@@ -205,18 +205,24 @@ a {
   .navigation-bar .nav-menu {
     color: white;
   }
-  .navigation-bar .logo-icon img {
-    display: block;
-    width: 10%;
-    position: absolute;
-    top: 115px;
-    left: 30px;
+  .navigation-bar ul {
+    align-items: center;
+  }
+  
+  .navigation-bar ul li:first-child {
+    width: 100px;
+    margin-right: 40px;
+    margin-left: 20px;
+  }
+  .navigation-bar ul li a img {
+    width: 100px;
   }
   .navigation-bar ul {
     text-decoration: none;
     display: flex;
-    justify-content: center;
-    padding: 50px 0;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 20px 0;
   }
   .navigation-bar li {
     font-size: 12px;
