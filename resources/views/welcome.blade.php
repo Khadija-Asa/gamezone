@@ -24,7 +24,7 @@
             <p>Gamers du monde entier : À vous de jouer !</p>
         </div>
 
-        <div>
+        <div class="center">
             <div>
                 <p>9</p>
                 <p>attractions</p>
