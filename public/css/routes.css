@@ -52,21 +52,10 @@
   justify-content: center;
   flex-direction: column;
 }
-.preparation div  {
-  margin: 50px 0;
-  padding: 75px 50px;
-  border-radius: 50%;
-background: #323868;
-box-shadow:  13px 13px 26px #222647, 
-             -10px -10px 26px #424a89;
-}
+
 @media screen and (min-width: 800px) {
   .preparation {
     flex-direction: row;
-  }
-  .preparation div {
-    margin: 100px 100px;
-    padding: 90px 80px;
   }
   .blabla-car {
     flex-direction: row;
