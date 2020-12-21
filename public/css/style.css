@@ -151,6 +151,10 @@
 }
 .pagination {
   display: flex;
+  justify-content: center;
+}
+.page-item {
+  padding: 0 5px;
 }
 .articles nav {
   display: flex;
