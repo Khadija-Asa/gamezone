@@ -73,13 +73,13 @@
             @else
               @if(Auth::user()->admin === 1)
               <a class="button-reservation" href="{{ route('Article.edit', ['Article' => $article->id]) }}" class="btn btn-primary">
-                <span class="fa fa-edit"> Modifier</span>
+                <span class="fa "> Modifier</span>
               </a>
               <form action="{{ route('Article.destroy', ['Article' => $article->id]) }}" method="POST" style="display: contents">
                 @csrf
                 @method('DELETE')
                 <button class="deletebuttonaccount" type="submit">
-                  <span class="fa fa-trash">Supprimer</span>
+                  <span class="fa ">Supprimer</span>
                 </button>
               </form><br>
               @endif

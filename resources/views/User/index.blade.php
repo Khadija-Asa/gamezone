@@ -24,13 +24,13 @@
                 <span class="fa fa-eye"> Détails</span>
               </a>&nbsp;
               <a href="{{ route('User.edit', ['User' => $user->id]) }}" class="btn btn-primary">
-                <span class="fa fa-edit"> Modifier</span>
+                <span class="fa "> Modifier</span>
               </a>&nbsp;
               <form action="{{ route('User.destroy', ['User' => $user->id]) }}" method="POST" style="display: contents">
                 @csrf
                 @method('DELETE')
                 <button class="editbuttonaccount" type="submit">
-                  <span class="fa fa-trash">Supprimer</span>
+                  <span class="fa ">Supprimer</span>
                 </button>
               </form>
             </td>

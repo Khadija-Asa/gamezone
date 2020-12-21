@@ -236,11 +236,13 @@
     <section class="bottom-page">
 
       <div class="social-media">
-        <h3>suivez gamezone :</h3>
-        <a href="www.twitter.com" title="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="www.youtube.com" title="Youtube"><i class="fab fa-youtube"></i></a>
-        <a href="www.instagram.com" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="www.facebook.com" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <h3>suivez gamezone</h3>
+        <div class="social-media-img">
+        <a href="www.twitter.com"><img src="{{ asset('images/twitter-brands.svg') }}"></a>
+        <a href="www.youtube.com"><img src="{{ asset('images/youtube-brands.svg') }}"></a>
+        <a href="www.instagram.com"><img src="{{ asset('images/instagram-brands.svg') }}"></a>
+        <a href="www.facebook.com"><img src="{{ asset('images/facebook-brands.svg') }}"></a>
+        </div>
       </div>
 
       <div class="logo-image">

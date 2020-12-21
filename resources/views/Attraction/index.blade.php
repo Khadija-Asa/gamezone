@@ -25,7 +25,7 @@
           @else
             @if (Auth::user()->admin === 1)
               <a class="button-reservation" href="{{ route('Attraction.edit', ['Attraction' => $attraction->id]) }}" class="btn btn-primary">
-                <span class="fa fa-edit"> Modifier</span>
+                <span class="fa "> Modifier</span>
               </a>
             @endif
           @endguest

@@ -37,14 +37,14 @@
         @if (Auth::check())
           @if (Auth::user()->admin === 1)
             <a href="{{ route('Product.edit', ['Product' => $product->id]) }}" class="btn btn-primary">
-              <button class="editbuttonaccount adminButton"><span class="fa fa-edit"> Modifier le produit</span>
+              <button class="editbuttonaccount adminButton"><span class="fa "> Modifier le produit</span>
               </button>
             </a>
             <form action="{{ route('Product.destroy', ['Product' => $product->id]) }}" method="POST" style="display: contents">
               @csrf
               @method('DELETE')
               <button class="deletebuttonaccount" type="submit">
-                <span class="fa fa-trash">Supprimer le produit</span>
+                <span class="fa ">Supprimer le produit</span>
               </button>
             </form>
           @endif
