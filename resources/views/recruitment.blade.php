@@ -1,9 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+
+<div class="recruitment-page">
+
 <section class="header-bottom">
         <h1>GAME ZONE</h1>
-        <p>ON RECRUTE</p>
+        <p>On recrute</p>
 </section>
 <div class="container-recruitment">
   <p class="titlecontact">Faites partie de notre team<br>
@@ -33,6 +36,7 @@ Postulez</p>
     59300 Gameland</p>
 </div>
     </div>
+</div>
 </div>
     
 @endsection

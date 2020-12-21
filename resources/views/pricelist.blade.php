@@ -1,9 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+
+<div class="pricelist-page">
+
 <section class="header-bottom">
   <h1>GAME ZONE</h1>
-  <p>TARIF</p>
+  <p>Nos tarifs</p>
 </section>
 <section class="pricelistContainer">
   <div class="disclaimer">
@@ -85,6 +88,8 @@
     </div>
   </div>
 </section>
+<div>
+
 <script type="text/javascript" src="{{ asset('js/pricelist.js') }}"></script>
 
 @endsection

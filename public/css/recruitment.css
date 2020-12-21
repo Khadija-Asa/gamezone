@@ -5,6 +5,15 @@
 .titlecontact {
     padding-top: 50px;
 }
+
+.map-page .header-bottom {
+    background-image: url(../images/background-header.png)!important;
+    background-position: top center;
+    background-size: cover;
+    height: 65vh;
+    text-shadow: 1px 1px #000;
+}
+
 .container-recruitment {
     background-image: url(../images/backgroud.png);
     background-repeat: no-repeat;

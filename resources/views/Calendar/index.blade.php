@@ -3,11 +3,12 @@
 @section('title', 'Tous les utilisateurs')
 
 @section('content')
-<section class="header-bottom-calendar">
+
+<div class="calendar-page">
+
+<section class="header-bottom">
         <h1>GAME ZONE</h1>
-        <p>Le premier parc d’attraction <br>
-        au monde entièrement dédié à <br>
-        l’univers des jeux-vidéos.</p>
+        <p>Le calendrier</p>
     </section>
 
 <div class="calendarContainer">
@@ -96,6 +97,7 @@
       <p><a href="{{ route('pricelist') }}">Tarif et billetterie</a></p>
     </div>
   </div>
+</div>
 </div>
 
 @endsection

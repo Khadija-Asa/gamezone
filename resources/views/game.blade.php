@@ -2,6 +2,13 @@
 
 @section('content')
 
+<div class="game-page">
+
+<section class="header-bottom">
+        <h1>GAME ZONE</h1>
+        <p>Mini-jeu</p>
+    </section>
+
   <section class="container-game">
 
     <div  class="instructions">
@@ -20,6 +27,7 @@
       </div>
 
   </section>
+</div>
       
     <script type="text/javascript" src="{{ asset('js/game.js') }}"></script>
 

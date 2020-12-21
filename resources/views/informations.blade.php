@@ -2,9 +2,11 @@
 
 @section('content')
 
+<div class="informations-page">
+
 <section class="header-bottom">
   <h1>GAME ZONE</h1>
-  <p>INFORMATIONS</p>
+  <p>Les informations</p>
 </section>
 
 
@@ -43,7 +45,7 @@ Nous nous consacrons à la création des expériences ludiques les plus épiques
   </div>
 
 </section>
-
+</div>
 
 
 @endsection

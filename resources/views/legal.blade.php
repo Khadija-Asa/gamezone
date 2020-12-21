@@ -2,6 +2,13 @@
 
 @section('content')
 
+<div class="legal-page">
+
+<section class="header-bottom">
+        <h1>GAME ZONE</h1>
+        <p>Les conditions de vente</p>
+    </section>
+
 <div class="paragraph">
   <p>
     <span class="clause">Mentions légales GAMEZONE</span> 
@@ -183,6 +190,7 @@
     Imagineer
     Omnimover
   <p>
+</div>
 </div>
 
 @endsection
