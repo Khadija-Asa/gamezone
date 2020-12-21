@@ -81,10 +81,10 @@
   </div>
   <div class="preparation">
     <div>
-      <p><a href="" title="Se rendre au parc">Se rendre au parc</a></p>
+      <p><a href="{{ route('routes') }}" title="Se rendre au parc">Se rendre au parc</a></p>
     </div>
     <div>
-      <p><a href="{{ route('Schedule.index') }}">Afficher les horaires</a></p>
+      <p><a href="{{ route('Calendar.index') }}" title="Calendrier">Afficher les horaires</a></p>
     </div>
   </div>
 </section>

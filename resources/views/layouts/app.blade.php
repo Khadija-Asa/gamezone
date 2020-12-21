@@ -59,11 +59,11 @@
         <div></div>
         @else
 					<div class="user">
-						<a href="{{ route('User.show', ['User' => Auth::user()->id]) }}"><i class="far fa-user"></i></a>
+						<a href="{{ route('User.show', ['User' => Auth::user()->id]) }}" title="Mon compte"><i class="far fa-user"></i></a>
           </div>
           @if (!Auth::user()->getIdCart()->isEmpty()) <!-- On fait apparaite le panier que s'il contient qqch -->
             <div class="cart">
-              <a href="{{ route('Cart.show', ['Cart' => Auth::user()->getIdCart()[0]['id']]) }}"><i class="fas fa-shopping-basket"></i></a>
+              <a href="{{ route('Cart.show', ['Cart' => Auth::user()->getIdCart()[0]['id']]) }}" title="Mon panier"><i class="fas fa-shopping-basket"></i></a>
             </div>
           @endif
         @endguest
@@ -73,40 +73,40 @@
 
 						<ul>
 							<li class="nav-item">
-              <a class="nav-link" href="{{ route('home') }}">Parc</a>
+              <a class="nav-link" href="{{ route('home') }}" title="Le parc">Parc</a>
             </li>
 							<li class="nav-item">
-            <a class="nav-link" href="{{ route('Attraction.index') }}">Attractions</a>
+            <a class="nav-link" href="{{ route('Attraction.index') }}" title="Les attractions">Attractions</a>
             </li>
 							<li class="nav-item">
-            <a class="nav-link" href="{{ route('map') }}">Plan</a>
+            <a class="nav-link" href="{{ route('map') }}" title="Le plan du parc">Plan</a>
             </li>
 							<li class="nav-item">
-            <a class="nav-link" href="#">Se rendre au parc</a>
+            <a class="nav-link" href="{{ route('routes') }}" title="Se rendre au parc">Se rendre au parc</a>
             </li>
 							<li class="nav-item">
-            <a class="nav-link" href="{{ route('pricelist') }}">Tarifs et billetterie</a>
+            <a class="nav-link" href="{{ route('pricelist') }}" title="Tarifs">Tarifs et billetterie</a>
             </li>
 						<li class="nav-item">
-            <a class="nav-link" href="{{ route('Calendar.index') }}">Horaires et calendrier</a>
+            <a class="nav-link" href="{{ route('Calendar.index') }}" title="Le calendrier">Horaires et calendrier</a>
             </li>
 						<li class="nav-item">
             <a class="nav-link" href="{{ route('game') }}">Mini-jeu</a>
             </li>
 						<li class="nav-item">
-            <a class="nav-link" href="#">Informations</a>
+            <a class="nav-link" href="{{ route('informations') }}" title="A propos du parc">Informations</a>
             </li>
 						<li class="nav-item">
-            <a class="nav-link" href="{{ route('Product.index') }}">Boutique</a>
+            <a class="nav-link" href="{{ route('Product.index') }}" title="La boutique">Boutique</a>
             </li>
 
 							@guest
 								<li class="nav-item">
-									<a class="nav-link" href="{{ route('login') }}">Se connecter</a>
+									<a class="nav-link" href="{{ route('login') }}" title="Se connecter">Se connecter</a>
 									</li>
                 @if (Route::has('register'))
                   <li class="nav-item">
-                    <a class="nav-link" href="{{ route('register') }}">S'enregistrer</a>
+                    <a class="nav-link" href="{{ route('register') }}" title="S'inscrire">S'enregistrer</a>
                     </li>
                 @endif
               @else
@@ -126,7 +126,7 @@
                   </div>
                   </li>
                   <li class="avatar">
-                <img src="{{ asset(Auth::user()->avatar) }}">
+                <img src="{{ asset(Auth::user()->avatar) }}" alt="Avatar">
               </li>
               <li>
                 {{ Auth::user()->exp }} xp
@@ -149,7 +149,7 @@
 				</section>
 				
 				<div class="top-logo">
-					<a href="{{ route('home') }}"><img src="{{ asset('images/logo-gamezone.png') }}"></a>
+					<a href="{{ route('home') }}" title="Accueil"><img src="{{ asset('images/logo-gamezone.png') }}" alt="Logo Gamezone"></a>
 				</div>
 			<header>
 
@@ -174,27 +174,27 @@
         @guest
           <div class="account">
             <div>
-              <a class="nav-link" href="{{ route('login') }}">Se connecter</a>
+              <a class="nav-link" href="{{ route('login') }}" title="Se connecter">Se connecter</a>
               @if (Route::has('register'))
-                 / <a class="nav-link" href="{{ route('register') }}">S'enregistrer</a>
+                 / <a class="nav-link" href="{{ route('register') }}" title="S'enregistrer">S'enregistrer</a>
               @endif
             </div>
           </div>
         @else
           <div class="account">
             <div class="avatar">
-              <img src="{{ asset(Auth::user()->avatar) }}">
+              <img src="{{ asset(Auth::user()->avatar) }}" alt="avatar">
             </div>
             <div>
               {{ Auth::user()->nickname }}<br>
               {{ Auth::user()->exp }} xp<br>
-              <a href="{{ route('User.show', ['User' => Auth::user()->id]) }}">Mon compte</a><br>
+              <a href="{{ route('User.show', ['User' => Auth::user()->id]) }}" title="Mon compte">Mon compte</a><br>
               @if (!Auth::user()->getIdCart()->isEmpty()) <!-- On fait apparaite le panier que s'il contient qqch -->
-                <a href="{{ route('Cart.show', ['Cart' => Auth::user()->getIdCart()[0]['id']]) }}">Mon panier ({{ Auth::user()->numberItems() }})</a><br>
+                <a href="{{ route('Cart.show', ['Cart' => Auth::user()->getIdCart()[0]['id']]) }}" title="Mon panier">Mon panier ({{ Auth::user()->numberItems() }})</a><br>
               @endif
               <a class="dropdown-item" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
-              document.getElementById('logout-form').submit();">
+              document.getElementById('logout-form').submit();" title="Déconnexion">
               Déconnexion</a>
             </div>
           </div>
@@ -206,16 +206,16 @@
 			<!-- <div class="logo-icon"> -->
         <!-- <a href="#"><img src="{{ asset('images/logo-gamezone.png') }}"></a> -->
         <ul>
-          <li><a href="{{ route('home') }}"><img src="{{ asset('images/logo-gamezone.png') }}"></a></li>
-          <li><a class="nav-menu" href="{{ route('home') }}">Parc</a></li>
-          <li><a class="nav-menu" href="{{ route('Attraction.index') }}">Attractions</a></li>
-          <li><a class="nav-menu" href="{{ route('map') }}">Plan</a></li>
-          <li><a class="nav-menu" href="">Se rendre au parc</a></li>
-          <li><a class="nav-menu" href="{{ route('pricelist') }}">Tarifs et billetterie</a></li>
-          <li><a class="nav-menu" href="{{ route('Calendar.index') }}">Horaires et calendrier</a></li>
-          <li><a class="nav-menu" href="{{ route('game') }}">Mini-jeu</a></li>
-          <li><a class="nav-menu" href="{{ route('informations') }}">Informations</a></li>
-          <li><a class="nav-menu" href="{{ route('Product.index') }}">Boutique</a></li>
+          <li><a href="{{ route('home') }}" title="Accueil"><img src="{{ asset('images/logo-gamezone.png') }}" alt="Logo Gamezone"></a></li>
+          <li><a class="nav-menu" href="{{ route('home') }}" title="Le parc">Parc</a></li>
+          <li><a class="nav-menu" href="{{ route('Attraction.index') }}" title="Les attractions">Attractions</a></li>
+          <li><a class="nav-menu" href="{{ route('map') }}" title="Le plan du parc">Plan</a></li>
+          <li><a class="nav-menu" href="{{ route('routes') }}" title="Se rendre au parc">Se rendre au parc</a></li>
+          <li><a class="nav-menu" href="{{ route('pricelist') }}" title="Tarifs">Tarifs et billetterie</a></li>
+          <li><a class="nav-menu" href="{{ route('Calendar.index') }}" title="Calendrier">Horaires et calendrier</a></li>
+          <li><a class="nav-menu" href="">My game</a></li>
+          <li><a class="nav-menu" href="{{ route('informations') }}" title="A propos du parc">Informations</a></li>
+          <li><a class="nav-menu" href="{{ route('Product.index') }}" title="La boutique">Boutique</a></li>
         </ul>
 			<!-- </div> -->
 	  </nav>
@@ -236,21 +236,21 @@
 
       <div class="social-media">
         <h3>suivez gamezone :</h3>
-        <a href="www.twitter.com"><i class="fab fa-twitter"></i></a>
-        <a href="www.youtube.com"><i class="fab fa-youtube"></i></a>
-        <a href="www.instagram.com"><i class="fab fa-instagram"></i></a>
-        <a href="www.facebook.com"><i class="fab fa-facebook"></i></a>
+        <a href="www.twitter.com" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="www.youtube.com" title="Youtube"><i class="fab fa-youtube"></i></a>
+        <a href="www.instagram.com" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="www.facebook.com" title="Facebook"><i class="fab fa-facebook"></i></a>
       </div>
 
       <div class="logo-image">
-        <a href="{{ route('home') }}"><img src="{{ asset('images/logo-gamezone.png') }}" alt="logo"></a>
+        <a href="{{ route('home') }}" title="Accueil"><img src="{{ asset('images/logo-gamezone.png') }}" alt="logo"></a>
       </div>
 
       <div class="links">
-          <a href="{{ route('contact') }}">nous contacter</a>
-          <a href="{{ route('recruitment') }}">on recrute</a>
-          <a href="{{ route('informations') }}">dans la presse</a>
-          <a href="{{ route('informations') }}">à propos du parc</a>
+          <a href="{{ route('contact') }}" title="Contact">nous contacter</a>
+          <a href="{{ route('recruitment') }}" title="Recrutement">on recrute</a>
+          <a href="{{ route('informations') }}" title="La presse">dans la presse</a>
+          <a href="{{ route('informations') }}" title="A propos du parc">à propos du parc</a>
       </div>
 
       <hr>
@@ -266,9 +266,9 @@
       <hr>
 
       <div class="laws">
-        <a href="{{ route('sale') }}">conditions de vente</a>
-        <a href="{{ route('cookies') }}">cookies</a>
-        <a href="{{ route('legal') }}">mentions légales</a>
+        <a href="{{ route('sale') }}" title="Conditions générales de vente">conditions de vente</a>
+        <a href="{{ route('cookies') }}" title="A propos des cookies">cookies</a>
+        <a href="{{ route('legal') }}" title="Mentions légales">mentions légales</a>
       </div>
 
       <p class="copyright"><i class="far fa-copyright"></i>Copyright Gamezone</p>

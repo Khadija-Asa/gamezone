@@ -31,10 +31,10 @@
   <h2>Préparer sa visite</h2>
   <div class="preparation">
     <div>
-      <p><a href="" title="">Tarifs</a></p>
+      <p><a href="{{ route('pricelist') }}" title="Tarifs">Tarifs</a></p>
     </div>
     <div>
-      <p><a href="" tilte="">Horaires</a></p>
+      <p><a href="{{ route('Calendar.index') }}" tilte="Calendrier">Horaires</a></p>
     </div>
   </div>
   <script type="text/javascript" src="{{ asset('js/routes.js') }}"></script>

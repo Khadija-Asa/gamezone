@@ -47,7 +47,7 @@ class ArticleController extends Controller
       ]);
       $article->save();
 
-      return redirect()->route('home', ['#news'])->with('message', 'Le produit a bien été créé !');
+      return redirect()->route('home', ['#news'])->with('message', 'La news a bien été créé !');
     }
 
     /**
@@ -86,7 +86,7 @@ class ArticleController extends Controller
       $article = Article::find($id);
       $article->fill($request->all());
       $article->save();
-      return redirect()->route('home', ['#news'])->with('message', 'Le produit a bien été modifié !');
+      return redirect()->route('home', ['#news'])->with('message', 'La news a bien été modifié !');
     }
 
     /**
@@ -100,6 +100,6 @@ class ArticleController extends Controller
       $article = Article::find($id);
       $article->delete();
 
-      return redirect()->route('home', ['#news'])->with('message', 'Le produit a bien été supprimé !');
+      return redirect()->route('home', ['#news'])->with('message', 'La news a bien été supprimé !');
     }
 }
