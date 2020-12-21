@@ -1,0 +1,68 @@
+/*GLOBAL*/
+/*Route*/
+.routes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.routes h2 {
+  text-align: center;
+  color:  #EFC732;
+  margin-top: 20px;
+}
+.routes .map {
+  text-align: center;
+  margin-top: 20px;
+}
+.h2-routes {
+  text-align: center;
+  color:  #EFC732;
+  margin: 30px;
+}
+
+#mapid { 
+  text-align: center;
+  height: 400px;
+  width: 90%;
+  margin: auto;
+ }
+
+
+
+
+.blabla-car {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.button-blabla-car p {
+  margin: 30px 0;
+}
+.button-blabla-car p a {
+  background-color: #881F6A;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.button-blabla-car p a:hover {
+  color: #EFC732;
+}
+.preparation {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+  .preparation {
+    flex-direction: row;
+  }
+  .blabla-car {
+    flex-direction: row;
+    justify-content: space-between;
+  }.button-blabla-car p a {
+    background-color: #881F6A;
+    margin: 0 100px;
+  }
+}

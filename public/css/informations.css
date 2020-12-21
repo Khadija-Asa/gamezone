@@ -1,0 +1,73 @@
+/*GLOBAL*/
+/*header-bottom*/
+
+.informations-page .header-bottom {
+  background-image: url(../images/background-header.png)!important;
+  background-position: top center;
+  background-size: cover;
+  height: 65vh;
+  text-shadow: 1px 1px #000;
+}
+
+.header-bottom p {
+  text-align: center;
+  color: #EFC732;
+}
+span {
+  color: #EFC732;
+}
+.image-information {
+  background-image: url(../images/boy.png);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 300px;
+}
+.informations .paragraphe {
+  margin: 100px;
+}
+
+.news-images img {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 30px;
+  width: 60%;
+}
+
+.news p {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.paragraphe p {
+  text-align: center;
+}
+
+/*PC*/
+@media screen and (min-width: 800px) {
+  /*Header bottom*/
+  .header-bottom {
+    align-items: flex-start;
+  }
+  .header-bottom h1,
+  .header-bottom p {
+    margin-left: 100px;
+  }
+  .image-information  {
+    height: 400px;
+    background-position: center;
+  }
+  .informations .paragraphe p {
+    line-height: 30px;
+    font-size: 20px;
+  }
+  .news-images {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .news-images img {
+    border-radius: 20px;
+    width: 30%;
+  }
+}

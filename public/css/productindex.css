@@ -1,0 +1,50 @@
+.shop-page .header-bottom {
+    background-image: url(../images/background-header.png)!important;
+    background-position: top center;
+    background-size: cover;
+    height: 65vh;
+    text-shadow: 1px 1px #000;
+}
+
+.product {
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.productcontent {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    border-top: 5px solid #EFC732;
+    padding: 50px 50px;
+}
+.form-group-index {
+    display: flex;
+    flex-direction: column;
+}
+.product img {
+    width: 200px;
+    height: 200px;
+}
+.priceproduct {
+    font-weight: bold;
+    color: #EFC732;
+}
+.bold {
+    font-weight: bold;
+}
+#quantity {
+    padding: 5px 0;
+}
+.editbuttonproduct {
+    padding: 5px 5px;
+}
+.adminbuttonindex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

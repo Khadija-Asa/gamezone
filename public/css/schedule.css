@@ -1,0 +1,55 @@
+.containerHours > table {
+  margin: 50px auto;
+  padding: 100px 0;
+}
+.containerHours table thead {
+  display: none;
+}
+.containerHours table tr{
+  display: block;
+  margin-bottom: 40px;
+}
+.containerHours table td {
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid cornsilk;
+}
+
+.containerHours thead tr th {
+  font-size: 20px;
+  border-bottom: 1px solid cornsilk;
+}
+.containerHours tbody tr td {
+  color: #ffffff;
+}
+.title-cart-table {
+  display: flex;
+  flex-direction: column;
+}
+.table-striped {
+  width: 200px;
+}
+@media only screen and (min-width: 768px) {
+  .containerHours {
+    margin: 25px;
+  }
+  .containerHours table {
+    min-width: 90%;
+  }
+  .containerHours table thead {
+    display: table-header-group;
+  }
+  .containerHours table tr{
+    display: table-row;
+  }
+  .containerHours table td {
+    display: table-cell;
+  }
+  .containerHours {
+    text-align: center;
+  }
+  .header-bottom h1,
+  .header-bottom h2 {
+    margin-left: 100px;
+  }
+}

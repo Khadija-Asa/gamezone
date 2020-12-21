@@ -1,0 +1,92 @@
+/*Global*/
+.attraction-page .header-bottom {
+  background-image: url(../images/background-header.png)!important;
+  background-position: top center;
+  background-size: cover;
+  height: 65vh;
+  text-shadow: 1px 1px #000;
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+p {
+  color: #fff;
+}
+/*Page Attractions*/
+.attractions {
+  background-image: url(../images/backgroud.png);
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.attraction {
+  margin: 10px;
+  padding-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+}
+.attraction:hover {
+  outline: 2px solid #EFC732;
+}
+.attraction .description {
+  margin: 50px 70px;
+}
+.attraction .logo-attraction img {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+.attraction a {
+  color: #ffffff;
+  background-color: #881f6a;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.attraction a:hover {
+  color: #EFC732;
+}
+
+.attraction > div {
+  width: 100%;
+}
+
+/*header-bottom*/
+.header-bottom p {
+  text-align: center;
+  color: #EFC732;
+}
+.header-bottom h1 {
+  color: #EFC732;
+  font-size: 40px;
+  margin: 20px 0;
+}
+/*PC*/
+@media screen and (min-width: 800px) {
+  /*Header bottom*/
+  .attractions {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .attraction {
+    display: flex;
+    width: 48%;
+  }
+  .header-bottom {
+    align-items: flex-start;
+  }
+  .header-bottom p {
+    margin: 20px 0;
+  }
+  .header-bottom h1,
+  .header-bottom h2 {
+    margin-left: 100px;
+  }
+}

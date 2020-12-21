@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+  .header-bottom h1 {
+      margin-bottom: 50px;
+      font-size: 40px;
+  }
+  .header-bottom h1, .header-bottom p {
+    text-align: center;
+    color: #EFC732;
+  }
+.container-contact {
+    background-image: url(../images/backgroud.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.row-contact {
+    padding-top: 50px;
+}
+.titlecontact {
+    color: #EFC732;
+    font-size: 20px;
+    padding-bottom: 50px;
+}
+
+.contact-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-group-contact {
+    margin: 20px 0;
+}
+.form-group-contact textarea {
+    border-radius: 5px;
+    border: none;
+}
+.contactbutton {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.buttoncontact {
+    margin-top: 20px;
+    padding: 7px 30px;
+    background-color: #881F6A;
+    color: #EFC732;
+    border-radius: 10px;
+    border: none;
+}
+.buttoncontact:hover {
+    background-color: #972d79;
+}
+.checkboxcontact {
+    display: flex;
+    justify-content: center;
+}
+.rgpdcontact {
+    padding-left: 5px;
+    font-size: 10px;
+    box-shadow: 1px black;
+}
+.container-contact label {
+    display: none;
+}
+@media screen and (min-width: 800px){
+    .header-bottom {
+        align-items: flex-start;
+      }
+      .header-bottom h1,
+      .header-bottom p {
+        margin-left: 100px;
+      }
+    .contact-part-one {
+        display: flex;
+        flex-direction: column;
+        }
+        .contact-part-two {
+            display: flex;
+        }
+        .form-group-contact {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 20px 20px 20px;
+        }
+        .col-contact {
+            padding: 70px 0;
+            background-image: url(../images/Group\ 31.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin: 0 100px;
+        }
+        .form-group-contact {
+            margin: 20px 10px;
+        }
+        .contact-part {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+}
+@media screen and (min-width: 992px){
+    .col-contact {
+        margin: 0 200px;
+    }
+}
+@media screen and (min-width: 1100px){
+    .col-contact {
+        margin: 0 300px;
+    }
+}

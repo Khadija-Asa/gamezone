@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.editaccountcontent {
+    padding: 50px 0;
+}
+.editbuttongroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.editinput {
+    font-weight: bold;
+}
+.editbutton {
+    margin: 20px 10px 0 10px;
+    padding: 10px 50px;
+    background-color: #881F6A;
+    color: #EFC732;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.editbutton:hover {
+    background-color: #a34488;
+    color: #EFC732;
+}
+.buttonModify {
+  text-align: center;
+}
+
+.disabled {
+    background-color:#4e57a7;
+    color: #201d20;
+}
+@media screen and (min-width: 800px) {
+    .editbuttongroup {
+        flex-direction: row;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,135 @@
+.pricelist-page .header-bottom {
+  background-image: url(../images/background-header.png)!important;
+  background-position: top center;
+  background-size: cover;
+  height: 65vh;
+  text-shadow: 1px 1px #000;
+}
+
+.pricelistContainer {
+  background-image: url('../images/backgroud.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 10%;
+  min-height: 50vh;
+}
+h1 {
+  margin-bottom: 50px;
+  font-size: 40px;
+  color: #EFC732;
+}
+.pricelistContainer .header-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/background-header.png)!important;
+  background: center;
+  background-size: cover;
+  background-position: top center;
+  height: 65vh;
+  text-shadow: 1px 1px #000;
+}
+.header-bottom p {
+  text-align: center;
+  color: #EFC732;
+  font-size: 30px;
+}
+.pricelistContainer .disclaimer {
+  padding: 80px 0;
+  font-size: 20px;
+}
+
+.pricelistContainer label {
+  color: white;
+}
+
+.select option {
+  padding: 100px;
+  width: 100px;
+  font-size: 20px;
+}
+.select {
+  padding: 5px;
+  width: 100px;
+  font-size: 16px;
+}
+
+.pricelist > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+.pricelist > div > div {
+  padding: 15px 0;
+}
+.pricelist span {
+  color: #EFC732;
+  font-size: 20px;
+}
+
+.totalPrice {
+  color: #EFC732;
+  font-size: 20px;
+}
+.pricelistContainer .preparation {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pricelistContainer .preparation div {
+  border-radius: 50%;
+  background: #323868;
+  box-shadow:  13px 13px 26px #222647, 
+             -10px -10px 26px #424a89;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 800px) {
+  /*Header bottom*/
+  .pricelistContainer .header-bottom {
+    align-items: flex-start;
+  }
+  .pricelistContainer .header-bottom h1,
+  .header-bottom p {
+    margin-left: 100px;
+  }
+  .header-bottom p {
+    margin-left: 190px;
+  }
+  .pricelistContainer .disclaimer {
+    width: 60%;
+    font-size: 20px;
+    margin: auto;
+  }
+  .pricelist > div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .pricelist > div > div {
+    padding: 15px 0;
+  }
+  .preparation {
+    display: flex;
+    justify-content: center;
+  }
+  .pricelistContainer .preparation {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .pricelist > div > div:first-child {
+    width: 300px;
+  }
+  .pricelist > div > div {
+    text-align: left;
+    width: 200px;
+  }
+}
+

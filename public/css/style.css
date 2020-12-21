@@ -1,0 +1,194 @@
+/*page index*/
+/*MOBILE*/
+/*Global*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #282C53;
+}
+.index {
+  background-image: url(../images/backgroud.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.index span,
+h2,
+.index h1,
+.index .header-bottom {
+  color: #EFC732;
+}
+.index h1 {
+  margin-bottom: 50px;
+  font-size: 40px;
+}
+.index h2 {
+  font-size: 30px;
+  text-align: center;
+  color: #EFC732;
+}
+.index p,
+.index li,
+.main-attraction {
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.index .main-attraction,
+.index .presentation {
+  margin-top: 40px;
+  text-align: center;
+}
+/*image*/
+.index .main-attraction .bottom,
+.index .presentation .bottom {
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+}
+/*header-bottom*/
+.index .header-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/background-header.png)!important;
+  background-position: top center;
+  background-size: cover;
+  height: 65vh;
+  text-shadow: 1px 1px #000;
+}
+.index .header-bottom p {
+  text-align: center;
+  color: #EFC732;
+}
+/*Section présentation*/
+  /*Top*/
+  .index .presentation .top {
+    font-size: 12px;
+    margin: 0 20px;
+  }
+  .index .presentation .top h2 {
+    margin-bottom: 20px;
+  }
+  /*Center*/
+  .index .presentation .center {
+    margin: 50px 100px;
+    padding: 10px 0px;
+    background-color: #881F6A;
+    border-radius: 10px;
+  }
+  .index .presentation .center p {
+    font-size: 30px;
+  }
+  .index .presentation .center div {
+    margin: 10px 10px;
+  }
+  .index .presentation .center p {
+    color: #EFC732;
+  }
+  /*Bottom*/
+  .index .presentation .bottom {
+    background-image: url(../images/picture-parc.png);
+    background-attachment: fixed;
+  }
+/*Section main-attractions*/
+.index .main-attraction img {
+  margin: 20px 0;
+}
+.index .main-attraction div {
+  margin: 30px 0;
+}
+.index .main-attraction .top,
+.index .main-attraction .center {
+  margin-right: 20px;
+  margin-left: 15px;
+}
+.index .main-attraction .top p {
+  margin: 30px 0;
+}
+.index .main-attraction .top a {
+  background-color: #881F6A;
+  color: #EFC732;
+  border-radius: 5px;
+  border: #881F6A;
+  padding: 10px;
+}
+.index .main-attraction .bottom {
+  background-image: url(../images/picture-parc-two.png);
+  background-attachment: fixed;
+}
+.articles {
+  margin: 40px;
+}
+.article {
+  margin: 50px auto;
+  border-radius: 5px;
+  max-width: 200px;
+  max-width: 500px;
+  background-color: #272c55;
+  box-shadow: 13px 13px 26px #222647, -5px -5px 26px #424a89;
+  padding: 10px;
+}
+.articles:first-child {
+  margin-top: 50px;
+}
+.articles:last-child {
+  margin-bottom: 50px;
+}
+.article .title {
+  padding: 20px;
+  font-size: 20px;
+  color: #EFC732;
+}
+.article .content {
+  padding: 20px;
+}
+.article .publishDate {
+  margin-top: 30px;
+  color: gray;
+  float: right;
+}
+.article:last-child {
+  clear: both;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.page-item {
+  padding: 0 5px;
+}
+.articles nav {
+  display: flex;
+  justify-content: center;
+}
+.articles li {
+  padding: 10px;
+  font-size: 20px;
+}
+/*PC*/
+@media screen and (min-width: 800px) {
+  /*Header bottom*/
+  .index .header-bottom {
+    align-items: flex-start;
+  }
+  .index .header-bottom h1,
+  .index .header-bottom p {
+    margin-left: 100px;
+  }
+  /*Presentation*/
+  .index .presentation .top {
+    margin: 0 200px;
+  }
+  .index .presentation .center {
+    display: flex;
+    justify-content: space-around;
+}
+  .index .presentation .center p {
+    font-size: 30px;
+}
+}
