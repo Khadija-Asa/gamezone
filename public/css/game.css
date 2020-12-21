@@ -22,11 +22,7 @@
   font-size: 1rem;
   text-align: center;
   margin-top: 20px;
-  position: relative;
   font-size: 1rem;
-  float: right;
-  margin-right: 40%;
-  margin-top: 10%;
   text-align: center;
   color: #EFC732;
   text-shadow: 1px 1px 1px #000;
@@ -58,5 +54,12 @@
 }
 
 .instructions p {
-  font-size: 20px;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .instructions p {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
