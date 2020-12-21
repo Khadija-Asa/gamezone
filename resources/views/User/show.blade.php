@@ -47,11 +47,7 @@
         </div>
         <div class="buttonaccount">
           <a href="{{ route('Address.index') }}" class="btn btn-primary" title="modifier">
-<<<<<<< HEAD
             <button class="editbuttonaccount"><span class="fa fa-edit"> Mes addresses</span>
-=======
-            <button class="editbuttonaccount"><span class="fa "> Ajouter une adresse</span>
->>>>>>> logo footer changed and font family
             </button>
           </a>
           <a href="{{ route('User.edit', ['User' => $user->id]) }}" class="btn btn-primary" title="modifier">
